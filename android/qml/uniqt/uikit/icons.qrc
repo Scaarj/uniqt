@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/visibility_on.svg</file>
+        <file>icons/visibility_off.svg</file>
+    </qresource>
+</RCC>

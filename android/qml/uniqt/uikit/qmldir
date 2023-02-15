@@ -1,0 +1,24 @@
+# Module name
+module uniqt.uikit
+
+# Components
+ApplicationWindow 1.0 ApplicationWindow.qml
+Button 1.0 Button.qml
+CheckBox 1.0 CheckBox.qml
+ColumnLayout 1.0 ColumnLayout.qml
+ComboBox 1.0 ComboBox.qml
+Container 1.0 Container.qml
+GridLayout 1.0 GridLayout.qml
+HorizontalSpacer 1.0 HorizontalSpacer.qml
+Item 1.0 Item.qml
+Label 1.0 Label.qml
+ListModel 1.0 ListModel.qml
+Page 1.0 Page.qml
+PasswordField 1.0 PasswordField.qml
+Rectangle 1.0 Rectangle.qml
+Repeater 1.0 Repeater.qml
+RowLayout 1.0 RowLayout.qml
+SliderButton 1.0 SliderButton.qml
+Text 1.0 Text.qml
+TextField 1.0 TextField.qml
+VerticalSpacer 1.0 VerticalSpacer.qml

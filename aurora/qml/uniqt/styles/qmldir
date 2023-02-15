@@ -1,0 +1,5 @@
+# Module name
+module uniqt.styles
+
+# Singletons
+singleton Styles 1.0 Styles.qml

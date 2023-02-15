@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/uikit/ApplicationWindow.qml</file>
+        <file>qml/uikit/Button.qml</file>
+        <file>qml/uikit/CheckBox.qml</file>
+        <file>qml/uikit/ColumnLayout.qml</file>
+        <file>qml/uikit/ComboBox.qml</file>
+        <file>qml/uikit/Container.qml</file>
+        <file>qml/uikit/HorizontalSpacer.qml</file>
+        <file>qml/uikit/icons.qrc</file>
+        <file>qml/uikit/Item.qml</file>
+        <file>qml/uikit/Label.qml</file>
+        <file>qml/uikit/ListModel.qml</file>
+        <file>qml/uikit/Page.qml</file>
+        <file>qml/uikit/PasswordField.qml</file>
+        <file>qml/uikit/qmldir</file>
+        <file>qml/uikit/Rectangle.qml</file>
+        <file>qml/uikit/RowLayout.qml</file>
+        <file>qml/uikit/SliderButton.qml</file>
+        <file>qml/uikit/Text.qml</file>
+        <file>qml/uikit/TextField.qml</file>
+        <file>qml/uikit/VerticalSpacer.qml</file>
+        <file>qml/styles/qmldir</file>
+        <file>qml/styles/Styles.qml</file>
+        <file>qml/example/ColorPage.qml</file>
+        <file>qml/example/qmldir</file>
+        <file>qml/example/UIKitPage.qml</file>
+    </qresource>
+</RCC>
