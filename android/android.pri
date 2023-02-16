@@ -1,5 +1,3 @@
-DEFINES += Q_OS_ANDROID
-
 INCLUDEPATH += \
     $$PWD \
     $$PWD/qml/uniqt/ \
@@ -13,6 +11,7 @@ SOURCES += \
 
 RESOURCES += \
     $$PWD/icons.qrc \
+    $$PWD/android.qrc \
 
 DISTFILES += \
     $$PWD/qml/uniqt/styles/qmldir \

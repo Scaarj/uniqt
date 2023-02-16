@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>qml/uniqt/example/ColorPage.qml</file>
-        <file>qml/uniqt/example/ExampleApplication.qml</file>
-        <file>qml/uniqt/example/LayoutPage.qml</file>
-        <file>qml/uniqt/example/MainPage.qml</file>
-    </qresource>
-</RCC>

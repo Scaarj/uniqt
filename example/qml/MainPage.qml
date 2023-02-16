@@ -6,10 +6,12 @@ Page {
 
     headerTitle: "UIKit demonstration"
 
-    padding: 16
+    padding: Styles.margins.middle
     content: ColumnLayout {
         id: columnLayout
         politic.preferredWidth: root.contentMaxWidth
+
+        spacing: Styles.margins.middle
 
         Button {
             id: colorSectionBtn

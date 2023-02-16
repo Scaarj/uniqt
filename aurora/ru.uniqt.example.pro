@@ -59,7 +59,18 @@ AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
 
 CONFIG += auroraapp_i18n
 
-RESOURCES += $$PWD/../example/icons.qrc
+RESOURCES += \
+    $$PWD/../example/icons.qrc \
+
+DISTFILES += \
+    $$PWD/../example/qml/ColorPage.qml \
+    $$PWD/../example/qml/ExampleApplication.qml \
+    $$PWD/../example/qml/LayoutPage.qml \
+    $$PWD/../example/qml/MainPage.qml \
+
+qml_files.files = $$PWD/../example/qml/
+qml_files.path = /usr/share/$${TARGET}/
+INSTALLS += qml_files
 
 TRANSLATIONS += \
     translations/ru.uniqt.example.ts \

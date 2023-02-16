@@ -8,6 +8,6 @@ int main(int argc, char *argv[])
     application.setOrganizationName(QStringLiteral("ru.uniqt"));
     application.setApplicationName(QStringLiteral("example"));
 
-    application.setSource("qml/uniqt/example/ExampleApplication.qml");
+    application.setSource("qml/ExampleApplication.qml");
     return application.exec();
 }

@@ -3,15 +3,15 @@
 using namespace uniqt;
 
 Application::Application(int &argc, char **argv)
-#ifdef Q_OS_ANDROID
-    : defaultAttributes(), application(argc, argv)
-#endif
-{
 #ifdef Q_OS_AURORA
+{
     application = Aurora::Application::application(argc, argv);
     view = Aurora::Application::createView();
-#endif
 }
+#else
+    : defaultAttributes(), application(argc, argv)
+{}
+#endif
 
 void Application::setOrganizationDomain(const QString& orgDomain)
 {

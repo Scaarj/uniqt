@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/ColorPage.qml</file>
+        <file>qml/ExampleApplication.qml</file>
+        <file>qml/LayoutPage.qml</file>
+        <file>qml/MainPage.qml</file>
+    </qresource>
+</RCC>
