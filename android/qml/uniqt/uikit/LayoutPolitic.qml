@@ -8,15 +8,21 @@ Item {
     property bool componentCompleted: false
     property bool fillWidth: false
     property bool fillHeight: false
+    property int preferredHeight: -1
+    property int preferredWidth: -1
 
     function apply() {
-        setChildsAlighment()
-
         if (fillWidth) {
-            setChildsFillWidth()
+            childFillWidth()
         }
         if (fillHeight) {
-            setChildsFillHeight()
+            childFillHeight()
+        }
+        if (preferredHeight !== -1) {
+            childPreferedHeight()
+        }
+        if (preferredWidth !== -1) {
+            childPreferedWidth()
         }
 
         componentCompleted = true
@@ -28,30 +34,47 @@ Item {
         if (childs.length <= 2) { return }
 
         for(var i = 2; i < childs.length; ++i) {
-            if(childs[i].layout === undefined) { continue }
             childs[i].layout.alignment = alignment
         }
     }
 
-    function setChildsFillWidth() {
+    function childFillHeight() {
         var childs = root.parent.children
 
         if (childs.length <= 2) { return }
 
         for(var i = 2; i < childs.length; ++i) {
-            if(childs[i].layout === undefined) { continue }
+            childs[i].layout.fillHeight = fillHeight
+        }
+    }
+
+    function childFillWidth() {
+        var childs = root.parent.children
+
+        if (childs.length <= 2) { return }
+
+        for(var i = 2; i < childs.length; ++i) {
             childs[i].layout.fillWidth = fillWidth
         }
     }
 
-    function setChildsFillHeight() {
+    function childPreferedHeight() {
         var childs = root.parent.children
 
-        if (childs.length <= 2) { return }
+        if (childs.length <= 2 || preferredHeight === -1) { return }
 
         for(var i = 2; i < childs.length; ++i) {
-            if(childs[i].layout === undefined) { continue }
-            childs[i].layout.fillHeight = fillHeight
+            childs[i].layout.preferredHeight = preferredHeight
+        }
+    }
+
+    function childPreferedWidth() {
+        var childs = root.parent.children
+
+        if (childs.length <= 2 || preferredWidth === -1) { return }
+
+        for(var i = 2; i < childs.length; ++i) {
+            childs[i].layout.preferredWidth = preferredWidth
         }
     }
 
@@ -61,15 +84,27 @@ Item {
         }
     }
 
-    onFillWidthChanged: {
+    onFillHeightChanged: {
         if (componentCompleted) {
-            setChildsFillWidth()
+            childFillHeight()
         }
     }
 
-    onFillHeightChanged: {
+    onFillWidthChanged: {
         if (componentCompleted) {
-            setChildsFillHeight()
+            childFillWidth()
+        }
+    }
+
+    onPreferredHeightChanged: {
+        if (componentCompleted) {
+            childPreferedHeight()
+        }
+    }
+
+    onPreferredWidthChanged: {
+        if (componentCompleted) {
+            childPreferedWidth()
         }
     }
 }

@@ -6,6 +6,30 @@ import Sailfish.Silica 1.0
 QtObject {
     id: root
 
+    property var colorModel: [
+        ["Theme.primaryColor", Theme.primaryColor],
+        ["Theme.secondaryColor", Theme.secondaryColor],
+        ["Theme.highlightColor", Theme.highlightColor],
+        ["Theme.secondaryHighlightColor", Theme.secondaryHighlightColor],
+        ["Theme.highlightDimmerColor", Theme.highlightDimmerColor],
+        ["Theme.lightPrimaryColor", Theme.lightPrimaryColor],
+        ["Theme.lightSecondaryColor", Theme.lightSecondaryColor],
+        ["Theme.darkPrimaryColor", Theme.darkPrimaryColor],
+        ["Theme.darkSecondaryColor", Theme.darkSecondaryColor],
+        ["Theme.highlightBackgroundColor", Theme.highlightBackgroundColor],
+        ["Theme.overlayBackgroundColor", Theme.overlayBackgroundColor],
+        ["Theme.errorColor", Theme.errorColor]
+// TODO: try to use later
+//        ["palete.primaryColor", palette.primaryColor],
+//        ["palete.secondaryColor", palette.secondaryColor],
+//        ["palete.secondaryHighlightColor", palette.secondaryHighlightColor],
+//        ["palete.highlightColor", palette.highlightColor],
+//        ["palete.highlightBackgroundColor", palette.highlightBackgroundColor],
+//        ["palete.highlightDimmerColor", palette.highlightDimmerColor],
+//        ["palete.overlayBackgroundColor", palette.overlayBackgroundColor],
+//        ["palete.errorColor", palette.errorColor]
+    ]
+
     readonly property QtObject orientation: QtObject
     {
         property int portraitMask: Orientation.Portrait

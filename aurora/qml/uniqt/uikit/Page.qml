@@ -2,6 +2,8 @@ import QtQuick 2.6
 import QtQuick.Window 2.0
 import Sailfish.Silica 1.0 as Q
 
+import "../styles"
+
 Q.Page {
     id: root
 
@@ -18,19 +20,20 @@ Q.Page {
     property var footerContent
     property string headerTitle
     property var headerContent: Text {
+        id: defaultHeader
         anchors {
             right: parent ? parent.right : undefined
-            rightMargin: 16
+            rightMargin: Styles.margins.small
             verticalCenter: parent ? parent.verticalCenter : undefined
         }
         text: headerTitle
         font.pixelSize: Q.Theme.fontSizeLarge
         color: palette.primaryColor
     }
-    property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding)
+    property int headerHeight: headerContent && headerContent.visible ? Styles.pageSize.header : 0
+    property int footerHeight: footerContent && footerContent.visible ? Styles.pageSize.footer : 0
+    property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding) - headerHeight - footerHeight
     property int contentMaxWidth: root.width - (leftPadding ? leftPadding : padding) - (rightPadding ? rightPadding : padding)
-    property int headerHeight: Q.Theme.fontSizeLarge + Q.Theme.paddingLarge * 2
-    property int footerHeight: Q.Theme.fontSizeLarge + Q.Theme.paddingLarge * 2
 
     function show()
     {

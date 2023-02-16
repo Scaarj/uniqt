@@ -7,6 +7,33 @@ import QtQuick.Controls.Material 2.15
 QtObject {
     id: root
 
+    property var colorModel: [
+        ["accentColor", Material.accentColor],
+        ["backgroundColor", Material.backgroundColor],
+        ["backgroundDimColor", Material.backgroundDimColor],
+        ["buttonColor", Material.buttonColor],
+        ["buttonDisabledColor", Material.buttonDisabledColor],
+        ["dialogColor", Material.dialogColor],
+        ["dividerColor", Material.dividerColor],
+        ["dropShadowColor", Material.dropShadowColor],
+        ["frameColor", Material.frameColor],
+        ["highlightedButtonColor", Material.highlightedButtonColor],
+        ["highlightedRippleColor", Material.highlightedRippleColor],
+        ["hintTextColor", Material.hintTextColor],
+        ["iconColor", Material.iconColor],
+        ["iconDisabledColor", Material.iconDisabledColor],
+        ["listHighlightColor", Material.listHighlightColor],
+        ["primaryColor", Material.primaryColor],
+        ["primaryHighlightedTextColor", Material.primaryHighlightedTextColor],
+        ["primaryTextColor", Material.primaryTextColor],
+        ["rippleColor", Material.rippleColor],
+        ["scrollBarColor", Material.scrollBarColor],
+        ["scrollBarHoveredColor", Material.scrollBarHoveredColor],
+        ["scrollBarPressedColor", Material.scrollBarPressedColor],
+        ["secondaryTextColor", Material.secondaryTextColor],
+        ["spinBoxDisabledIconColor", Material.spinBoxDisabledIconColor]
+    ]
+
     readonly property QtObject orientation: QtObject
     {
         property int portraitMask: 1

@@ -6,21 +6,21 @@ Page {
 
     headerTitle: "UIKit demonstration"
 
+    padding: 16
     content: ColumnLayout {
         id: columnLayout
-
-        anchors {
-            margins: Styles.margins.middle
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
+        politic.preferredWidth: root.contentMaxWidth
 
         Button {
             id: colorSectionBtn
             text: "Show color page"
             onClicked: colorPage.show()
-            preferredWidth: root.width - columnLayout.anchors.leftMargin - columnLayout.anchors.rightMargin
+        }
+
+        Button {
+            id: layoutSectionBtn
+            text: "Show layout page"
+            onClicked: layoutPage.show()
         }
     }
 }

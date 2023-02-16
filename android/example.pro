@@ -11,7 +11,8 @@ SOURCES += \
     $$PWD/../example/src/main.cpp \
 
 RESOURCES += \
-    $$PWD/example.qrc \
+    $$PWD/../aurora/example.qrc \
+    $$PWD/../example/icons.qrc \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

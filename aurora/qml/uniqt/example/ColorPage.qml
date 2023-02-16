@@ -1,30 +1,8 @@
-import Sailfish.Silica 1.0
 import uniqt.uikit 1.0
 import uniqt.styles 1.0
 
 Page {
     id: root
-
-    property var colorModel: [
-        ["Theme.primaryColor", Theme.primaryColor],
-        ["Theme.secondaryColor", Theme.secondaryColor],
-        ["Theme.highlightColor", Theme.highlightColor],
-        ["Theme.secondaryHighlightColor", Theme.secondaryHighlightColor],
-        ["Theme.highlightDimmerColor", Theme.highlightDimmerColor],
-        ["Theme.lightPrimaryColor", Theme.lightPrimaryColor],
-        ["Theme.lightSecondaryColor", Theme.lightSecondaryColor],
-        ["Theme.darkPrimaryColor", Theme.darkPrimaryColor],
-        ["Theme.darkSecondaryColor", Theme.darkSecondaryColor],
-        ["Theme.highlightBackgroundColor", Theme.highlightBackgroundColor],
-        ["palete.primaryColor", palette.primaryColor],
-        ["palete.secondaryColor", palette.secondaryColor],
-        ["palete.secondaryHighlightColor", palette.secondaryHighlightColor],
-        ["palete.highlightColor", palette.highlightColor],
-        ["palete.highlightBackgroundColor", palette.highlightBackgroundColor],
-        ["palete.highlightDimmerColor", palette.highlightDimmerColor],
-        ["palete.overlayBackgroundColor", palette.overlayBackgroundColor],
-        ["palete.errorColor", palette.errorColor]
-    ]
 
     headerContent: RowLayout {
         anchors {
@@ -58,7 +36,7 @@ Page {
         rowSpacing: Styles.margins.middle
 
         Repeater {
-            model: colorModel
+            model: Styles.colorModel
 
             Text {
                 layout.row: index
@@ -68,7 +46,7 @@ Page {
         }
 
         Repeater {
-            model: colorModel
+            model: Styles.colorModel
 
             Rectangle {
                 layout.row: index

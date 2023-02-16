@@ -30,10 +30,11 @@ Rectangle {
         font.pixelSize: Styles.textSize.middle
         color: Material.primaryTextColor
     }
-    property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding)
+
+    property int headerHeight: headerContent && headerContent.visible ? Styles.pageSize.header : 0
+    property int footerHeight: footerContent && footerContent.visible ? Styles.pageSize.footer : 0
+    property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding) - headerHeight - footerHeight
     property int contentMaxWidth: root.width - (leftPadding ? leftPadding : padding) - (rightPadding ? rightPadding : padding)
-    property int headerHeight: Styles.pageSize.header
-    property int footerHeight: Styles.pageSize.footer
 
     function show()
     {

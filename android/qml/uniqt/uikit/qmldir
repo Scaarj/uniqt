@@ -8,6 +8,7 @@ CheckBox 1.0 CheckBox.qml
 ColumnLayout 1.0 ColumnLayout.qml
 ComboBox 1.0 ComboBox.qml
 Container 1.0 Container.qml
+CoverPage 1.0 CoverPage.qml
 GridLayout 1.0 GridLayout.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml
 Item 1.0 Item.qml

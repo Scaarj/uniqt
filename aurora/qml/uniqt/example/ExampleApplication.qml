@@ -17,5 +17,7 @@ ApplicationWindow {
     allowedOrientations: defaultAllowedOrientations
 
     ColorPage { id: colorPage }
+
+    LayoutPage { id: layoutPage }
 }
 
