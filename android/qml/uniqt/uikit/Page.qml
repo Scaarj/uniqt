@@ -18,17 +18,45 @@ Rectangle {
     property alias header: header
     property alias content: container.contentItem
     property alias footer: footer
+    property alias headerBackground: headerBackground
+    property alias visibleBack: backButton.visible
     property var footerContent
     property string headerTitle
-    property var headerContent: Text {
+
+    property var headerContent: Item {
         anchors {
-            right: parent ? parent.right : undefined
-            rightMargin: Styles.margins.small
             verticalCenter: parent ? parent.verticalCenter : undefined
+            left: parent ? parent.left : undefined
+            right: parent ? parent.right : undefined
+            leftMargin: Styles.margins.middle
+            rightMargin: anchors.leftMargin
         }
-        text: headerTitle
-        font.pixelSize: Styles.textSize.middle
-        color: Material.primaryTextColor
+
+        Button {
+            id: backButton
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+            }
+
+            icon.source: "qrc:/icons/back_arrow.svg"
+            icon.width: Styles.iconSize.middle
+            icon.height: Styles.iconSize.middle
+            padding: 0
+
+            onClicked: root.close()
+            width: height
+        }
+
+        Text {
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: parent.right
+            }
+
+            text: root.headerTitle
+            font.pixelSize: Styles.textSize.large
+        }
     }
 
     property int headerHeight: headerContent && headerContent.visible ? Styles.pageSize.header : 0

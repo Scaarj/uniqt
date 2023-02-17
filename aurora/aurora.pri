@@ -11,6 +11,9 @@ HEADERS += \
 SOURCES += \
     $$PWD/../src/application.cpp \
 
+RESOURCES += \
+    $$PWD/../resource/res.qrc \
+
 qml_lib.files = $$PWD/qml/uniqt/*
 qml_lib.path = /usr/share/$${TARGET}/uniqt/
 INSTALLS += qml_lib

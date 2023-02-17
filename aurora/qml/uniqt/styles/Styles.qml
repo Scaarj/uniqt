@@ -58,6 +58,16 @@ QtObject {
         property int launcher: Theme.horizontalPageMargin
     }
 
+    readonly property QtObject textSize: QtObject
+    {
+        property int xsmall: 8
+        property int small: 16
+        property int smiddle: 20
+        property int middle: 24
+        property int large: 32
+        property int xlarge: 64
+    }
+
     readonly property QtObject pageSize: QtObject
     {
         property int header: Theme.fontSizeLarge + Theme.paddingLarge * 2

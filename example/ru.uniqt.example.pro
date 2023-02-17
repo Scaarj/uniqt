@@ -37,25 +37,25 @@
 
 TARGET = ru.uniqt.example
 
+INCLUDEPATH += \
+    $$PWD/ \
+
+HEADERS += \
+
+SOURCES += \
+    $$PWD/src/main.cpp \
+
+RESOURCES += \
+    $$PWD/icons.qrc \
+
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")
 
-    CONFIG += \
-        auroraapp
+    CONFIG += auroraapp auroraapp_i18n
 
     PKGCONFIG += \
 
-    SOURCES += \
-        $$PWD/src/main.cpp \
-
-    HEADERS += \
-
     AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
-
-    CONFIG += auroraapp_i18n
-
-    RESOURCES += \
-        $$PWD/icons.qrc \
 
     DISTFILES += \
         $$PWD/qml/ColorPage.qml \
@@ -73,15 +73,8 @@ contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(Q
 
     QT += quick quickcontrols2 core svg
 
-    INCLUDEPATH += \
-        $$PWD/ \
-
-    SOURCES += \
-        $$PWD/src/main.cpp \
-
     RESOURCES += \
         $$PWD/qml.qrc \
-        $$PWD/icons.qrc \
 
     # Default rules for deployment.
     qnx: target.path = /tmp/$${TARGET}/bin

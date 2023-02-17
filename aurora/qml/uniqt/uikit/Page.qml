@@ -17,19 +17,43 @@ Q.Page {
     property alias header: header
     property alias content: container.contentItem
     property alias footer: footer
+    property alias visibleBack: backButton.visible
     property var footerContent
     property string headerTitle
-    property var headerContent: Text {
-        id: defaultHeader
+
+    property var headerContent: Item {
         anchors {
-            right: parent ? parent.right : undefined
-            rightMargin: Styles.margins.small
             verticalCenter: parent ? parent.verticalCenter : undefined
+            left: parent ? parent.left : undefined
+            right: parent ? parent.right : undefined
+            leftMargin: Styles.margins.middle
+            rightMargin: anchors.leftMargin
         }
-        text: headerTitle
-        font.pixelSize: Q.Theme.fontSizeLarge
-        color: palette.primaryColor
+
+        Button {
+            id: backButton
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+            }
+
+            icon.source: "qrc:/icons/back_arrow.svg"
+            icon.sourceSize: Qt.size(Styles.iconSize.middle, Styles.iconSize.middle)
+            icon.color: Q.Theme.primaryColor
+            onClicked: root.close()
+        }
+
+        Text {
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: parent.right
+            }
+
+            text: root.headerTitle
+            font.pixelSize: Styles.textSize.large
+        }
     }
+
     property int headerHeight: headerContent && headerContent.visible ? Styles.pageSize.header : 0
     property int footerHeight: footerContent && footerContent.visible ? Styles.pageSize.footer : 0
     property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding) - headerHeight - footerHeight

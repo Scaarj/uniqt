@@ -5,6 +5,7 @@ Page {
     id: root
 
     headerTitle: "UIKit demonstration"
+    visibleBack: false
 
     padding: Styles.margins.middle
     content: ColumnLayout {

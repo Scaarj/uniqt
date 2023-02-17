@@ -10,8 +10,8 @@ SOURCES += \
     $$PWD/../src/application.cpp \
 
 RESOURCES += \
-    $$PWD/../android/icons.qrc \
     $$PWD/../android/android.qrc \
+    $$PWD/../resource/res.qrc \
 
 DISTFILES += \
     $$PWD/../android/qml/uniqt/styles/qmldir \

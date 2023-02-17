@@ -53,12 +53,12 @@ QtObject {
 
     readonly property QtObject iconSize: QtObject
     {
-        property int xsmall: 16
-        property int small: 32
-        property int smiddle: 48
-        property int middle: 64
-        property int large: 128
-        property int xlarge: 256
+        property int xsmall: 8
+        property int small: 16
+        property int smiddle: 24
+        property int middle: 32
+        property int large: 64
+        property int xlarge: 128
         property int launcher: large
     }
 

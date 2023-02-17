@@ -4,25 +4,7 @@ import uniqt.styles 1.0
 Page {
     id: root
 
-    headerContent: RowLayout {
-        anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: parent.right
-            leftMargin: Styles.margins.middle
-            rightMargin: anchors.leftMargin
-        }
-
-        Text {
-            text: "Color Page"
-            layout.fillWidth: true
-        }
-
-        Button {
-            text: "Back"
-            onClicked: root.close()
-        }
-    }
+    headerTitle: "Color Page"
 
     padding: Styles.margins.small
     content: GridLayout {
