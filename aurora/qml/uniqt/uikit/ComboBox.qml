@@ -6,11 +6,23 @@ Q.ComboBox {
     id: root
 
     property alias layout: layoutControl
-    property bool fillWidth: false
-    signal completed()
+    property alias model: repeater.model
 
-    Layout.fillWidth: fillWidth
-    Component.onCompleted: root.completed()
+    signal accepted()
+    signal activated(var index)
+
+    onCurrentIndexChanged: activated(currentIndex)
 
     LayoutControl { id: layoutControl }
+
+    menu: Q.ContextMenu {
+        id: contextMenu
+
+        Repeater {
+            id: repeater
+            Q.MenuItem {
+                text: model.modelData
+            }
+        }
+    }
 }

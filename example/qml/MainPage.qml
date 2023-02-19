@@ -25,5 +25,11 @@ Page {
             text: "Show layout page"
             onClicked: layoutPage.show()
         }
+
+        Button {
+            id: controlSectionBtn
+            text: "Show control page"
+            onClicked: controlPage.show()
+        }
     }
 }

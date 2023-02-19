@@ -60,12 +60,12 @@ QtObject {
 
     readonly property QtObject textSize: QtObject
     {
-        property int xsmall: 8
-        property int small: 16
-        property int smiddle: 20
-        property int middle: 24
-        property int large: 32
-        property int xlarge: 64
+        property int xsmall: Theme.fontSizeTiny
+        property int small: Theme.fontSizeExtraSmall
+        property int smiddle: Theme.fontSizeSmall
+        property int middle: Theme.fontSizeMedium
+        property int large: Theme.fontSizeLarge
+        property int xlarge: Theme.fontSizeExtraLarge
     }
 
     readonly property QtObject pageSize: QtObject

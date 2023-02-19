@@ -4,5 +4,6 @@
         <file>qml/ExampleApplication.qml</file>
         <file>qml/LayoutPage.qml</file>
         <file>qml/MainPage.qml</file>
+        <file>qml/ControlPage.qml</file>
     </qresource>
 </RCC>

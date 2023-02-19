@@ -8,7 +8,6 @@ Q.ComboBox {
     property alias layout: layoutControl
     signal completed()
 
-    Layout.fillWidth: fillWidth
     Component.onCompleted: root.completed()
 
     LayoutControl { id: layoutControl }

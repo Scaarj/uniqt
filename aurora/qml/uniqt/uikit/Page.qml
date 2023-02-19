@@ -37,8 +37,9 @@ Q.Page {
                 left: parent.left
             }
 
-            icon.source: "qrc:/icons/back_arrow.svg"
-            icon.sourceSize: Qt.size(Styles.iconSize.middle, Styles.iconSize.middle)
+            icon.source: "image://theme/icon-m-back"
+            icon.width: Styles.iconSize.middle
+            icon.height: Styles.iconSize.middle
             icon.color: Q.Theme.primaryColor
             onClicked: root.close()
         }

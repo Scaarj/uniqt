@@ -48,6 +48,13 @@ SOURCES += \
 RESOURCES += \
     $$PWD/icons.qrc \
 
+DISTFILES += \
+    $$PWD/qml/ColorPage.qml \
+    $$PWD/qml/ExampleApplication.qml \
+    $$PWD/qml/LayoutPage.qml \
+    $$PWD/qml/ControlPage.qml \
+    $$PWD/qml/MainPage.qml \
+
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")
 
@@ -56,12 +63,6 @@ contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(Q
     PKGCONFIG += \
 
     AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
-
-    DISTFILES += \
-        $$PWD/qml/ColorPage.qml \
-        $$PWD/qml/ExampleApplication.qml \
-        $$PWD/qml/LayoutPage.qml \
-        $$PWD/qml/MainPage.qml \
 
     TRANSLATIONS += \
         translations/ru.uniqt.example.ts \

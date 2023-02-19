@@ -19,5 +19,7 @@ ApplicationWindow {
     ColorPage { id: colorPage }
 
     LayoutPage { id: layoutPage }
+
+    ControlPage { id: controlPage }
 }
 
