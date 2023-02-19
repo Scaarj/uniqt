@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
+import uniqt.styles 1.0
 
 Window {
     property alias layout: layoutControl
@@ -9,8 +10,8 @@ Window {
     property int allowedOrientations
     property int defaultAllowedOrientations: 0
 
-    height: 800
-    width: 600
+    height: Styles.android ? Screen.height : 640
+    width: Styles.android ? Screen.width : 360
     visible: true
 
     function push(item)

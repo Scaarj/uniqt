@@ -12,7 +12,7 @@ Page {
         id: columnLayout
         politic.preferredWidth: root.contentMaxWidth
 
-        spacing: Styles.margins.middle
+        spacing: Styles.margins.small
 
         Button {
             id: colorSectionBtn

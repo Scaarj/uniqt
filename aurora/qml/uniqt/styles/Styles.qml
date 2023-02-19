@@ -6,6 +6,9 @@ import Sailfish.Silica 1.0
 QtObject {
     id: root
 
+    readonly property int screenHeight: Screen.height
+    readonly property int screenWidth: Screen.width
+
     property var colorModel: [
         ["Theme.primaryColor", Theme.primaryColor],
         ["Theme.secondaryColor", Theme.secondaryColor],

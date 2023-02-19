@@ -9,7 +9,7 @@ Page {
     padding: Styles.margins.small
     content: ColumnLayout {
         width: root.contentMaxWidth
-        spacing: Styles.margins.middle
+        spacing: Styles.margins.small
 
         Button {
             text: "Button1"

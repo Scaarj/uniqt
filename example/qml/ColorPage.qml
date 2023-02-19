@@ -3,17 +3,14 @@ import uniqt.styles 1.0
 
 Page {
     id: root
+    property int textHeight: 0
 
     headerTitle: "Color Page"
 
     padding: Styles.margins.small
     content: GridLayout {
-        anchors {
-            margins: Styles.margins.small
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
+        id: gridLayout
+        width: root.contentMaxWidth
         columns: 2
         rowSpacing: Styles.margins.middle
 
@@ -34,7 +31,7 @@ Page {
                 layout.row: index
                 layout.column: 1
                 width: 100
-                height: 64
+                height: Styles.textSize.middle
                 border.width: 1
                 color: modelData[1]
             }
