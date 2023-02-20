@@ -9,7 +9,7 @@ QtObject {
     id: root
 
     readonly property bool android: Qt.platform.os === "android"
-    readonly property real ratio: android ? Screen.devicePixelRatio / 3 : Screen.devicePixelRatio * 1.0
+    readonly property real ratio: 1.0
     readonly property int screenHeight: Screen.height
     readonly property int screenWidth: Screen.width
 
@@ -80,7 +80,7 @@ QtObject {
 
     readonly property QtObject pageSize: QtObject
     {
-        property int content: 48 * ratio
+        property int content: 64 * ratio
         property int header: content
         property int footer: content
     }
