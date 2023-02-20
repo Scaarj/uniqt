@@ -43,6 +43,7 @@ Rectangle {
             icon.width: Styles.iconSize.middle
             icon.height: Styles.iconSize.middle
             padding: 0
+            flat: true
 
             onClicked: root.close()
             width: height
@@ -92,16 +93,9 @@ Rectangle {
     Rectangle {
         id: headerBackground
         anchors.fill: header
-        color: Material.backgroundColor
         visible: headerContent ? headerContent.visible : false
         z: root.z + 1
-
-        Rectangle {
-            anchors.bottom: parent.bottom
-            width: parent.width
-            height: 2
-            color: Material.backgroundDimColor
-        }
+        color: Qt.lighter(Material.accentColor, 1.8)
     }
 
     Flickable {

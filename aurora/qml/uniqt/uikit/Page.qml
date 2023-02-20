@@ -42,6 +42,7 @@ Q.Page {
             icon.height: Styles.iconSize.middle
             icon.color: Q.Theme.primaryColor
             onClicked: root.close()
+            backgroundColor: "transparent"
         }
 
         Text {
@@ -88,13 +89,6 @@ Q.Page {
         color: palette.secondaryHighlightColor
         visible: headerContent ? true : false
         z: root.z + 1
-
-        Rectangle {
-            anchors.bottom: parent.bottom
-            width: parent.width
-            height: 2
-            color: palette.secondaryHighlightColor
-        }
     }
 
     Q.SilicaFlickable {

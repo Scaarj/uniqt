@@ -17,6 +17,7 @@ Page {
         RowLayout {
             politic.fillWidth: true
             politic.preferredHeight: blockHeight
+            spacing: Styles.margins.small
 
             Rectangle { color: "red" }
             Rectangle { color: "green" }
