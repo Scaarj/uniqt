@@ -40,8 +40,8 @@ Rectangle {
             }
 
             icon.source: "qrc:/icons/back_arrow.svg"
-            icon.width: Styles.iconSize.middle
-            icon.height: Styles.iconSize.middle
+            icon.width: root.headerHeight / 2
+            icon.height: root.headerHeight / 2
             padding: 0
             flat: true
 

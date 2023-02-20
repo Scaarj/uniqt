@@ -7,10 +7,8 @@ Q.Label {
     id: label
 
     property alias layout: layoutControl
-    property bool fillWidth: false
     property color backgroundColor: Material.accent
 
-    Layout.fillWidth: fillWidth
     padding: font.pixelSize / 2
     color: Material.background
 

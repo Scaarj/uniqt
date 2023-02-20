@@ -38,8 +38,8 @@ Q.Page {
             }
 
             icon.source: "image://theme/icon-m-back"
-            icon.width: Styles.iconSize.middle
-            icon.height: Styles.iconSize.middle
+            icon.width: root.headerHeight / 2
+            icon.height: root.headerHeight / 2
             icon.color: Q.Theme.primaryColor
             onClicked: root.close()
             backgroundColor: "transparent"

@@ -3,7 +3,6 @@ import uniqt.styles 1.0
 
 Page {
     id: root
-    property int textHeight: 0
 
     headerTitle: "Color Page"
 

@@ -21,6 +21,12 @@ Page {
         }
 
         Button {
+            id: iconSectionBtn
+            text: "Show icon page"
+            onClicked: iconPage.show()
+        }
+
+        Button {
             id: layoutSectionBtn
             text: "Show layout page"
             onClicked: layoutPage.show()

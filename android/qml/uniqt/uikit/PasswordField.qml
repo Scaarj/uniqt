@@ -8,10 +8,8 @@ TextField {
     id: root
 
     property alias layout: layoutControl
-    property bool fillWidth: false
     property bool hidden: !iconArea.pressed
 
-    Layout.fillWidth: fillWidth
     echoMode: hidden ? TextInput.Password : TextInput.Normal
     passwordCharacter: "*"
     passwordMaskDelay: 300

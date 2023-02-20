@@ -6,10 +6,8 @@ Q.Switch {
     id: root
 
     property alias layout: layoutControl
-    property bool fillWidth: false
     property alias description: descriptionLabel.text
 
-    Layout.fillWidth: fillWidth
     bottomPadding: description.length !== 0 ? description.height : 0
 
     Text {

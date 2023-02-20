@@ -9,7 +9,7 @@ QtObject {
     id: root
 
     readonly property bool android: Qt.platform.os === "android"
-    readonly property real ratio: android ? Screen.width / 1080 : Screen.width / (1080 * 5)
+    readonly property real ratio: android ? Screen.devicePixelRatio / 3 : Screen.devicePixelRatio * 1.0
     readonly property int screenHeight: Screen.height
     readonly property int screenWidth: Screen.width
 
@@ -49,44 +49,44 @@ QtObject {
 
     readonly property QtObject margins: QtObject
     {
-        property int xsmall: 5 * ratio
-        property int small: 10 * ratio
-        property int middle: 15 * ratio
-        property int large: 20 * ratio
-        property int xlarge: 30 * ratio
+        property int xsmall: small / 2 * ratio
+        property int small: 8 * ratio
+        property int middle: small * 2 * ratio
+        property int large: small * 4 * ratio
+        property int xlarge: small * 8 * ratio
         property int border: large
     }
 
     readonly property QtObject iconSize: QtObject
     {
-        property int xsmall: 16 * ratio
-        property int small: 32 * ratio
-        property int smiddle: 64 * ratio
-        property int middle: 96 * ratio
-        property int large: 128 * ratio
-        property int xlarge: 192 * ratio
-        property int launcher: large
+        property int ldpi: 36 * ratio
+        property int mdpi: 48 * ratio
+        property int tvdpi: 64 * ratio
+        property int hdpi: 72 * ratio
+        property int xhdpi: 96 * ratio
+        property int xxhdpi: 144 * ratio
+        property int xxxhdpi: 192 * ratio
     }
 
     readonly property QtObject textSize: QtObject
     {
-        property int xsmall: 24 * ratio
-        property int small: 30 * ratio
-        property int smiddle: 36 * ratio
-        property int middle: 48 * ratio
-        property int large: 60 * ratio
-        property int xlarge: 96 * ratio
+        property int xsmall: 12 * ratio
+        property int small: 14 * ratio
+        property int smiddle: 16 * ratio
+        property int middle: 18 * ratio
+        property int large: 22 * ratio
+        property int xlarge: 24 * ratio
     }
 
     readonly property QtObject pageSize: QtObject
     {
-        property int content: 144 * ratio
+        property int content: 48 * ratio
         property int header: content
         property int footer: content
     }
 
     readonly property QtObject control: QtObject
     {
-        property int button: 54
+        property int button: 54 * ratio
     }
 }

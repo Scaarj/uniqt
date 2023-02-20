@@ -7,9 +7,7 @@ Q.TextField {
     id: root
 
     property alias layout: layoutControl
-    property bool fillWidth: false
 
-    Layout.fillWidth: fillWidth
     leftPadding: root.height / 4
     rightPadding: leftPadding
 

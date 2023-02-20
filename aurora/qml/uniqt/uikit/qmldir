@@ -11,6 +11,7 @@ Container 1.0 Container.qml
 CoverPage 1.0 CoverPage.qml
 GridLayout 1.0 GridLayout.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml
+Image 1.0 Image.qml
 Item 1.0 Item.qml
 Label 1.0 Label.qml
 ListModel 1.0 ListModel.qml

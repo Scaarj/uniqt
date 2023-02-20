@@ -8,6 +8,7 @@ QtObject {
 
     readonly property int screenHeight: Screen.height
     readonly property int screenWidth: Screen.width
+    readonly property real iconRatio: 2.25
 
     property var colorModel: [
         ["Theme.primaryColor", Theme.primaryColor],
@@ -52,13 +53,13 @@ QtObject {
 
     readonly property QtObject iconSize: QtObject
     {
-        property int xsmall: Theme.iconSizeExtraSmall
-        property int small: Theme.iconSizeSmall
-        property int smiddle: Theme.iconSizeSmallPlus
-        property int middle: Theme.iconSizeMedium
-        property int large: Theme.iconSizeLarge
-        property int xlarge: Theme.iconSizeExtraLarge
-        property int launcher: Theme.horizontalPageMargin
+        property int ldpi: 36 * iconRatio
+        property int mdpi: 48 * iconRatio
+        property int tvdpi: 64 * iconRatio
+        property int hdpi: 72 * iconRatio
+        property int xhdpi: 96 * iconRatio
+        property int xxhdpi: 144 * iconRatio
+        property int xxxhdpi: 192 * iconRatio
     }
 
     readonly property QtObject textSize: QtObject

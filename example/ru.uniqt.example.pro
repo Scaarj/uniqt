@@ -53,6 +53,7 @@ DISTFILES += \
     $$PWD/qml/ExampleApplication.qml \
     $$PWD/qml/LayoutPage.qml \
     $$PWD/qml/ControlPage.qml \
+    $$PWD/qml/IconPage.qml \
     $$PWD/qml/MainPage.qml \
 
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
