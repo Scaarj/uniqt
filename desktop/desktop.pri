@@ -5,6 +5,7 @@ INCLUDEPATH += \
 
 HEADERS += \
     $$PWD/../src/application.h \
+    $$PWD/../src/enum.h \
 
 SOURCES += \
     $$PWD/../src/application.cpp \

@@ -30,7 +30,7 @@ Page {
                 layout.row: index
                 layout.column: 1
                 width: 100
-                height: Styles.textSize.middle
+                height: Styles.font.size.middle
                 border.width: 1
                 color: modelData[1]
             }

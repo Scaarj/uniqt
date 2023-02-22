@@ -16,25 +16,31 @@ Page {
 
         Button {
             id: colorSectionBtn
-            text: "Show color page"
+            text: "Colors"
             onClicked: colorPage.show()
         }
 
         Button {
+            id: textSectionBtn
+            text: "Fonts"
+            onClicked: fontPage.show()
+        }
+
+        Button {
             id: iconSectionBtn
-            text: "Show icon page"
+            text: "Icons"
             onClicked: iconPage.show()
         }
 
         Button {
             id: layoutSectionBtn
-            text: "Show layout page"
+            text: "Layouts"
             onClicked: layoutPage.show()
         }
 
         Button {
             id: controlSectionBtn
-            text: "Show control page"
+            text: "Controls"
             onClicked: controlPage.show()
         }
     }

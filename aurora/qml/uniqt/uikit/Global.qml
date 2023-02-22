@@ -36,7 +36,7 @@ QtObject {
 
     readonly property QtObject pageSize: QtObject
     {
-        property int header: Theme.fontSizeLarge + Theme.paddingLarge * 2
-        property int footer: Theme.fontSizeLarge + Theme.paddingLarge * 2
+        property int header: Theme.font.sizeLarge + Theme.paddingLarge * 2
+        property int footer: Theme.font.sizeLarge + Theme.paddingLarge * 2
     }
 }

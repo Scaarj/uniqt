@@ -81,7 +81,7 @@ MouseArea {
         Text {
             id: text
             color: Q.Theme.primaryColor
-            font.pixelSize: Q.Theme.fontSizeMedium
+            font.pixelSize: Q.Theme.font.sizeMedium
         }
 
         Item {
@@ -92,7 +92,7 @@ MouseArea {
         Text {
             id: descriptionLabel
             color: Q.Theme.secondaryColor
-            font.pixelSize: Q.Theme.fontSizeTiny
+            font.pixelSize: Q.Theme.font.sizeTiny
             font.italic: true
             visible: descriptionLabel.text.length
         }

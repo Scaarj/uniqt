@@ -62,19 +62,29 @@ QtObject {
         property int xxxhdpi: 192 * iconRatio
     }
 
-    readonly property QtObject textSize: QtObject
-    {
-        property int xsmall: Theme.fontSizeTiny
-        property int small: Theme.fontSizeExtraSmall
-        property int smiddle: Theme.fontSizeSmall
-        property int middle: Theme.fontSizeMedium
-        property int large: Theme.fontSizeLarge
-        property int xlarge: Theme.fontSizeExtraLarge
-    }
+
 
     readonly property QtObject pageSize: QtObject
     {
         property int header: Theme.fontSizeLarge + Theme.paddingLarge * 2
         property int footer: Theme.fontSizeLarge + Theme.paddingLarge * 2
+    }
+
+    readonly property QtObject fonts: QtObject
+    {
+        property font bold: Qt.font({ weight: Font.Bold })
+        property font italic: Qt.font({ italic: true })
+    }
+
+    readonly property QtObject font: QtObject
+    {
+        readonly property QtObject size: QtObject
+        {
+            property int xsmall: Theme.fontSizeExtraSmall
+            property int small: Theme.fontSizeSmall
+            property int middle: Theme.fontSizeMedium
+            property int large: Theme.fontSizeLarge
+            property int xlarge: Theme.fontSizeExtraLarge
+        }
     }
 }

@@ -1,5 +1,7 @@
 #include "application.h"
 
+#include "enum.h"
+
 using namespace uniqt;
 
 Application::Application(int &argc, char **argv)
@@ -7,10 +9,13 @@ Application::Application(int &argc, char **argv)
 {
     application = Aurora::Application::application(argc, argv);
     view = Aurora::Application::createView();
+    EnumRegister::init();
 }
 #else
     : defaultAttributes(), application(argc, argv)
-{}
+{
+    EnumRegister::init();
+}
 #endif
 
 void Application::setOrganizationDomain(const QString& orgDomain)

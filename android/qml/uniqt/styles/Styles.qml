@@ -68,16 +68,6 @@ QtObject {
         property int xxxhdpi: 192 * ratio
     }
 
-    readonly property QtObject textSize: QtObject
-    {
-        property int xsmall: 12 * ratio
-        property int small: 14 * ratio
-        property int smiddle: 16 * ratio
-        property int middle: 18 * ratio
-        property int large: 22 * ratio
-        property int xlarge: 24 * ratio
-    }
-
     readonly property QtObject pageSize: QtObject
     {
         property int content: 64 * ratio
@@ -88,5 +78,17 @@ QtObject {
     readonly property QtObject control: QtObject
     {
         property int button: 54 * ratio
+    }
+
+    readonly property QtObject font: QtObject
+    {
+        readonly property QtObject size: QtObject
+        {
+            property int xsmall: 12 * ratio
+            property int small: 14 * ratio
+            property int middle: 18 * ratio
+            property int large: 22 * ratio
+            property int xlarge: 24 * ratio
+        }
     }
 }

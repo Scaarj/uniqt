@@ -7,6 +7,7 @@ INCLUDEPATH += \
 
 HEADERS += \
     $$PWD/../src/application.h \
+    $$PWD/../src/enum.h \
 
 SOURCES += \
     $$PWD/../src/application.cpp \
@@ -29,6 +30,7 @@ DISTFILES += \
     $$PWD/qml/uikit/ComboBox.qml \
     $$PWD/qml/uikit/Container.qml \
     $$PWD/qml/uikit/CoverPage.qml \
+    $$PWD/qml/uikit/Font.qml \
     $$PWD/qml/uikit/GridLayout.qml \
     $$PWD/qml/uikit/HorizontalSpacer.qml \
     $$PWD/qml/uikit/Image.qml \

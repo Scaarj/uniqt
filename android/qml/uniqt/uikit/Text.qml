@@ -6,7 +6,7 @@ Q.Text {
     property alias layout: layoutControl
 
     color: Material.primaryTextColor
-    font.pixelSize: Styles.textSize.middle
+    font.pixelSize: Styles.font.size.middle
 
     LayoutControl { id: layoutControl }
 }

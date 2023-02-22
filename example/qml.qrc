@@ -6,5 +6,6 @@
         <file>qml/MainPage.qml</file>
         <file>qml/ControlPage.qml</file>
         <file>qml/IconPage.qml</file>
+        <file>qml/FontPage.qml</file>
     </qresource>
 </RCC>
