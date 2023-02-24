@@ -52,6 +52,7 @@ DISTFILES += \
     $$PWD/qml/ColorPage.qml \
     $$PWD/qml/ExampleApplication.qml \
     $$PWD/qml/LayoutPage.qml \
+    $$PWD/qml/ModifierPage.qml \
     $$PWD/qml/ControlPage.qml \
     $$PWD/qml/IconPage.qml \
     $$PWD/qml/MainPage.qml \

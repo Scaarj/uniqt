@@ -13,6 +13,7 @@ GridLayout 1.0 GridLayout.qml
 Font 1.0 Font.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml
 Image 1.0 Image.qml
+ModifierControl 1.0 ModifierControl.qml
 Item 1.0 Item.qml
 Label 1.0 Label.qml
 ListModel 1.0 ListModel.qml

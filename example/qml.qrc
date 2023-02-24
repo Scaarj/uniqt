@@ -7,5 +7,6 @@
         <file>qml/ControlPage.qml</file>
         <file>qml/IconPage.qml</file>
         <file>qml/FontPage.qml</file>
+        <file>qml/ModifierPage.qml</file>
     </qresource>
 </RCC>

@@ -34,6 +34,7 @@ DISTFILES += \
     $$PWD/qml/uikit/GridLayout.qml \
     $$PWD/qml/uikit/HorizontalSpacer.qml \
     $$PWD/qml/uikit/Image.qml \
+    $$PWD/qml/uikit/ModifierControl.qml \
     $$PWD/qml/uikit/Item.qml \
     $$PWD/qml/uikit/Label.qml \
     $$PWD/qml/uikit/LayoutControl.qml \

@@ -24,6 +24,8 @@ ApplicationWindow {
 
     LayoutPage { id: layoutPage }
 
+    ModifierPage { id: modifierPage }
+
     ControlPage { id: controlPage }
 }
 

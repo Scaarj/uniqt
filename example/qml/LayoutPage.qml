@@ -14,6 +14,10 @@ Page {
         width: root.contentMaxWidth
         spacing: Styles.margins.small
 
+        Text {
+            text: "Politic on fillWidth"
+        }
+
         RowLayout {
             politic.fillWidth: true
             politic.preferredHeight: blockHeight
@@ -22,6 +26,10 @@ Page {
             Rectangle { color: "red" }
             Rectangle { color: "green" }
             Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Politic on left alignment"
         }
 
         RowLayout {
@@ -34,6 +42,10 @@ Page {
             Rectangle { color: "blue" }
         }
 
+        Text {
+            text: "Politic on center alignment"
+        }
+
         RowLayout {
             layout.alignment: Qt.AlignHCenter
             politic.preferredWidth: blockWidth
@@ -44,6 +56,10 @@ Page {
             Rectangle { color: "blue" }
         }
 
+        Text {
+            text: "Politic on right alignment"
+        }
+
         RowLayout {
             layout.alignment: Qt.AlignRight
             politic.preferredWidth: blockWidth
@@ -52,6 +68,11 @@ Page {
             Rectangle { color: "red" }
             Rectangle { color: "green" }
             Rectangle { color: "blue" }
+        }
+
+
+        Text {
+            text: "Politic on fillWidth"
         }
 
         ColumnLayout {
@@ -65,6 +86,10 @@ Page {
             Rectangle { color: "blue" }
         }
 
+        Text {
+            text: "Politic on left alignment"
+        }
+
         ColumnLayout {
             layout.alignment: Qt.AlignLeft
             layout.preferredHeight: blockHeight * 3
@@ -75,6 +100,10 @@ Page {
             Rectangle { color: "red" }
             Rectangle { color: "green" }
             Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Politic on center alignment"
         }
 
         ColumnLayout {
@@ -89,6 +118,10 @@ Page {
             Rectangle { color: "blue" }
         }
 
+        Text {
+            text: "Politic on right alignment"
+        }
+
         ColumnLayout {
             layout.alignment: Qt.AlignRight
             layout.preferredHeight: blockHeight * 3
@@ -99,6 +132,10 @@ Page {
             Rectangle { color: "red" }
             Rectangle { color: "green" }
             Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Politic on fillHeight and fillWidth"
         }
 
         GridLayout {
@@ -114,11 +151,15 @@ Page {
             Rectangle { color: "purple" }
         }
 
+        Text {
+            text: "Different layout alignment"
+        }
+
         GridLayout {
             layout.alignment: Qt.AlignHCenter
+            layout.fillWidth: true
             rows: 2
             columns: 2
-            layout.fillWidth: true
             columnSpacing: Styles.margins.small
             rowSpacing: Styles.margins.large
 

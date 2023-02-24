@@ -27,6 +27,7 @@ DISTFILES += \
     $$PWD/../android/qml/uniqt/uikit/CoverPage.qml \
     $$PWD/../android/qml/uniqt/uikit/GridLayout.qml \
     $$PWD/../android/qml/uniqt/uikit/HorizontalSpacer.qml \
+    $$PWD/../android/qml/uniqt/uikit/ModifierControl.qml \
     $$PWD/../android/qml/uniqt/uikit/Image.qml \
     $$PWD/../android/qml/uniqt/uikit/Item.qml \
     $$PWD/../android/qml/uniqt/uikit/Label.qml \

@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 Item {
     id: root
 
+    readonly property int startIndex: 3
     property int alignment: Qt.AlignCenter
     property bool componentCompleted: false
     property bool fillWidth: false
@@ -13,16 +14,16 @@ Item {
 
     function apply() {
         if (fillWidth) {
-            childFillWidth()
+            setChildsFillWidth()
         }
         if (fillHeight) {
-            childFillHeight()
+            setChildsFillHeight()
         }
         if (preferredHeight !== -1) {
-            childPreferedHeight()
+            setChildsPreferedHeight()
         }
         if (preferredWidth !== -1) {
-            childPreferedWidth()
+            setChildsPreferedWidth()
         }
 
         componentCompleted = true
@@ -31,49 +32,49 @@ Item {
     function setChildsAlighment() {
         var childs = root.parent.children
 
-        if (childs.length <= 2) { return }
+        if (childs.length <= startIndex) { return }
 
-        for(var i = 2; i < childs.length; ++i) {
+        for(var i = startIndex; i < childs.length; ++i) {
             childs[i].layout.alignment = alignment
         }
     }
 
-    function childFillHeight() {
+    function setChildsFillHeight() {
         var childs = root.parent.children
 
-        if (childs.length <= 2) { return }
+        if (childs.length <= startIndex) { return }
 
-        for(var i = 2; i < childs.length; ++i) {
+        for(var i = startIndex; i < childs.length; ++i) {
             childs[i].layout.fillHeight = fillHeight
         }
     }
 
-    function childFillWidth() {
+    function setChildsFillWidth() {
         var childs = root.parent.children
 
-        if (childs.length <= 2) { return }
+        if (childs.length <= startIndex) { return }
 
-        for(var i = 2; i < childs.length; ++i) {
+        for(var i = startIndex; i < childs.length; ++i) {
             childs[i].layout.fillWidth = fillWidth
         }
     }
 
-    function childPreferedHeight() {
+    function setChildsPreferedHeight() {
         var childs = root.parent.children
 
-        if (childs.length <= 2 || preferredHeight === -1) { return }
+        if (childs.length <= startIndex || preferredHeight === -1) { return }
 
-        for(var i = 2; i < childs.length; ++i) {
+        for(var i = startIndex; i < childs.length; ++i) {
             childs[i].layout.preferredHeight = preferredHeight
         }
     }
 
-    function childPreferedWidth() {
+    function setChildsPreferedWidth() {
         var childs = root.parent.children
 
-        if (childs.length <= 2 || preferredWidth === -1) { return }
+        if (childs.length <= startIndex || preferredWidth === -1) { return }
 
-        for(var i = 2; i < childs.length; ++i) {
+        for(var i = startIndex; i < childs.length; ++i) {
             childs[i].layout.preferredWidth = preferredWidth
         }
     }
@@ -86,25 +87,25 @@ Item {
 
     onFillHeightChanged: {
         if (componentCompleted) {
-            childFillHeight()
+            setChildsFillHeight()
         }
     }
 
     onFillWidthChanged: {
         if (componentCompleted) {
-            childFillWidth()
+            setChildsFillWidth()
         }
     }
 
     onPreferredHeightChanged: {
         if (componentCompleted) {
-            childPreferedHeight()
+            setChildsPreferedHeight()
         }
     }
 
     onPreferredWidthChanged: {
         if (componentCompleted) {
-            childPreferedWidth()
+            setChildsPreferedWidth()
         }
     }
 }

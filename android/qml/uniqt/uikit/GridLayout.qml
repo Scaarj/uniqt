@@ -3,11 +3,17 @@ import QtQuick.Layouts 1.5 as Q
 
 Q.GridLayout {
     property alias layout: layoutControl
+    property alias modifier: modifierControl
     property alias politic: layoutPolitic
 
     LayoutControl { id: layoutControl }
 
+    ModifierControl { id: modifierControl }
+
     LayoutPolitic { id: layoutPolitic }
 
-    Component.onCompleted: politic.apply()
+    Component.onCompleted: {
+        modifier.apply()
+        politic.apply()
+    }
 }

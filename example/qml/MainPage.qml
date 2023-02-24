@@ -39,6 +39,12 @@ Page {
         }
 
         Button {
+            id: modifierSectionBtn
+            text: "Modifier"
+            onClicked: modifierPage.show()
+        }
+
+        Button {
             id: controlSectionBtn
             text: "Controls"
             onClicked: controlPage.show()
