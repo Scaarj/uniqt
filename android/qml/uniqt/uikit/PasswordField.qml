@@ -10,6 +10,7 @@ TextField {
     property alias layout: layoutControl
     property bool hidden: !iconArea.pressed
 
+    layout.fillWidth: true
     echoMode: hidden ? TextInput.Password : TextInput.Normal
     passwordCharacter: "*"
     passwordMaskDelay: 300

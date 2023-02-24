@@ -8,6 +8,7 @@ Q.TextField {
 
     property alias layout: layoutControl
 
+    layout.fillWidth: true
     leftPadding: root.height / 4
     rightPadding: leftPadding
 

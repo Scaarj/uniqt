@@ -80,6 +80,18 @@ QtObject {
         property int button: 54 * ratio
     }
 
+    readonly property QtObject button: QtObject
+    {
+        readonly property QtObject width: QtObject
+        {
+            readonly property int tiny: android ? screenWidth / 8 : 48
+            readonly property int xsmall: android ? screenWidth / 3 - 4 * margins.small : 96
+            readonly property int small: android ? screenWidth / 2 - 3 * margins.small : 144
+            readonly property int middle: android ? screenWidth - margins.middle : 192
+            readonly property int large: android ? screenWidth - margins.small : 256
+        }
+    }
+
     readonly property QtObject font: QtObject
     {
         readonly property QtObject size: QtObject

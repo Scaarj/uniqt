@@ -45,6 +45,8 @@ Page {
             placeholderText: "TextField2"
         }
 
+        PasswordField {}
+
         RowLayout {
             layout.fillWidth: true
             ComboBox {
