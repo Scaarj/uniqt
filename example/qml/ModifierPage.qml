@@ -51,7 +51,7 @@ Page {
         RowLayout {
             politic.fillWidth: true
             politic.preferredHeight: blockHeight
-            modifier.borderWidth: 2
+            modifier.borderWidth: Styles.margins.small
             modifier.borderColor: "purple"
             spacing: Styles.margins.small
 

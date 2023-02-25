@@ -21,6 +21,12 @@ Page {
         }
 
         Button {
+            id: controlSectionBtn
+            text: "Controls"
+            onClicked: controlPage.show()
+        }
+
+        Button {
             id: textSectionBtn
             text: "Fonts"
             onClicked: fontPage.show()
@@ -42,12 +48,6 @@ Page {
             id: modifierSectionBtn
             text: "Modifier"
             onClicked: modifierPage.show()
-        }
-
-        Button {
-            id: controlSectionBtn
-            text: "Controls"
-            onClicked: controlPage.show()
         }
     }
 }

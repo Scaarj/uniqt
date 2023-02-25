@@ -10,11 +10,11 @@ uniqt - обёртка над Qt (5.15) и Aurora Sdk, для того чтоб�
 ## Версия 1.0
 #### Сделано:
 - Проект настроен на использование в прикладных приложения для Aurora/Android/Desktop через подключение соотвествующего pri файла.
-- Checkbox, ColumnLayout, Combobox, Container, CoverPage, GridLayout, HorizontalSpacer, Item, Label, LayoutControl, LayoutPolitic, ListModel, Page, PasswordField, Rectangle, Repeater, RowLayout, SliderButton, TextField, VerticalSpacer
+- Checkbox, ColumnLayout, Combobox, Container, CoverPage, GridLayout, HorizontalSpacer, Item, Label, LayoutControl, LayoutPolitic, ListModel, Page, PasswordField, Rectangle, Repeater, RowLayout, SliderButton, TextField, VerticalSpacer, Image, Button
 - Пример использования библиотеки и демонстрация компонент.
 
 #### В планах
-- Animation, Button(дополнить), Column, ComboBox(дополнить), DropShadow, Flickable, Grid, GroupButton, Icon, Image, InnerShadow, ListView, Modifiers, MouseArea, NotifiCation, Politics(дополнить), Row, TableView, TreeView
+- Animation, Column, DropShadow, Flickable, Grid, GroupButton, InnerShadow, ListView, Modifiers, MouseArea, Notification, Politics(дополнить), Row, TableView, TreeView
 - Расширить пример для всех компонет
 - Unit-тесты
 

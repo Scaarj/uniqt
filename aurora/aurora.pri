@@ -20,9 +20,8 @@ qml_lib.path = /usr/share/$${TARGET}/uniqt/
 INSTALLS += qml_lib
 
 DISTFILES += \
-    $$PWD/qml/styles/qmldir \
     $$PWD/qml/styles/Styles.qml \
-    $$PWD/qml/uikit/qmldir \
+    $$PWD/qml/styles/qmldir \
     $$PWD/qml/uikit/ApplicationWindow.qml \
     $$PWD/qml/uikit/Button.qml \
     $$PWD/qml/uikit/CheckBox.qml \
@@ -34,12 +33,12 @@ DISTFILES += \
     $$PWD/qml/uikit/GridLayout.qml \
     $$PWD/qml/uikit/HorizontalSpacer.qml \
     $$PWD/qml/uikit/Image.qml \
-    $$PWD/qml/uikit/ModifierControl.qml \
     $$PWD/qml/uikit/Item.qml \
     $$PWD/qml/uikit/Label.qml \
     $$PWD/qml/uikit/LayoutControl.qml \
     $$PWD/qml/uikit/LayoutPolitic.qml \
     $$PWD/qml/uikit/ListModel.qml \
+    $$PWD/qml/uikit/ModifierControl.qml \
     $$PWD/qml/uikit/Page.qml \
     $$PWD/qml/uikit/PasswordField.qml \
     $$PWD/qml/uikit/Rectangle.qml \
@@ -49,5 +48,6 @@ DISTFILES += \
     $$PWD/qml/uikit/Text.qml \
     $$PWD/qml/uikit/TextField.qml \
     $$PWD/qml/uikit/VerticalSpacer.qml \
+    $$PWD/qml/uikit/qmldir \
 
 QML_IMPORT_PATH = $$PWD/qml
