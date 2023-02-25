@@ -5,10 +5,12 @@ module uniqt.uikit
 ApplicationWindow 1.0 ApplicationWindow.qml
 Button 1.0 Button.qml
 CheckBox 1.0 CheckBox.qml
+Column 1.0 Column.qml
 ColumnLayout 1.0 ColumnLayout.qml
 ComboBox 1.0 ComboBox.qml
 Container 1.0 Container.qml
 CoverPage 1.0 CoverPage.qml
+Grid 1.0 Grid.qml
 GridLayout 1.0 GridLayout.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml
 Image 1.0 Image.qml
@@ -20,6 +22,7 @@ Page 1.0 Page.qml
 PasswordField 1.0 PasswordField.qml
 Rectangle 1.0 Rectangle.qml
 Repeater 1.0 Repeater.qml
+Row 1.0 Row.qml
 RowLayout 1.0 RowLayout.qml
 SliderButton 1.0 SliderButton.qml
 Text 1.0 Text.qml

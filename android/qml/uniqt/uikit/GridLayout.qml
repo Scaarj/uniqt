@@ -17,7 +17,10 @@ Q.GridLayout {
 
     LayoutControl { id: layoutControl }
 
-    ModifierControl { id: modifierControl }
+    ModifierControl {
+        id: modifierControl
+        startIndex: 3
+    }
 
     LayoutPolitic { id: layoutPolitic }
 }

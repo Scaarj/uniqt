@@ -49,5 +49,11 @@ Page {
             text: "Modifier"
             onClicked: modifierPage.show()
         }
+
+        Button {
+            id: positionSectionBtn
+            text: "Positions"
+            onClicked: positionPage.show()
+        }
     }
 }

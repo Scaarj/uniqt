@@ -18,6 +18,8 @@ ApplicationWindow {
 
     ColorPage { id: colorPage }
 
+    ControlPage { id: controlPage }
+
     FontPage { id: fontPage }
 
     IconPage { id: iconPage }
@@ -26,6 +28,6 @@ ApplicationWindow {
 
     ModifierPage { id: modifierPage }
 
-    ControlPage { id: controlPage }
+    PositionPage { id: positionPage }
 }
 

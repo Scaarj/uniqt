@@ -57,6 +57,7 @@ DISTFILES += \
     $$PWD/qml/LayoutPage.qml \
     $$PWD/qml/MainPage.qml \
     $$PWD/qml/ModifierPage.qml \
+    $$PWD/qml/PositionPage.qml \
 
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")

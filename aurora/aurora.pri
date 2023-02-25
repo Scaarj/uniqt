@@ -25,11 +25,13 @@ DISTFILES += \
     $$PWD/qml/uikit/ApplicationWindow.qml \
     $$PWD/qml/uikit/Button.qml \
     $$PWD/qml/uikit/CheckBox.qml \
+    $$PWD/qml/uikit/Column.qml \
     $$PWD/qml/uikit/ColumnLayout.qml \
     $$PWD/qml/uikit/ComboBox.qml \
     $$PWD/qml/uikit/Container.qml \
     $$PWD/qml/uikit/CoverPage.qml \
     $$PWD/qml/uikit/Font.qml \
+    $$PWD/qml/uikit/Grid.qml \
     $$PWD/qml/uikit/GridLayout.qml \
     $$PWD/qml/uikit/HorizontalSpacer.qml \
     $$PWD/qml/uikit/Image.qml \
@@ -43,6 +45,7 @@ DISTFILES += \
     $$PWD/qml/uikit/PasswordField.qml \
     $$PWD/qml/uikit/Rectangle.qml \
     $$PWD/qml/uikit/Repeater.qml \
+    $$PWD/qml/uikit/Row.qml \
     $$PWD/qml/uikit/RowLayout.qml \
     $$PWD/qml/uikit/SliderButton.qml \
     $$PWD/qml/uikit/Text.qml \

@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.1
 Item {
     id: root
 
-    readonly property int startIndex: 3
+    property int startIndex: 0
     property int alignment: Qt.AlignCenter
     property bool componentCompleted: false
     property bool fillWidth: false

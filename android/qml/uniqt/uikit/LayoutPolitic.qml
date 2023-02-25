@@ -4,11 +4,11 @@ import QtQuick.Layouts 1.15
 Item {
     id: root
 
-    readonly property int startIndex: 3
-    property int alignment: Qt.AlignCenter
     property bool componentCompleted: false
     property bool fillWidth: false
     property bool fillHeight: false
+    property int startIndex: 0
+    property int alignment: Qt.AlignCenter
     property int preferredHeight: -1
     property int preferredWidth: -1
 
@@ -35,7 +35,9 @@ Item {
         if (childs.length <= startIndex) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.alignment = alignment
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.alignment = alignment
+            }
         }
     }
 
@@ -45,7 +47,9 @@ Item {
         if (childs.length <= startIndex) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.fillHeight = fillHeight
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.fillHeight = fillHeight
+            }
         }
     }
 
@@ -55,7 +59,10 @@ Item {
         if (childs.length <= startIndex) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.fillWidth = fillWidth
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.fillWidth = fillWidth
+
+            }
         }
     }
 
@@ -65,7 +72,9 @@ Item {
         if (childs.length <= startIndex || preferredHeight === -1) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.preferredHeight = preferredHeight
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.preferredHeight = preferredHeight
+            }
         }
     }
 
@@ -75,7 +84,9 @@ Item {
         if (childs.length <= startIndex || preferredWidth === -1) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.preferredWidth = preferredWidth
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.preferredWidth = preferredWidth
+            }
         }
     }
 

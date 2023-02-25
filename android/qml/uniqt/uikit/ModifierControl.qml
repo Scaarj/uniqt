@@ -4,8 +4,8 @@ import QtQuick.Layouts 1.15
 Item {
     id: root
 
-    readonly property int startIndex: 3
     property bool componentCompleted: false
+    property int startIndex: 0
     property var background
     property var borderWidth
     property var borderColor

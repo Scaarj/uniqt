@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.5 as Q
 import uniqt.styles 1.0
 
 Q.ColumnLayout {
+    readonly property int baseChildCount: 3
     property alias layout: layoutControl
     property alias modifier: modifierControl
     property alias politic: layoutPolitic
@@ -16,7 +17,13 @@ Q.ColumnLayout {
 
     LayoutControl { id: layoutControl }
 
-    ModifierControl { id: modifierControl }
+    ModifierControl {
+        id: modifierControl
+        startIndex: baseChildCount
+    }
 
-    LayoutPolitic { id: layoutPolitic }
+    LayoutPolitic {
+        id: layoutPolitic
+        startIndex: baseChildCount
+    }
 }

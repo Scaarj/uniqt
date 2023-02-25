@@ -8,5 +8,6 @@
         <file>qml/IconPage.qml</file>
         <file>qml/FontPage.qml</file>
         <file>qml/ModifierPage.qml</file>
+        <file>qml/PositionPage.qml</file>
     </qresource>
 </RCC>
