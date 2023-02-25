@@ -36,6 +36,60 @@ Page {
             text: "Checkbox"
         }
 
+        Column {
+            Text {
+                text: "Exclusive group button"
+            }
+
+            ButtonGroup {
+                id: exclusiveButtonGroup
+                exclusive: true
+            }
+
+            CheckBox {
+                text: "Checkbox 1"
+                buttonGroup: exclusiveButtonGroup
+                checked: true
+            }
+            CheckBox {
+                text: "Checkbox 2"
+                buttonGroup: exclusiveButtonGroup
+                checked: true
+            }
+            CheckBox {
+                text: "Checkbox 3"
+                buttonGroup: exclusiveButtonGroup
+                checked: true
+            }
+        }
+
+        Column {
+            Text {
+                text: "Unexclusive group button"
+            }
+
+            ButtonGroup {
+                id: unexclusiveButtonGroup
+                exclusive: false
+            }
+
+            CheckBox {
+                text: "Checkbox 1"
+                buttonGroup: unexclusiveButtonGroup
+                checked: true
+            }
+            CheckBox {
+                text: "Checkbox 2"
+                buttonGroup: unexclusiveButtonGroup
+                checked: true
+            }
+            CheckBox {
+                text: "Checkbox 3"
+                buttonGroup: unexclusiveButtonGroup
+                checked: true
+            }
+        }
+
         TextField {
             placeholderText: "TextField1"
         }

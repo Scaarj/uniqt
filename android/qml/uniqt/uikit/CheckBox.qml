@@ -4,6 +4,9 @@ import QtQuick.Layouts 1.15
 
 Q.CheckBox {
     property alias layout: layoutControl
+    property var buttonGroup: Q.ButtonGroup {}
+
+    Q.ButtonGroup.group: buttonGroup
 
     LayoutControl { id: layoutControl }
 }

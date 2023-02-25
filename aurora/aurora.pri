@@ -24,6 +24,7 @@ DISTFILES += \
     $$PWD/qml/styles/qmldir \
     $$PWD/qml/uikit/ApplicationWindow.qml \
     $$PWD/qml/uikit/Button.qml \
+    $$PWD/qml/uikit/ButtonGroup.qml \
     $$PWD/qml/uikit/CheckBox.qml \
     $$PWD/qml/uikit/Column.qml \
     $$PWD/qml/uikit/ColumnLayout.qml \

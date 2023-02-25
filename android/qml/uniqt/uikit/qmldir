@@ -4,6 +4,7 @@ module uniqt.uikit
 # Components
 ApplicationWindow 1.0 ApplicationWindow.qml
 Button 1.0 Button.qml
+ButtonGroup 1.0 ButtonGroup.qml
 CheckBox 1.0 CheckBox.qml
 Column 1.0 Column.qml
 ColumnLayout 1.0 ColumnLayout.qml

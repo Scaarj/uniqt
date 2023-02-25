@@ -12,11 +12,19 @@ MouseArea {
     property bool fillWidth: false
     property bool checked: false
     property real ratio: 1.0
+    property var buttonGroup
+
+    Component.onCompleted: buttonGroup.append(root)
 
     onClicked: {
         if (pressTimer.running) { return }
 
-        root.checked = !root.checked
+        if (buttonGroup) {
+            buttonGroup.checked(root, !root.checked)
+        } else {
+            root.checked = !root.checked
+        }
+
         ratio = 0.8
         pressTimer.restart()
     }
