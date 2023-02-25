@@ -45,7 +45,7 @@ Page {
         }
 
         Text {
-            text: "Modifier on border width and color"
+            text: "Modifier on border"
         }
 
         RowLayout {

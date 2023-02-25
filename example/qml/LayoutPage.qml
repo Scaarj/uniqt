@@ -12,7 +12,6 @@ Page {
     padding: Styles.margins.small
     content: ColumnLayout {
         width: root.contentMaxWidth
-        spacing: Styles.margins.small
 
         Text {
             text: "Politic on fillWidth"
