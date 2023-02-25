@@ -11,11 +11,11 @@ Container 1.0 Container.qml
 CoverPage 1.0 CoverPage.qml
 GridLayout 1.0 GridLayout.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml
-ModifierControl 1.0 ModifierControl.qml
 Image 1.0 Image.qml
 Item 1.0 Item.qml
 Label 1.0 Label.qml
 ListModel 1.0 ListModel.qml
+MouseArea 1.0 MouseArea.qml
 Page 1.0 Page.qml
 PasswordField 1.0 PasswordField.qml
 Rectangle 1.0 Rectangle.qml

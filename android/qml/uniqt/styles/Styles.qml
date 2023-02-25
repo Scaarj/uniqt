@@ -50,7 +50,7 @@ QtObject {
     readonly property QtObject margins: QtObject
     {
         property int xsmall: small / 2 * ratio
-        property int small: 4 * ratio
+        property int small: 6 * ratio
         property int middle: small * 2 * ratio
         property int large: small * 4 * ratio
         property int xlarge: small * 8 * ratio
@@ -70,14 +70,14 @@ QtObject {
 
     readonly property QtObject pageSize: QtObject
     {
-        property int content: 64 * ratio
+        property int content: 52 * ratio
         property int header: content
         property int footer: content
     }
 
     readonly property QtObject control: QtObject
     {
-        property int button: 54 * ratio
+        property int button: android ? 38 * ratio : 42 * ratio
     }
 
     readonly property QtObject button: QtObject
