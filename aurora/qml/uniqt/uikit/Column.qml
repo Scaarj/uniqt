@@ -8,6 +8,8 @@ Q.Column {
 
     spacing: 0
 
+    Q.Component.onCompleted: modifier.apply()
+
     LayoutControl { id: layoutControl }
 
     ModifierControl {

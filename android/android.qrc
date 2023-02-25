@@ -27,5 +27,8 @@
         <file>qml/uniqt/styles/qmldir</file>
         <file>qml/uniqt/styles/Styles.qml</file>
         <file>qml/uniqt/uikit/Image.qml</file>
+        <file>qml/uniqt/uikit/Column.qml</file>
+        <file>qml/uniqt/uikit/Grid.qml</file>
+        <file>qml/uniqt/uikit/Row.qml</file>
     </qresource>
 </RCC>

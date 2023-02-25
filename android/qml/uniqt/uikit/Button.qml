@@ -10,10 +10,10 @@ Q.Button {
     implicitHeight: Styles.control.button
     layout.preferredWidth: text.length === 0 ? Styles.button.width.tiny : Styles.button.width.small
     font: Qt.font({pixelSize: Styles.font.size.middle, capitalization: Font.MixedCase})
-    bottomInset: 0
-    topInset: 0
-    leftInset: 0
-    rightInset: 0
+    bottomInset: 1
+    topInset: 1
+    leftInset: 1
+    rightInset: 1
 
     LayoutControl { id: layoutControl }
 }

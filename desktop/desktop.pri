@@ -20,6 +20,7 @@ DISTFILES += \
     $$PWD/../android/qml/uniqt/uikit/ApplicationWindow.qml \
     $$PWD/../android/qml/uniqt/uikit/Button.qml \
     $$PWD/../android/qml/uniqt/uikit/CheckBox.qml \
+    $$PWD/../android/qml/uniqt/uikit/Column.qml \
     $$PWD/../android/qml/uniqt/uikit/ColumnLayout.qml \
     $$PWD/../android/qml/uniqt/uikit/ComboBox.qml \
     $$PWD/../android/qml/uniqt/uikit/Container.qml \

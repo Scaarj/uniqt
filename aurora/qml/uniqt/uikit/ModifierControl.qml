@@ -4,12 +4,14 @@ import QtQuick.Layouts 1.1
 Item {
     id: root
 
-    property int startIndex: 0
     property bool componentCompleted: false
+    property int startIndex: 0
     property var background
     property var borderWidth
     property var borderColor
     property var color
+    property var childHeight
+    property var childWidth
     property var radius
 
     function apply() {
@@ -27,6 +29,14 @@ Item {
 
         if (color) {
             setChildsColor()
+        }
+
+        if (childHeight) {
+            setChildsHeight()
+        }
+
+        if (childWidth) {
+            setChildsWidth()
         }
 
         if (radius) {
@@ -84,6 +94,30 @@ Item {
         }
     }
 
+    function setChildsHeight() {
+        var childs = root.parent.children
+
+        if (childs.length <= startIndex) { return }
+
+        for(var i = startIndex; i < childs.length; ++i) {
+            if (childs[i].height !== undefined) {
+                childs[i].height = root.childHeight
+            }
+        }
+    }
+
+    function setChildsWidth() {
+        var childs = root.parent.children
+
+        if (childs.length <= startIndex) { return }
+
+        for(var i = startIndex; i < childs.length; ++i) {
+            if (childs[i].width !== undefined) {
+                childs[i].width = root.childWidth
+            }
+        }
+    }
+
     function setChildsRadius() {
         var childs = root.parent.children
 
@@ -117,6 +151,18 @@ Item {
     onColorChanged: {
         if (componentCompleted) {
             setChildsColor()
+        }
+    }
+
+    onChildHeightChanged: {
+        if (componentCompleted) {
+            setChildsHeight()
+        }
+    }
+
+    onChildWidthChanged : {
+        if (componentCompleted) {
+            setChildsWidth()
         }
     }
 

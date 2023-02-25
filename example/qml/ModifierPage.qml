@@ -6,8 +6,7 @@ Page {
 
     headerTitle: "Layout Page"
 
-    property int blockWidth: application.width / 6
-    property int blockHeight: application.height / 12
+    property int blockSize: application.width / 6
 
     padding: Styles.margins.small
     content: ColumnLayout {
@@ -15,13 +14,17 @@ Page {
         spacing: Styles.margins.small
 
         Text {
+            text: "Layouts"
+        }
+
+        Text {
             text: "Modifier on radius"
         }
 
         RowLayout {
             politic.fillWidth: true
-            politic.preferredHeight: blockHeight
-            modifier.radius: blockHeight / 2
+            politic.preferredHeight: blockSize
+            modifier.radius: blockSize / 2
             spacing: Styles.margins.small
 
             Rectangle { color: "red" }
@@ -35,7 +38,7 @@ Page {
 
         RowLayout {
             politic.fillWidth: true
-            politic.preferredHeight: blockHeight
+            politic.preferredHeight: blockSize
             modifier.color: "purple"
             spacing: Styles.margins.small
 
@@ -50,7 +53,7 @@ Page {
 
         RowLayout {
             politic.fillWidth: true
-            politic.preferredHeight: blockHeight
+            politic.preferredHeight: blockSize
             modifier.borderWidth: Styles.margins.small
             modifier.borderColor: "purple"
             spacing: Styles.margins.small
@@ -58,6 +61,103 @@ Page {
             Rectangle { color: "red" }
             Rectangle { color: "green" }
             Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Positions"
+        }
+
+        Text {
+            text: "Row modifier on radius"
+        }
+
+        Row {
+            spacing: Styles.margins.small
+            modifier {
+                radius: blockSize / 2
+                childHeight: blockSize
+                childWidth: blockSize
+            }
+
+            Rectangle { color: "red" }
+            Rectangle { color: "green" }
+            Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Row modifier on color"
+        }
+
+        Row {
+            spacing: Styles.margins.small
+            modifier {
+                color: "purple"
+                childHeight: blockSize
+                childWidth: blockSize
+            }
+
+            Rectangle { color: "red" }
+            Rectangle { color: "green" }
+            Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Row modifier on border"
+        }
+
+        Row {
+            spacing: Styles.margins.small
+            modifier {
+                borderWidth: Styles.margins.small
+                borderColor: "purple"
+                childHeight: blockSize
+                childWidth: blockSize
+            }
+
+            Rectangle { color: "red" }
+            Rectangle { color: "green" }
+            Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Column modifier on border"
+        }
+
+        Column {
+            spacing: Styles.margins.small
+            modifier {
+                radius: blockSize / 2
+                borderWidth: Styles.margins.small
+                borderColor: "purple"
+                childHeight: blockSize
+                childWidth: blockSize
+            }
+
+            Rectangle { color: "red" }
+            Rectangle { color: "green" }
+            Rectangle { color: "blue" }
+        }
+
+        Text {
+            text: "Grid modifier on border"
+        }
+
+        Grid {
+            spacing: Styles.margins.small
+            rows: 2
+            columns: 2
+            modifier {
+                radius: blockSize / 2
+                borderWidth: Styles.margins.small
+                borderColor: "purple"
+                childHeight: blockSize
+                childWidth: blockSize
+            }
+
+            Rectangle { color: "red" }
+            Rectangle { color: "green" }
+            Rectangle { color: "blue" }
+            Rectangle { color: "cyan" }
         }
     }
 }
