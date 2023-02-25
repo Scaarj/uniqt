@@ -14,8 +14,12 @@ Page {
         width: root.contentMaxWidth
         spacing: Styles.margins.small
 
+        Text {
+            text: "Row positions. LayoutDirection Qt.LeftToRight"
+        }
+
         Row {
-            spacing: Styles.margins.small
+            layoutDirection: Qt.LeftToRight
 
             Rectangle {
                 color: "red"
@@ -36,5 +40,87 @@ Page {
             }
         }
 
+        Text {
+            text: "Row positions. LayoutDirection Qt.RightToLeft"
+        }
+
+        Row {
+            layoutDirection: Qt.RightToLeft
+
+            Rectangle {
+                color: "red"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "green"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "blue"
+                height: blockHeight
+                width: blockWidth
+            }
+        }
+
+        Text {
+            text: "Column positions"
+        }
+
+        Column {
+            Rectangle {
+                color: "red"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "green"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "blue"
+                height: blockHeight
+                width: blockWidth
+            }
+        }
+
+        Text {
+            text: "Grid positions"
+        }
+
+        Grid {
+            rows: 2
+            columns: 2
+
+            Rectangle {
+                color: "red"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "green"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "blue"
+                height: blockHeight
+                width: blockWidth
+            }
+
+            Rectangle {
+                color: "purple"
+                height: blockHeight
+                width: blockWidth
+            }
+        }
     }
 }
