@@ -94,6 +94,13 @@ QtObject {
 
     readonly property QtObject font: QtObject
     {
+        readonly property QtObject type: QtObject
+        {
+            property font common: Qt.font({ pixelSize: font.size.middle })
+            property font description: Qt.font({ pixelSize: font.size.small, italic: true })
+            property font header: Qt.font({ pixelSize: font.size.large, weight: Font.Bold })
+        }
+
         readonly property QtObject size: QtObject
         {
             property int xsmall: 12 * ratio

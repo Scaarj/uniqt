@@ -56,7 +56,7 @@ Rectangle {
             }
 
             text: root.headerTitle
-            font.pixelSize: Styles.font.size.large
+            font: Styles.font.type.header
         }
     }
 
