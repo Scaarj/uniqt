@@ -14,7 +14,11 @@ MouseArea {
     property real ratio: 1.0
     property var buttonGroup
 
-    Component.onCompleted: buttonGroup.append(root)
+    Component.onCompleted: {
+        if (buttonGroup) {
+            buttonGroup.append(root)
+        }
+    }
 
     onClicked: {
         if (pressTimer.running) { return }

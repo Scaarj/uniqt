@@ -110,4 +110,16 @@ QtObject {
             property int xlarge: 24 * ratio
         }
     }
+
+    readonly property QtObject shadow: QtObject
+    {
+        readonly property QtObject size: QtObject
+        {
+            property int xsmall: small / 2 * ratio
+            property int small: 8 * ratio
+            property int middle: small * 2 * ratio
+            property int large: small * 4 * ratio
+            property int xlarge: small * 8 * ratio
+        }
+    }
 }

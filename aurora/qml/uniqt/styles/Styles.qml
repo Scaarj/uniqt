@@ -62,8 +62,6 @@ QtObject {
         property int xxxhdpi: 192 * iconRatio
     }
 
-
-
     readonly property QtObject pageSize: QtObject
     {
         property int header: Theme.fontSizeLarge + Theme.paddingLarge * 2
@@ -92,6 +90,18 @@ QtObject {
             property int middle: Theme.fontSizeMedium
             property int large: Theme.fontSizeLarge
             property int xlarge: Theme.fontSizeExtraLarge
+        }
+    }
+
+    readonly property QtObject shadow: QtObject
+    {
+        readonly property QtObject size: QtObject
+        {
+            property int xsmall: small / 2
+            property int small: 10
+            property int middle: small * 2
+            property int large: small * 4
+            property int xlarge: small * 8
         }
     }
 }
