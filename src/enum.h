@@ -33,12 +33,30 @@ namespace uniqt {
         }
     };
 
+    class Animation : public QObject
+    {
+        Q_OBJECT
+
+    public:
+        Animation() : QObject() {}
+        enum Type
+        {
+            Infinite = -1,
+        };
+        Q_ENUM(Type)
+
+        static void declare() {
+            qmlRegisterType<Animation>("uniqt.uikit", VERSION_MAJOR, VERSION_MINOR, "Animation");
+        }
+    };
+
     class EnumRegister
     {
     public:
         static void init()
         {
             Font::declare();
+            Animation::declare();
         }
     };
 }

@@ -2,6 +2,8 @@
 module uniqt.uikit
 
 # Components
+AnchorAnimation 1.0 AnchorAnimation.qml
+AnchorChanges 1.0 AnchorChanges.qml
 ApplicationWindow 1.0 ApplicationWindow.qml
 Button 1.0 Button.qml
 ButtonGroup 1.0 ButtonGroup.qml
@@ -27,10 +29,13 @@ ParallelAnimation 1.0 ParallelAnimation.qml
 PasswordField 1.0 PasswordField.qml
 Rectangle 1.0 Rectangle.qml
 Repeater 1.0 Repeater.qml
+RotationAnimation 1.0 RotationAnimation.qml
 Row 1.0 Row.qml
 RowLayout 1.0 RowLayout.qml
 SequentialAnimation 1.0 SequentialAnimation.qml
 SliderButton 1.0 SliderButton.qml
+State 1.0 State.qml
 Text 1.0 Text.qml
 TextField 1.0 TextField.qml
+Transition 1.0 Transition.qml
 VerticalSpacer 1.0 VerticalSpacer.qml
