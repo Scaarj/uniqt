@@ -11,20 +11,18 @@ that allows it to be used in third-party applications.
 The project has a common structure
 of an application based on C++ and QML for Aurora OS.
 
-* **[ru.auroraos.untitled3.pro](ru.auroraos.untitled3.pro)** file
+* **[ru.uniqt.example.pro](ru.uniqt.example.pro)** file
   describes the project structure for the qmake build system.
 * **[icons](icons)** directory contains application icons for different screen resolutions.
 * **[qml](qml)** directory contains the QML source code and the UI resources.
-  * **[cover](qml/cover)** directory contains the application cover implementations.
-  * **[icons](qml/icons)** directory contains the custom UI icons.
   * **[pages](qml/pages)** directory contains the application pages.
-  * **[untitled3.qml](qml/untitled3.qml)** file
+  * **[example.qml](qml/example.qml)** file
     provides the application window implementation.
 * **[rpm](rpm)** directory contains the rpm-package build settings.
-  **[ru.auroraos.untitled3.spec](rpm/ru.auroraos.untitled3.spec)** file is used by rpmbuild tool.
-  It is generated from **[ru.auroraos.untitled3.yaml](rpm/ru.auroraos.untitled3.yaml)** file.
+  **[ru.uniqt.example.spec](rpm/ru.uniqt.example.spec)** file is used by rpmbuild tool.
+  It is generated from **[ru.uniqt.example.yaml](rpm/ru.uniqt.example.yaml)** file.
 * **[src](src)** directory contains the C++ source code.
   * **[main.cpp](src/main.cpp)** file is the application entry point.
 * **[translations](translations)** directory contains the UI translation files.
-* **[ru.auroraos.untitled3.desktop](ru.auroraos.untitled3.desktop)** file
+* **[ru.uniqt.example.desktop](ru.uniqt.example.desktop)** file
   defines the display and parameters for launching the application.

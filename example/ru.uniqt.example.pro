@@ -53,7 +53,7 @@ DISTFILES += \
     $$PWD/../CODE_OF_CONDUCT.md \
     $$PWD/../LICENSE.md \
     $$PWD/../README.md \
-    $$PWD/qml/ExampleApplication.qml \
+    $$PWD/qml/example.qml \
     $$PWD/qml/MainPage.qml \
     $$PWD/qml/pages/ColorPage.qml \
     $$PWD/qml/pages/ControlPage.qml \

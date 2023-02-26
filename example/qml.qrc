@@ -1,13 +1,13 @@
 <RCC>
     <qresource prefix="/">
-        <file>qml/ExampleApplication.qml</file>
-        <file>qml/MainPage.qml</file>
-        <file>qml/pages/ColorPage.qml</file>
-        <file>qml/pages/ControlPage.qml</file>
-        <file>qml/pages/FontPage.qml</file>
-        <file>qml/pages/IconPage.qml</file>
-        <file>qml/pages/LayoutPage.qml</file>
-        <file>qml/pages/ModifierPage.qml</file>
-        <file>qml/pages/PositionPage.qml</file>
+		<file>qml/MainPage.qml</file>
+		<file>qml/example.qml</file>
+		<file>qml/pages/ColorPage.qml</file>
+		<file>qml/pages/ControlPage.qml</file>
+		<file>qml/pages/FontPage.qml</file>
+		<file>qml/pages/IconPage.qml</file>
+		<file>qml/pages/LayoutPage.qml</file>
+		<file>qml/pages/ModifierPage.qml</file>
+		<file>qml/pages/PositionPage.qml</file>
     </qresource>
 </RCC>
