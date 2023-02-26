@@ -21,12 +21,15 @@ Item 1.0 Item.qml
 Label 1.0 Label.qml
 ListModel 1.0 ListModel.qml
 MouseArea 1.0 MouseArea.qml
+NumberAnimation 1.0 NumberAnimation.qml
 Page 1.0 Page.qml
+ParallelAnimation 1.0 ParallelAnimation.qml
 PasswordField 1.0 PasswordField.qml
 Rectangle 1.0 Rectangle.qml
 Repeater 1.0 Repeater.qml
 Row 1.0 Row.qml
 RowLayout 1.0 RowLayout.qml
+SequentialAnimation 1.0 SequentialAnimation.qml
 SliderButton 1.0 SliderButton.qml
 Text 1.0 Text.qml
 TextField 1.0 TextField.qml

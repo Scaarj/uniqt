@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>qml/MainPage.qml</file>
         <file>qml/example.qml</file>
+        <file>qml/pages/AnimationPage.qml</file>
         <file>qml/pages/ColorPage.qml</file>
         <file>qml/pages/ControlPage.qml</file>
         <file>qml/pages/FontPage.qml</file>

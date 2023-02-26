@@ -55,6 +55,7 @@ DISTFILES += \
     $$PWD/../README.md \
     $$PWD/qml/example.qml \
     $$PWD/qml/MainPage.qml \
+    $$PWD/qml/pages/AnimationPage.qml \
     $$PWD/qml/pages/ColorPage.qml \
     $$PWD/qml/pages/ControlPage.qml \
     $$PWD/qml/pages/FontPage.qml \

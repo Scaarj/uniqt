@@ -24,12 +24,15 @@
         <file>qml/uniqt/uikit/ListModel.qml</file>
         <file>qml/uniqt/uikit/ModifierControl.qml</file>
         <file>qml/uniqt/uikit/MouseArea.qml</file>
+        <file>qml/uniqt/uikit/NumberAnimation.qml</file>
         <file>qml/uniqt/uikit/Page.qml</file>
+        <file>qml/uniqt/uikit/ParallelAnimation.qml</file>
         <file>qml/uniqt/uikit/PasswordField.qml</file>
         <file>qml/uniqt/uikit/Rectangle.qml</file>
         <file>qml/uniqt/uikit/Repeater.qml</file>
         <file>qml/uniqt/uikit/Row.qml</file>
         <file>qml/uniqt/uikit/RowLayout.qml</file>
+        <file>qml/uniqt/uikit/SequentialAnimation.qml</file>
         <file>qml/uniqt/uikit/SliderButton.qml</file>
         <file>qml/uniqt/uikit/Text.qml</file>
         <file>qml/uniqt/uikit/TextField.qml</file>

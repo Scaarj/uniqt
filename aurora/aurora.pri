@@ -42,12 +42,16 @@ DISTFILES += \
     $$PWD/qml/uikit/LayoutPolitic.qml \
     $$PWD/qml/uikit/ListModel.qml \
     $$PWD/qml/uikit/ModifierControl.qml \
+    $$PWD/qml/uikit/MouseArea.qml \
+    $$PWD/qml/uikit/NumberAnimation.qml \
     $$PWD/qml/uikit/Page.qml \
+    $$PWD/qml/uikit/ParallelAnimation.qml \
     $$PWD/qml/uikit/PasswordField.qml \
     $$PWD/qml/uikit/Rectangle.qml \
     $$PWD/qml/uikit/Repeater.qml \
     $$PWD/qml/uikit/Row.qml \
     $$PWD/qml/uikit/RowLayout.qml \
+    $$PWD/qml/uikit/SequentialAnimation.qml \
     $$PWD/qml/uikit/SliderButton.qml \
     $$PWD/qml/uikit/Text.qml \
     $$PWD/qml/uikit/TextField.qml \

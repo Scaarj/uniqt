@@ -7,7 +7,6 @@ import "./../styles"
 CoverBackground {
     objectName: "defaultCover"
 
-
     property alias layout: layoutControl
     property alias icon: coverPlaceholder.icon
     property alias title: coverPlaceholder.text

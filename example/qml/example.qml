@@ -18,6 +18,8 @@ ApplicationWindow {
     }
     allowedOrientations: defaultAllowedOrientations
 
+    AnimationPage { id: animationPage }
+
     ColorPage { id: colorPage }
 
     ControlPage { id: controlPage }
