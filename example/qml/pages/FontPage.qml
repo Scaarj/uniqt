@@ -4,7 +4,7 @@ import uniqt.styles 1.0
 Page {
     id: root
 
-    headerTitle: "Color Page"
+    headerTitle: "Font"
 
     property var fonts: [
         ["xsmall", Qt.font({pixelSize: Styles.font.size.xsmall}) ],

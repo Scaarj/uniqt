@@ -24,6 +24,8 @@ ApplicationWindow {
 
     FontPage { id: fontPage }
 
+    GraphicPage { id: graphicPage }
+
     IconPage { id: iconPage }
 
     LayoutPage { id: layoutPage }

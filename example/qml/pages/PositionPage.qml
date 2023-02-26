@@ -4,7 +4,7 @@ import uniqt.styles 1.0
 Page {
     id: root
 
-    headerTitle: "Layout Page"
+    headerTitle: "Position"
 
     property int blockWidth: application.width / 6
     property int blockHeight: application.height / 12

@@ -4,6 +4,8 @@ import uniqt.styles 1.0
 Page {
     id: root
 
+    property var pages: [colorPage, controlPage, fontPage, graphicPage, iconPage, layoutPage, modifierPage, positionPage]
+
     headerTitle: "UIKit demonstration"
     visibleBack: false
 
@@ -14,46 +16,13 @@ Page {
 
         spacing: Styles.margins.small
 
-        Button {
-            id: colorSectionBtn
-            text: "Colors"
-            onClicked: colorPage.show()
-        }
-
-        Button {
-            id: controlSectionBtn
-            text: "Controls"
-            onClicked: controlPage.show()
-        }
-
-        Button {
-            id: textSectionBtn
-            text: "Fonts"
-            onClicked: fontPage.show()
-        }
-
-        Button {
-            id: iconSectionBtn
-            text: "Icons"
-            onClicked: iconPage.show()
-        }
-
-        Button {
-            id: layoutSectionBtn
-            text: "Layouts"
-            onClicked: layoutPage.show()
-        }
-
-        Button {
-            id: modifierSectionBtn
-            text: "Modifier"
-            onClicked: modifierPage.show()
-        }
-
-        Button {
-            id: positionSectionBtn
-            text: "Positions"
-            onClicked: positionPage.show()
+        Repeater {
+            model: pages
+            Button {
+                text: modelData.headerTitle
+                onClicked: modelData.show()
+                layout.fillWidth: true
+            }
         }
     }
 }

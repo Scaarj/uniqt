@@ -14,7 +14,7 @@ Page {
         ["xxxhdpi", Styles.iconSize.xxxhdpi]
     ]
 
-    headerTitle: "Icon Page"
+    headerTitle: "Icon"
     padding: Styles.margins.small
     content: GridLayout {
         id: gridLayout

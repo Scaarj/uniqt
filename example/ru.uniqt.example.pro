@@ -58,6 +58,7 @@ DISTFILES += \
     $$PWD/qml/pages/ColorPage.qml \
     $$PWD/qml/pages/ControlPage.qml \
     $$PWD/qml/pages/FontPage.qml \
+    $$PWD/qml/pages/GraphicPage.qml \
     $$PWD/qml/pages/IconPage.qml \
     $$PWD/qml/pages/LayoutPage.qml \
     $$PWD/qml/pages/ModifierPage.qml \

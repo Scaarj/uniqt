@@ -4,7 +4,7 @@ import uniqt.styles 1.0
 Page {
     id: root
 
-    headerTitle: "Layout Page"
+    headerTitle: "Control"
 
     padding: Styles.margins.small
     content: ColumnLayout {
