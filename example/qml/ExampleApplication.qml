@@ -1,6 +1,8 @@
 import uniqt.uikit 1.0
 import uniqt.styles 1.0
 
+import "./pages"
+
 ApplicationWindow {
     id: application
     objectName: "applicationWindow"

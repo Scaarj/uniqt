@@ -49,18 +49,19 @@ RESOURCES += \
     $$PWD/icons.qrc \
 
 DISTFILES += \
-    $$PWD/qml/ColorPage.qml \
-    $$PWD/qml/ControlPage.qml \
-    $$PWD/qml/ExampleApplication.qml \
-    $$PWD/qml/FontPage.qml \
-    $$PWD/qml/IconPage.qml \
-    $$PWD/qml/LayoutPage.qml \
-    $$PWD/qml/MainPage.qml \
-    $$PWD/qml/ModifierPage.qml \
     $$PWD/../AUTHORS.md \
     $$PWD/../CODE_OF_CONDUCT.md \
     $$PWD/../LICENSE.md \
     $$PWD/../README.md \
+    $$PWD/qml/ExampleApplication.qml \
+    $$PWD/qml/MainPage.qml \
+    $$PWD/qml/pages/ColorPage.qml \
+    $$PWD/qml/pages/ControlPage.qml \
+    $$PWD/qml/pages/FontPage.qml \
+    $$PWD/qml/pages/IconPage.qml \
+    $$PWD/qml/pages/LayoutPage.qml \
+    $$PWD/qml/pages/ModifierPage.qml \
+    $$PWD/qml/pages/PositionPage.qml \
 
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")
