@@ -195,5 +195,38 @@ Page {
                 }
             }
         }
+
+        Text {
+            text: "Color animation"
+        }
+
+        Text {
+            text: "Click for animation"
+            font: Styles.font.type.description
+        }
+
+        Rectangle {
+            id: rectForColorAnimation
+            layout.alignment: Qt.AlignHCenter
+            height: blockHeight
+            width: height
+            color: "red"
+
+            ColorAnimation on color {
+                id: colorAnimation
+                from: "red"
+                to: "blue"
+                duration: 2000
+                running: false
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    if (colorAnimation.runnning) { return }
+                    colorAnimation.running = true
+                }
+            }
+        }
     }
 }

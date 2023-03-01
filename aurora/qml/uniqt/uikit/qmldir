@@ -5,9 +5,11 @@ module uniqt.uikit
 AnchorAnimation 1.0 AnchorAnimation.qml
 AnchorChanges 1.0 AnchorChanges.qml
 ApplicationWindow 1.0 ApplicationWindow.qml
+Behavior 1.0 Behavior.qml
 Button 1.0 Button.qml
 ButtonGroup 1.0 ButtonGroup.qml
 CheckBox 1.0 CheckBox.qml
+ColorAnimation 1.0 ColorAnimation.qml
 Column 1.0 Column.qml
 ColumnLayout 1.0 ColumnLayout.qml
 ComboBox 1.0 ComboBox.qml
@@ -27,6 +29,7 @@ NumberAnimation 1.0 NumberAnimation.qml
 Page 1.0 Page.qml
 ParallelAnimation 1.0 ParallelAnimation.qml
 PasswordField 1.0 PasswordField.qml
+PropertyChanges 1.0 PropertyChanges.qml
 Rectangle 1.0 Rectangle.qml
 Repeater 1.0 Repeater.qml
 RotationAnimation 1.0 RotationAnimation.qml
