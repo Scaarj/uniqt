@@ -78,8 +78,8 @@ Page {
 
             Rectangle {
                 id: rectForParallelAnimation
-                height: blockWidth
-                width: blockHeight
+                height: blockHeight
+                width: blockWidth
                 x: 0
                 y: 0
                 color: "Blue"
@@ -118,13 +118,18 @@ Page {
         }
 
         Text {
-            text: "Infinite rotation animation. Click for animation"
+            text: "Infinite rotation animation"
+        }
+
+        Text {
+            text: "Click for animation"
+            font: Styles.font.type.description
         }
 
         Rectangle {
             layout.alignment: Qt.AlignHCenter
-            height: blockWidth
-            width: blockHeight
+            height: blockHeight
+            width: height
             color: "green"
             RotationAnimation on rotation {
                 id: rotationAnimation
@@ -142,7 +147,12 @@ Page {
         }
 
         Text {
-            text: "Infinite anchor animation. Click for animation"
+            text: "Infinite anchor animation"
+        }
+
+        Text {
+            text: "Click for animation"
+            font: Styles.font.type.description
         }
 
         Rectangle {
@@ -154,7 +164,7 @@ Page {
             Rectangle {
                 id: rectForAnchorAnimation
                 height: parent.height
-                width: blockWidth
+                width: height
                 color: "purple"
             }
 
