@@ -4,7 +4,8 @@ import uniqt.styles 1.0
 Page {
     id: root
 
-    property var pages: [animationPage, colorPage, controlPage, fontPage, graphicPage, iconPage, layoutPage, modifierPage, positionPage]
+    property var pages: [animationPage, colorPage, controlPage, fontPage, flickablePage,
+        graphicPage, iconPage, layoutPage, modifierPage, positionPage]
 
     headerTitle: "UIKit demonstration"
     visibleBack: false

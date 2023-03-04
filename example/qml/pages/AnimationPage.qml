@@ -216,8 +216,6 @@ Page {
                 id: colorAnimation
                 from: "red"
                 to: "blue"
-                duration: 2000
-                running: false
             }
 
             MouseArea {

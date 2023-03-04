@@ -11,5 +11,6 @@
         <file>qml/pages/LayoutPage.qml</file>
         <file>qml/pages/ModifierPage.qml</file>
         <file>qml/pages/PositionPage.qml</file>
+        <file>qml/pages/FlickablePage.qml</file>
     </qresource>
 </RCC>

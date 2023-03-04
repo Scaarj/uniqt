@@ -1,8 +1,10 @@
 import QtQuick 2.15 as Q
-import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 
-Q.Rectangle {
+Q.ListView {
     property alias layout: layoutControl
+
+    boundsBehavior: Flickable.StopAtBounds
 
     LayoutControl { id: layoutControl }
 }

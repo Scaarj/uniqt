@@ -2,16 +2,21 @@
     <qresource prefix="/">
         <file>qml/uniqt/styles/Styles.qml</file>
         <file>qml/uniqt/styles/qmldir</file>
+        <file>qml/uniqt/uikit/AnchorAnimation.qml</file>
+        <file>qml/uniqt/uikit/AnchorChanges.qml</file>
         <file>qml/uniqt/uikit/ApplicationWindow.qml</file>
+        <file>qml/uniqt/uikit/Behavior.qml</file>
         <file>qml/uniqt/uikit/Button.qml</file>
         <file>qml/uniqt/uikit/ButtonGroup.qml</file>
         <file>qml/uniqt/uikit/CheckBox.qml</file>
+        <file>qml/uniqt/uikit/ColorAnimation.qml</file>
         <file>qml/uniqt/uikit/Column.qml</file>
         <file>qml/uniqt/uikit/ColumnLayout.qml</file>
         <file>qml/uniqt/uikit/ComboBox.qml</file>
         <file>qml/uniqt/uikit/Container.qml</file>
         <file>qml/uniqt/uikit/CoverPage.qml</file>
         <file>qml/uniqt/uikit/DropShadow.qml</file>
+        <file>qml/uniqt/uikit/Flickable.qml</file>
         <file>qml/uniqt/uikit/Grid.qml</file>
         <file>qml/uniqt/uikit/GridLayout.qml</file>
         <file>qml/uniqt/uikit/HorizontalSpacer.qml</file>
@@ -22,6 +27,7 @@
         <file>qml/uniqt/uikit/LayoutControl.qml</file>
         <file>qml/uniqt/uikit/LayoutPolitic.qml</file>
         <file>qml/uniqt/uikit/ListModel.qml</file>
+        <file>qml/uniqt/uikit/ListView.qml</file>
         <file>qml/uniqt/uikit/ModifierControl.qml</file>
         <file>qml/uniqt/uikit/MouseArea.qml</file>
         <file>qml/uniqt/uikit/NumberAnimation.qml</file>
@@ -30,12 +36,15 @@
         <file>qml/uniqt/uikit/PasswordField.qml</file>
         <file>qml/uniqt/uikit/Rectangle.qml</file>
         <file>qml/uniqt/uikit/Repeater.qml</file>
+        <file>qml/uniqt/uikit/RotationAnimation.qml</file>
         <file>qml/uniqt/uikit/Row.qml</file>
         <file>qml/uniqt/uikit/RowLayout.qml</file>
         <file>qml/uniqt/uikit/SequentialAnimation.qml</file>
         <file>qml/uniqt/uikit/SliderButton.qml</file>
+        <file>qml/uniqt/uikit/State.qml</file>
         <file>qml/uniqt/uikit/Text.qml</file>
         <file>qml/uniqt/uikit/TextField.qml</file>
+        <file>qml/uniqt/uikit/Transition.qml</file>
         <file>qml/uniqt/uikit/VerticalSpacer.qml</file>
         <file>qml/uniqt/uikit/icons.qrc</file>
         <file>qml/uniqt/uikit/qmldir</file>
