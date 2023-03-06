@@ -20,6 +20,7 @@ Rectangle {
     property alias footer: footer
     property alias headerBackground: headerBackground
     property alias visibleBack: backButton.visible
+    property int maximumWidth: root.width - leftPadding - rightPadding
     property var footerContent
     property string headerTitle
 

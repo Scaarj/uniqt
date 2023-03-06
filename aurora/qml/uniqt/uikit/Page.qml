@@ -18,6 +18,7 @@ Q.Page {
     property alias content: container.contentItem
     property alias footer: footer
     property alias visibleBack: backButton.visible
+    property int maximumWidth: root.width - leftPadding - rightPadding
     property var footerContent
     property string headerTitle
 
