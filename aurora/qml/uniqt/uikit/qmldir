@@ -17,6 +17,7 @@ Container 1.0 Container.qml
 CoverPage 1.0 CoverPage.qml
 DropShadow 1.0 DropShadow.qml
 Flickable 1.0 Flickable.qml
+FontMetrics 1.0 FontMetrics.qml
 Grid 1.0 Grid.qml
 GridLayout 1.0 GridLayout.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml

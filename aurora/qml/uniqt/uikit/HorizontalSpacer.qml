@@ -1,10 +1,10 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 
-Item {    
+Item {
     property alias layout: layoutControl
 
-    layout.fillWidth: true
+    Component.onCompleted: Layout.fillWidth = true
 
     LayoutControl { id: layoutControl }
 }

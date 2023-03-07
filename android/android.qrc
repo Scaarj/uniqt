@@ -17,6 +17,7 @@
         <file>qml/uniqt/uikit/CoverPage.qml</file>
         <file>qml/uniqt/uikit/DropShadow.qml</file>
         <file>qml/uniqt/uikit/Flickable.qml</file>
+        <file>qml/uniqt/uikit/FontMetrics.qml</file>
         <file>qml/uniqt/uikit/Grid.qml</file>
         <file>qml/uniqt/uikit/GridLayout.qml</file>
         <file>qml/uniqt/uikit/HorizontalSpacer.qml</file>
