@@ -20,6 +20,7 @@ Flickable 1.0 Flickable.qml
 FontMetrics 1.0 FontMetrics.qml
 Grid 1.0 Grid.qml
 GridLayout 1.0 GridLayout.qml
+HorizontalDivider 1.0 HorizontalDivider.qml
 HorizontalSpacer 1.0 HorizontalSpacer.qml
 Image 1.0 Image.qml
 InnerShadow 1.0 InnerShadow.qml

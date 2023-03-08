@@ -7,10 +7,10 @@ Q.Button {
 
     property alias layout: layoutControl
 
-    property color bgColor: palette.primaryColor
-    color: Qt.darker(bgColor, 10)
-    highlightBackgroundColor: Qt.darker(bgColor, 20)
-    highlightColor: Qt.darker(bgColor, 10)
+    property var bgColor: undefined
+    color: bgColor ? Qt.darker(bgColor, 10) : palette.primaryColor
+    highlightBackgroundColor: bgColor ? Qt.darker(bgColor, 20) : Q.Theme.rgba(palette.highlightBackgroundColor, Q.Theme.opacityFaint)
+    highlightColor: bgColor ? Qt.darker(bgColor, 10) : palette.highlightColor
 
     icon.height: root.height / 2
     icon.width: icon.height

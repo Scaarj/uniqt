@@ -20,6 +20,7 @@
         <file>qml/uniqt/uikit/FontMetrics.qml</file>
         <file>qml/uniqt/uikit/Grid.qml</file>
         <file>qml/uniqt/uikit/GridLayout.qml</file>
+        <file>qml/uniqt/uikit/HorizontalDivider.qml</file>
         <file>qml/uniqt/uikit/HorizontalSpacer.qml</file>
         <file>qml/uniqt/uikit/Image.qml</file>
         <file>qml/uniqt/uikit/InnerShadow.qml</file>
