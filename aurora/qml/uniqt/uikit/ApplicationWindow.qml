@@ -4,8 +4,10 @@ import uniqt.styles 1.0
 
 Q.ApplicationWindow {
     id: root
+
     property alias layout: layoutControl
     property alias coverPage: root.cover
+
     height: Styles.screenHeight
     width: Styles.screenWidth
 

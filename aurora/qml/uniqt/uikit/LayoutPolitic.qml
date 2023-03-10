@@ -79,43 +79,33 @@ Item {
         }
     }
 
-//    onAlignmentChanged: {
-//        if (componentCompleted) {
-//            setChildsAlighment()
-//        }
-//    }
+    onAlignmentChanged: {
+        if (componentCompleted) {
+            setChildsAlighment()
+        }
+    }
 
-//    onFillHeightChanged: {
-//        if (componentCompleted) {
-//            childFillHeight()
-//        }
-//    }
+    onFillHeightChanged: {
+        if (componentCompleted) {
+            childFillHeight()
+        }
+    }
 
-//    onFillWidthChanged: {
-//        if (componentCompleted) {
-//            childFillWidth()
-//        }
-//    }
+    onFillWidthChanged: {
+        if (componentCompleted) {
+            childFillWidth()
+        }
+    }
 
-//    onPreferredHeightChanged: {
-//        if (componentCompleted) {
-//            childPreferedHeight()
-//        }
-//    }
+    onPreferredHeightChanged: {
+        if (componentCompleted) {
+            childPreferedHeight()
+        }
+    }
 
-//    onPreferredWidthChanged: {
-//        if (componentCompleted) {
-//            childPreferedWidth()
-//        }
-//    }
-
-    onAlignmentChanged: setChildsAlighment()
-
-    onFillHeightChanged: childFillHeight()
-
-    onFillWidthChanged: childFillWidth()
-
-    onPreferredHeightChanged:  childPreferedHeight()
-
-    onPreferredWidthChanged: childPreferedWidth()
+    onPreferredWidthChanged: {
+        if (componentCompleted) {
+            childPreferedWidth()
+        }
+    }
 }

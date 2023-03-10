@@ -65,6 +65,7 @@ DISTFILES += \
     $$PWD/qml/pages/LayoutPage.qml \
     $$PWD/qml/pages/ModifierPage.qml \
     $$PWD/qml/pages/PositionPage.qml \
+    ../aurora/qml/uniqt/uikit/ToolTip.qml
 
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")

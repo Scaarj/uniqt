@@ -50,5 +50,7 @@
         <file>qml/uniqt/uikit/VerticalSpacer.qml</file>
         <file>qml/uniqt/uikit/icons.qrc</file>
         <file>qml/uniqt/uikit/qmldir</file>
+        <file>qml/uniqt/uikit/Pane.qml</file>
+        <file>qml/uniqt/uikit/ToolTip.qml</file>
     </qresource>
 </RCC>
