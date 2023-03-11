@@ -19,12 +19,12 @@ Pane {
     contentItem: Q.Label {
         id: contentLabel
         horizontalAlignment: Qt.AlignHCenter
-        verticalAlignment:   Qt.AlignVCenter
-        padding:       0
-        leftPadding:  backgroundRect.radius
+        verticalAlignment: Qt.AlignVCenter
+        padding: 0
+        leftPadding: backgroundRect.radius
         rightPadding: leftPadding
 
-        width: Math.min(implicitWidth, maxWidth)
+        width: Math.min(fontMetrics.advanceWidth(text) + leftPadding + rightPadding, maxWidth)
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
         font: Styles.font.type.toolTip
         text: root.text
@@ -36,5 +36,10 @@ Pane {
         radius: Styles.margins.small
         color: Q.Theme.overlayBackgroundColor
         border.color: Q.Theme.overlayBackgroundColor
+    }
+
+    FontMetrics {
+        id: fontMetrics
+        font: contentLabel.font
     }
 }

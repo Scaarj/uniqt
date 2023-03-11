@@ -25,8 +25,8 @@ Pane {
         leftPadding:  backgroundRect.radius
         rightPadding: leftPadding
 
-        width: Math.min(implicitWidth, maxWidth)
-        wrapMode: Text.WrapAnywhere
+        width: Math.min(fontMetrics.advanceWidth(text) + leftPadding + rightPadding, maxWidth)
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
         font: Styles.font.type.toolTip
         text: root.text
     }
@@ -37,5 +37,10 @@ Pane {
         radius: Styles.margins.small
         color: Material.backgroundColor
         border.color: Material.backgroundColor
+    }
+
+    FontMetrics {
+        id: fontMetrics
+        font: contentLabel.font
     }
 }
