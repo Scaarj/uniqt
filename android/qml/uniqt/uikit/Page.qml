@@ -113,6 +113,7 @@ Rectangle {
 
         Container {
             id: container
+            padding: Styles.margins.middle
         }
     }
 

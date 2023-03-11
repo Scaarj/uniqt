@@ -105,6 +105,7 @@ Q.Page {
 
         Container {
             id: container
+            padding: Styles.margins.middle
         }
     }
 
