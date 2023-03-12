@@ -1,16 +1,14 @@
-import QtQuick 2.15
 import QtQuick.Controls 2.15 as Q
-import QtQuick.Layouts 1.15
-import QtQuick.Controls.Material 2.15
+import uniqt.styles 1.0
 
 Q.Label {
     id: label
 
     property alias layout: layoutControl
-    property color backgroundColor: Material.accent
+    property color backgroundColor: Styles.colors.secondaryHighlight
 
     padding: font.pixelSize / 2
-    color: Material.background
+    color: Styles.colors.background
 
     background: Rectangle {
         color: backgroundColor

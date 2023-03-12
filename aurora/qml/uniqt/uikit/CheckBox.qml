@@ -58,10 +58,10 @@ MouseArea {
     Row {
         id: row
         anchors.centerIn: root
-        topPadding: Q.Theme.paddingMedium
+        topPadding: Styles.margins.middle
         bottomPadding: topPadding
         leftPadding: topPadding
-        spacing: Q.Theme.paddingMedium
+        spacing: Styles.margins.middle
 
         Item {
             width: 40

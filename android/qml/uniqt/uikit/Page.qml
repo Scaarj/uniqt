@@ -1,7 +1,4 @@
-import QtQuick 2.15
 import QtQuick.Controls 2.15 as Q
-import QtQuick.Layouts 1.15
-import QtQuick.Controls.Material 2.15
 
 import uniqt.styles 1.0
 
@@ -96,7 +93,7 @@ Rectangle {
         anchors.fill: header
         visible: headerContent ? headerContent.visible : false
         z: root.z + 1
-        color: Qt.lighter(Material.accentColor, 1.8)
+        color: Qt.lighter(Styles.colors.secondaryHighlight, 1.8)
     }
 
     Flickable {
@@ -131,14 +128,12 @@ Rectangle {
 
     Rectangle {
         anchors.fill: footer
-        color: Material.backgroundColor
+        color: Styles.colors.background
         visible: footerContent ? true : false
 
-        Rectangle {
+        HorizontalDivider {
             anchors.top: parent.top
             width: parent.width
-            height: 2
-            color: Material.backgroundDimColor
         }
     }
 

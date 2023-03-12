@@ -1,7 +1,4 @@
 import QtQuick 2.6
-import QtQuick.Window 2.0
-import Sailfish.Silica 1.0 as Q
-import QtGraphicalEffects 1.0
 import uniqt.styles 1.0
 
 MouseArea {

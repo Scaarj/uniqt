@@ -99,6 +99,7 @@ QtObject {
         readonly property QtObject type: QtObject
         {
             property font common: Qt.font({ pixelSize: font.size.middle })
+            property font control: Qt.font({ pixelSize: font.size.middle, capitalization: Font.MixedCase })
             property font toolTip: Qt.font({ pixelSize: font.size.xsmall })
             property font description: Qt.font({ pixelSize: font.size.small, italic: true })
             property font header: Qt.font({ pixelSize: font.size.large, weight: Font.Bold })

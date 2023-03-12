@@ -1,6 +1,6 @@
-import QtQuick 2.15
+import QtQuick 2.15 as Q
 
-Image {
+Q.Image {
     property alias layout: layoutControl
 
     LayoutControl { id: layoutControl }
