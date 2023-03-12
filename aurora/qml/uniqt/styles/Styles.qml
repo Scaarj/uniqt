@@ -49,8 +49,8 @@ QtObject {
         property color primary: Theme.primaryColor
         property color secondary: Theme.secondaryColor
         property color error: Theme.errorColor
-        property color primaryHighlight: Theme.highlightColor
-        property color secondaryHighlight: Theme.secondaryHighlightColor
+        property color primaryHighlight: Theme.secondaryHighlightColor
+        property color secondaryHighlight: Theme.highlightColor
         property color darkerHighlight: Theme.highlightDimmerColor
     }
 

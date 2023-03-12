@@ -42,6 +42,10 @@ Rectangle {
             icon.height: root.headerHeight / 2
             padding: 0
             flat: true
+            background: Rectangle {
+                color: backButton.pressed ? Qt.rgba(0,0,0,0.2) : backButton.hovered ? Qt.rgba(0,0,0,0.1) : headerBackground.color
+                radius: Styles.margins.small
+            }
 
             onClicked: root.close()
             width: height
