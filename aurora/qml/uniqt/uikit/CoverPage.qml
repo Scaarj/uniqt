@@ -1,6 +1,7 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import QtGraphicalEffects 1.0
+import uniqt.styles 1.0
 
 import "./../styles"
 
@@ -20,7 +21,7 @@ CoverBackground {
             id: colorOverlay
             anchors.fill: coverPlaceholder
             source: coverPlaceholder
-            color: Theme.highlightColor
+            color: Styles.colors.primaryHighlight
         }
     }
 

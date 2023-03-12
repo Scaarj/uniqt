@@ -14,31 +14,52 @@ QtObject {
     readonly property int screenWidth: Screen.width
 
     property var colorModel: [
-        ["accentColor", Material.accentColor],
-        ["backgroundColor", Material.backgroundColor],
-        ["backgroundDimColor", Material.backgroundDimColor],
-        ["buttonColor", Material.buttonColor],
-        ["buttonDisabledColor", Material.buttonDisabledColor],
-        ["dialogColor", Material.dialogColor],
-        ["dividerColor", Material.dividerColor],
-        ["dropShadowColor", Material.dropShadowColor],
-        ["frameColor", Material.frameColor],
-        ["highlightedButtonColor", Material.highlightedButtonColor],
-        ["highlightedRippleColor", Material.highlightedRippleColor],
-        ["hintTextColor", Material.hintTextColor],
-        ["iconColor", Material.iconColor],
-        ["iconDisabledColor", Material.iconDisabledColor],
-        ["listHighlightColor", Material.listHighlightColor],
-        ["primaryColor", Material.primaryColor],
-        ["primaryHighlightedTextColor", Material.primaryHighlightedTextColor],
-        ["primaryTextColor", Material.primaryTextColor],
-        ["rippleColor", Material.rippleColor],
-        ["scrollBarColor", Material.scrollBarColor],
-        ["scrollBarHoveredColor", Material.scrollBarHoveredColor],
-        ["scrollBarPressedColor", Material.scrollBarPressedColor],
-        ["secondaryTextColor", Material.secondaryTextColor],
-        ["spinBoxDisabledIconColor", Material.spinBoxDisabledIconColor]
+        ["background", colors.background],
+        ["backgroundHighlight", colors.backgroundHighlight],
+        ["primaryColor", colors.primaryColor],
+        ["secondaryColor", colors.secondaryColor],
+        ["error", colors.error],
+        ["primaryHighlight", colors.primaryHighlight],
+        ["secondaryHighlight", colors.darkerHighlight],
+        ["darkerHighlight", colors.secondaryHighlight],
+// NOTE: not used platform depended colors
+//        ["accentColor", Material.accentColor],
+//        ["backgroundColor", Material.backgroundColor],
+//        ["backgroundDimColor", Material.backgroundDimColor],
+//        ["buttonColor", Material.buttonColor],
+//        ["buttonDisabledColor", Material.buttonDisabledColor],
+//        ["dialogColor", Material.dialogColor],
+//        ["dividerColor", Material.dividerColor],
+//        ["dropShadowColor", Material.dropShadowColor],
+//        ["frameColor", Material.frameColor],
+//        ["highlightedButtonColor", Material.highlightedButtonColor],
+//        ["highlightedRippleColor", Material.highlightedRippleColor],
+//        ["hintTextColor", Material.hintTextColor],
+//        ["iconColor", Material.iconColor],
+//        ["iconDisabledColor", Material.iconDisabledColor],
+//        ["listHighlightColor", Material.listHighlightColor],
+//        ["primaryColor", Material.primaryColor],
+//        ["primaryHighlightedTextColor", Material.primaryHighlightedTextColor],
+//        ["primaryTextColor", Material.primaryTextColor],
+//        ["rippleColor", Material.rippleColor],
+//        ["scrollBarColor", Material.scrollBarColor],
+//        ["scrollBarHoveredColor", Material.scrollBarHoveredColor],
+//        ["scrollBarPressedColor", Material.scrollBarPressedColor],
+//        ["secondaryTextColor", Material.secondaryTextColor],
+//        ["spinBoxDisabledIconColor", Material.spinBoxDisabledIconColor]
     ]
+
+    readonly property QtObject colors: QtObject
+    {
+        property color background: Material.backgroundColor
+        property color backgroundHighlight: Material.backgroundDimColor
+        property color primaryColor: Material.primaryTextColor
+        property color secondaryColor: Material.secondaryTextColor
+        property color error: "red"
+        property color primaryHighlight: Material.highlightedRippleColor
+        property color secondaryHighlight: Material.accentColor
+        property color darkerHighlight: Material.primaryColor
+    }
 
     readonly property QtObject orientation: QtObject
     {

@@ -1,11 +1,10 @@
 import QtQuick 2.6 as Q
-import Sailfish.Silica 1.0
-import QtQuick.Layouts 1.1
+import uniqt.styles 1.0
 
 Q.Text {
     property alias layout: layoutControl
 
-    color: Theme.primaryColor
+    color: Styles.colors.primary
 
     LayoutControl { id: layoutControl }
 }

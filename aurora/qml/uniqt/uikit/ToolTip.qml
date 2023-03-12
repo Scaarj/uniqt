@@ -1,5 +1,4 @@
 import QtQuick 2.6
-import QtGraphicalEffects 1.0
 import Sailfish.Silica 1.0 as Q
 import uniqt.styles 1.0
 
@@ -34,8 +33,8 @@ Pane {
         id: backgroundRect
         anchors.fill: parent
         radius: Styles.margins.small
-        color: Q.Theme.overlayBackgroundColor
-        border.color: Q.Theme.overlayBackgroundColor
+        color: Styles.colors.background
+        border.color: Qt.darker(Styles.colors.background, 2)
     }
 
     FontMetrics {

@@ -1,6 +1,7 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0 as Q
 import QtQuick.Layouts 1.1
+import uniqt.styles 1.0
 
 import "." as Base
 
@@ -47,7 +48,7 @@ MouseArea {
         },
         State {
             name: "checked"
-            PropertyChanges { target: checkBox; color: Q.Theme.highlightColor; border.width: 0 }
+            PropertyChanges { target: checkBox; color: Styles.colors.primaryHighlight; border.width: 0 }
             PropertyChanges { target: leftMark; visible: true }
             PropertyChanges { target: rightMark; visible: true }
         }
@@ -76,7 +77,7 @@ MouseArea {
                 radius: width / 10
                 border {
                     width: checkBox.width / 10
-                    color: Q.Theme.secondaryColor
+                    color: Styles.colors.secondary
                 }
 
                 Behavior on width { PropertyAnimation { easing.type: Easing.Linear } }
@@ -88,7 +89,7 @@ MouseArea {
                     height: checkBox.width / 2.7
                     x: checkBox.width * 0.5
                     y: checkBox.height * 0.7
-                    color: palette.overlayBackgroundColor
+                    color: Styles.colors.background
                     transform: Rotation { origin.x: 0; origin.y: 0; angle: 135 }
                 }
 
@@ -98,7 +99,7 @@ MouseArea {
                     height: checkBox.width / 1.8
                     x: checkBox.width * 0.5
                     y: checkBox.height * 0.7
-                    color: palette.overlayBackgroundColor
+                    color: Styles.colors.background
                     transform: Rotation { origin.x: 0; origin.y: 0; angle: -135 }
                 }
             }

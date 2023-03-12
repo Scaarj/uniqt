@@ -1,7 +1,9 @@
 import QtQuick 2.6
 import QtQuick.Window 2.0
 import Sailfish.Silica 1.0 as Q
+import uniqt.styles 1.0
 
+import "." as Base
 import "../styles"
 
 Q.Page {
@@ -41,12 +43,12 @@ Q.Page {
             icon.source: "image://theme/icon-m-back"
             icon.width: root.headerHeight / 2
             icon.height: root.headerHeight / 2
-            icon.color: Q.Theme.primaryColor
+            icon.color: Styles.colors.primary
             onClicked: root.close()
             backgroundColor: "transparent"
         }
 
-        Text {
+        Base.Text {
             anchors {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
@@ -87,7 +89,7 @@ Q.Page {
     Rectangle {
         id: headerBackground
         anchors.fill: header
-        color: palette.secondaryHighlightColor
+        color: Styles.colors.darkerHighlight
         visible: headerContent ? true : false
         z: root.z + 1
     }
@@ -121,14 +123,13 @@ Q.Page {
 
     Rectangle {
         anchors.fill: footer
-        color: Q.Theme.overlayBackgroundColor
+        color: Styles.colors.background
         visible: footerContent ? true : false
 
-        Rectangle {
-            anchors.top: parent.top
+        HorizontalDivider {
+            anchors.top: { left: parent.left; parent.top }
             width: parent.width
-            height: 2
-            color: Q.Theme.lightSecondaryColor
+
         }
     }
 

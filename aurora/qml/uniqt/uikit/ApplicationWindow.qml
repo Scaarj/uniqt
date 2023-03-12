@@ -7,6 +7,7 @@ Q.ApplicationWindow {
 
     property alias layout: layoutControl
     property alias coverPage: root.cover
+    property bool noAnimation: true
 
     height: Styles.screenHeight
     width: Styles.screenWidth
@@ -14,11 +15,17 @@ Q.ApplicationWindow {
     function push(item)
     {
         pageStack.push(item)
+        if (noAnimation) {
+            pageStack.completeAnimation()
+        }
     }
 
     function pop()
     {
         pageStack.pop()
+        if (noAnimation) {
+            pageStack.completeAnimation()
+        }
     }
 
     LayoutControl { id: layoutControl }

@@ -90,6 +90,10 @@ Page {
             }
         }
 
+        SliderButton {
+            text: "Slidder button"
+        }
+
         TextField {
             placeholderText: "TextField1"
         }

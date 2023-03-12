@@ -11,19 +11,27 @@ QtObject {
     readonly property real iconRatio: 2.25
 
     property var colorModel: [
-        ["Theme.primaryColor", Theme.primaryColor],
-        ["Theme.secondaryColor", Theme.secondaryColor],
-        ["Theme.highlightColor", Theme.highlightColor],
-        ["Theme.secondaryHighlightColor", Theme.secondaryHighlightColor],
-        ["Theme.highlightDimmerColor", Theme.highlightDimmerColor],
-        ["Theme.lightPrimaryColor", Theme.lightPrimaryColor],
-        ["Theme.lightSecondaryColor", Theme.lightSecondaryColor],
-        ["Theme.darkPrimaryColor", Theme.darkPrimaryColor],
-        ["Theme.darkSecondaryColor", Theme.darkSecondaryColor],
-        ["Theme.highlightBackgroundColor", Theme.highlightBackgroundColor],
-        ["Theme.overlayBackgroundColor", Theme.overlayBackgroundColor],
-        ["Theme.errorColor", Theme.errorColor]
-// TODO: try to use later
+        ["background", colors.background],
+        ["backgroundHighlight", colors.backgroundHighlight],
+        ["primary", colors.primary],
+        ["secondary", colors.secondary],
+        ["error", colors.error],
+        ["primaryHighlight", colors.primaryHighlight],
+        ["secondaryHighlight", colors.secondaryHighlight],
+        ["darkerHighlight", colors.darkerHighlight],
+// NOTE: not used platform depended colors
+//        ["Theme.primaryColor", Theme.primaryColor],
+//        ["Theme.secondaryColor", Theme.secondaryColor],
+//        ["Theme.highlightColor", Theme.highlightColor],
+//        ["Theme.secondaryHighlightColor", Theme.secondaryHighlightColor],
+//        ["Theme.highlightDimmerColor", Theme.highlightDimmerColor],
+//        ["Theme.lightPrimaryColor", Theme.lightPrimaryColor],
+//        ["Theme.lightSecondaryColor", Theme.lightSecondaryColor],
+//        ["Theme.darkPrimaryColor", Theme.darkPrimaryColor],
+//        ["Theme.darkSecondaryColor", Theme.darkSecondaryColor],
+//        ["Theme.highlightBackgroundColor", Theme.highlightBackgroundColor],
+//        ["Theme.overlayBackgroundColor", Theme.overlayBackgroundColor],
+//        ["Theme.errorColor", Theme.errorColor],
 //        ["palete.primaryColor", palette.primaryColor],
 //        ["palete.secondaryColor", palette.secondaryColor],
 //        ["palete.secondaryHighlightColor", palette.secondaryHighlightColor],
@@ -33,6 +41,18 @@ QtObject {
 //        ["palete.overlayBackgroundColor", palette.overlayBackgroundColor],
 //        ["palete.errorColor", palette.errorColor]
     ]
+
+    readonly property QtObject colors: QtObject
+    {
+        property color background: Theme.overlayBackgroundColor
+        property color backgroundHighlight: Theme.highlightBackgroundColor
+        property color primary: Theme.primaryColor
+        property color secondary: Theme.secondaryColor
+        property color error: Theme.errorColor
+        property color primaryHighlight: Theme.highlightColor
+        property color secondaryHighlight: Theme.secondaryHighlightColor
+        property color darkerHighlight: Theme.highlightDimmerColor
+    }
 
     readonly property QtObject orientation: QtObject
     {

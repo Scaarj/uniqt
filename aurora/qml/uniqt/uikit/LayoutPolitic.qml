@@ -35,7 +35,9 @@ Item {
         if (childs.length <= startIndex) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.alignment = alignment
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.alignment = alignment
+            }
         }
     }
 
@@ -45,7 +47,9 @@ Item {
         if (childs.length <= startIndex) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.fillHeight = fillHeight
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.fillHeight = fillHeight
+            }
         }
     }
 
@@ -55,7 +59,9 @@ Item {
         if (childs.length <= startIndex) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.fillWidth = fillWidth
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.fillWidth = fillWidth
+            }
         }
     }
 
@@ -65,7 +71,9 @@ Item {
         if (childs.length <= startIndex || preferredHeight === -1) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.preferredHeight = preferredHeight
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.preferredHeight = preferredHeight
+            }
         }
     }
 
@@ -75,7 +83,9 @@ Item {
         if (childs.length <= startIndex || preferredWidth === -1) { return }
 
         for(var i = startIndex; i < childs.length; ++i) {
-            childs[i].layout.preferredWidth = preferredWidth
+            if (childs[i].layout !== undefined) {
+                childs[i].layout.preferredWidth = preferredWidth
+            }
         }
     }
 
