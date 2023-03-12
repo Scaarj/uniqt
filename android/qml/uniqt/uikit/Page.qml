@@ -1,3 +1,4 @@
+import QtQuick 2.15
 import QtQuick.Controls 2.15 as Q
 
 import uniqt.styles 1.0
@@ -81,6 +82,17 @@ Rectangle {
 
     visible: false
 
+    Rectangle {
+        id: background
+        anchors.fill: parent
+        color: Styles.colors.background
+
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: Qt.lighter(background.color, 1.2) }
+            GradientStop { position: 1.0; color: background.color }
+        }
+    }
+
     Item {
         id: header
         height: root.headerHeight
@@ -97,7 +109,7 @@ Rectangle {
         anchors.fill: header
         visible: headerContent ? headerContent.visible : false
         z: root.z + 1
-        color: Qt.lighter(Styles.colors.secondaryHighlight, 1.8)
+        color: Styles.colors.primaryHighlight
     }
 
     Flickable {

@@ -51,14 +51,14 @@ QtObject {
 
     readonly property QtObject colors: QtObject
     {
-        property color background: Material.backgroundColor
+        property color background: Qt.lighter(Material.accentColor, 1.87)
         property color backgroundHighlight: Material.backgroundDimColor
         property color primaryColor: Material.primaryTextColor
         property color secondaryColor: Material.secondaryTextColor
         property color error: "red"
-        property color primaryHighlight: Material.highlightedRippleColor
-        property color secondaryHighlight: Material.accentColor
-        property color darkerHighlight: Material.primaryColor
+        property color primaryHighlight: Qt.lighter(Material.accentColor, 1.8)
+        property color secondaryHighlight: Material.primaryColor
+        property color darkerHighlight: Material.accentColor
     }
 
     readonly property QtObject orientation: QtObject
