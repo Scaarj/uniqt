@@ -7,8 +7,8 @@ using namespace uniqt;
 Application::Application(int &argc, char **argv)
 #ifdef Q_OS_AURORA
 {
-    application = Aurora::Application::application(argc, argv);
-    view = Aurora::Application::createView();
+    application = SailfishApp::application(argc, argv);
+    view = SailfishApp::createView();
     EnumRegister::init();
 }
 #else
@@ -92,7 +92,7 @@ void Application::setStyle(const QString& style)
 void Application::setSource(const QString& path)
 {
 #ifdef Q_OS_AURORA
-    view->setSource(Aurora::Application::pathTo(path));
+    view->setSource(SailfishApp::pathTo(path));
     view->show();
 #else
     engine.addImportPath(QML_IMPORT_PATH_STRING);

@@ -6,11 +6,11 @@ INCLUDEPATH += \
     $$PWD/../src/ \
 
 HEADERS += \
-    $$PWD/../src/application.h \
-    $$PWD/../src/enum.h \
+    $$PWD/../src/uniqt/application.h \
+    $$PWD/../src/uniqt/enum.h \
 
 SOURCES += \
-    $$PWD/../src/application.cpp \
+    $$PWD/../src/uniqt/application.cpp \
 
 RESOURCES += \
     $$PWD/../resource/res.qrc \
