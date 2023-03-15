@@ -1,12 +1,12 @@
-#include "uniqt/application.h"
+#include "uniqt/applicationCore.h"
 
 int main(int argc, char *argv[])
 {
-    uniqt::Application::setStyle("Material");
+    uniqt::ApplicationCore::setStyle("Material");
 
-    uniqt::Application application(argc, argv);
+    uniqt::ApplicationCore application(argc, argv);
     application.setOrganizationName(QStringLiteral("ru.uniqt"));
-    application.setApplicationName(QStringLiteral("example"));
+    application.setApplicationName   (QStringLiteral("example"));
 
     application.setSource("qml/example.qml");
     return application.exec();

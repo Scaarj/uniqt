@@ -38,12 +38,12 @@
 TARGET = ru.uniqt.example
 
 INCLUDEPATH += \
-    $$PWD/ \
+    src \
 
 HEADERS += \
 
 SOURCES += \
-    $$PWD/src/main.cpp \
+    src/main.cpp \
 
 RESOURCES += \
     $$PWD/icons.qrc \
@@ -55,17 +55,7 @@ DISTFILES += \
     $$PWD/../README.md \
     $$PWD/qml/example.qml \
     $$PWD/qml/MainPage.qml \
-    $$PWD/qml/pages/AnimationPage.qml \
-    $$PWD/qml/pages/ColorPage.qml \
-    $$PWD/qml/pages/ControlPage.qml \
-    $$PWD/qml/pages/FontPage.qml \
-    $$PWD/qml/pages/FlickablePage.qml \
-    $$PWD/qml/pages/GraphicPage.qml \
-    $$PWD/qml/pages/IconPage.qml \
-    $$PWD/qml/pages/LayoutPage.qml \
-    $$PWD/qml/pages/ModifierPage.qml \
-    $$PWD/qml/pages/PositionPage.qml \
-    ../aurora/qml/uniqt/uikit/ToolTip.qml
+    $$PWD/qml/pages/*.qml \
 
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")
@@ -94,5 +84,5 @@ contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(Q
     else: unix:!android: target.path = /opt/$${TARGET}/bin
     !isEmpty(target.path): INSTALLS += target
 
-    include(../desktop/desktop.pri)
+    include(../android/android.pri)
 }
