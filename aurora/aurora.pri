@@ -23,7 +23,6 @@ DISTFILES += \
     $$PWD/qml/styles/*.qml \
     $$PWD/qml/styles/qmldir \
     $$PWD/qml/uikit/*.qml \
-    $$PWD/qml/uikit/qmldir \
-    $$PWD/qml/uniqt/Pane.qml
+    $$PWD/qml/uikit/qmldir
 
 QML_IMPORT_PATH = $$PWD/qml
