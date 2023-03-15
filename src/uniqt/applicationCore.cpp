@@ -1,10 +1,10 @@
-#include "application.h"
+#include "applicationCore.h"
 
 #include "enum.h"
 
 using namespace uniqt;
 
-Application::Application(int &argc, char **argv)
+ApplicationCore::ApplicationCore(int& argc, char** argv)
 #ifdef Q_OS_AURORA
 {
     application = SailfishApp::application(argc, argv);
@@ -18,7 +18,7 @@ Application::Application(int &argc, char **argv)
 }
 #endif
 
-void Application::setOrganizationDomain(const QString& orgDomain)
+void ApplicationCore::setOrganizationDomain(const QString& orgDomain)
 {
 #ifdef Q_OS_AURORA
     application->setOrganizationDomain(orgDomain);
@@ -27,7 +27,7 @@ void Application::setOrganizationDomain(const QString& orgDomain)
 #endif
 }
 
-QString Application::organizationDomain()
+QString ApplicationCore::organizationDomain() const
 {
 #ifdef Q_OS_AURORA
     return application->organizationDomain();
@@ -36,7 +36,7 @@ QString Application::organizationDomain()
 #endif
 }
 
-void Application::setOrganizationName(const QString& orgName)
+void ApplicationCore::setOrganizationName(const QString& orgName)
 {
 #ifdef Q_OS_AURORA
     application->setOrganizationName(orgName);
@@ -45,7 +45,7 @@ void Application::setOrganizationName(const QString& orgName)
 #endif
 }
 
-QString Application::organizationName()
+QString ApplicationCore::organizationName() const
 {
 #ifdef Q_OS_AURORA
     return application->organizationName();
@@ -54,7 +54,7 @@ QString Application::organizationName()
 #endif
 }
 
-void Application::setApplicationName(const QString& applicationName)
+void ApplicationCore::setApplicationName(const QString& applicationName)
 {
 #ifdef Q_OS_AURORA
     application->setApplicationName(applicationName);
@@ -63,7 +63,7 @@ void Application::setApplicationName(const QString& applicationName)
 #endif
 }
 
-QString Application::applicationName()
+QString ApplicationCore::applicationName() const
 {
 #ifdef Q_OS_AURORA
     return application->applicationName();
@@ -72,7 +72,7 @@ QString Application::applicationName()
 #endif
 }
 
-void Application::setApplicationVersion(const QString& version)
+void ApplicationCore::setApplicationVersion(const QString& version)
 {
 #ifdef Q_OS_AURORA
     application->setApplicationVersion(version);
@@ -81,7 +81,7 @@ void Application::setApplicationVersion(const QString& version)
 #endif
 }
 
-void Application::setStyle(const QString& style)
+void ApplicationCore::setStyle([[maybe_unused]] const QString& style)
 {
 #ifdef Q_OS_AURORA
 #else
@@ -89,7 +89,7 @@ void Application::setStyle(const QString& style)
 #endif
 }
 
-void Application::setSource(const QString& path)
+void ApplicationCore::setSource(const QString& path)
 {
 #ifdef Q_OS_AURORA
     view->setSource(SailfishApp::pathTo(path));
@@ -107,7 +107,17 @@ void Application::setSource(const QString& path)
 #endif
 }
 
-int Application::exec()
+// TODO: implement later
+QString ApplicationCore::source() const
+{
+#ifdef Q_OS_AURORA
+    return QString();
+#else
+    return QString();
+#endif
+}
+
+int ApplicationCore::exec()
 {
 #ifdef Q_OS_AURORA
     return application->exec();

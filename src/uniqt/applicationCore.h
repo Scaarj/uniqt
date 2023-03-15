@@ -13,20 +13,21 @@
 #endif
 
 namespace uniqt {
-    class Application {
+    class ApplicationCore {
     public:
-        Application(int &argc, char **argv);
+        ApplicationCore(int& argc, char** argv);
 
         void setOrganizationDomain(const QString& orgDomain);
-        QString organizationDomain();
+        QString organizationDomain() const;
         void setOrganizationName(const QString& orgName);
-        QString organizationName();
+        QString organizationName() const;
         void setApplicationName(const QString& application);
-        QString applicationName();
+        QString applicationName() const;
         void setApplicationVersion(const QString& version);
         static void setStyle(const QString& style);
 
         void setSource(const QString&);
+        QString source() const;
         int exec();
 
     private:
