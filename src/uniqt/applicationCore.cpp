@@ -1,5 +1,7 @@
 #include "applicationCore.h"
 
+#include <QQmlContext>
+
 #include "enum.h"
 
 using namespace uniqt;
@@ -104,16 +106,6 @@ void ApplicationCore::setSource(const QString& path)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
-#endif
-}
-
-// TODO: implement later
-QString ApplicationCore::source() const
-{
-#ifdef Q_OS_AURORA
-    return QString();
-#else
-    return QString();
 #endif
 }
 

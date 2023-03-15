@@ -24,10 +24,10 @@ namespace uniqt {
         void setApplicationName(const QString& application);
         QString applicationName() const;
         void setApplicationVersion(const QString& version);
+        void setSource(const QString&);
+
         static void setStyle(const QString& style);
 
-        void setSource(const QString&);
-        QString source() const;
         int exec();
 
     private:
