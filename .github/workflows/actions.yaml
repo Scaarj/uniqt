@@ -11,6 +11,8 @@ jobs:
         with:
             set-safe-directory: true
       - name: Clang format apply
+        with:
+            git config --global --add safe.directory /__w/uniqt/uniqt
         run: |
             git fetch
             git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
