@@ -1,5 +1,5 @@
 name: Clang format checker
-on: [push:]
+on: [push]
 jobs:
   format:
     name: Format checker
