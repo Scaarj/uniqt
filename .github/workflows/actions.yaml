@@ -6,7 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     container: yaishenka/docker-codestyle-checker
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v3
+        with:
+            set-safe-directory: true
       - name: Clang format apply
         run: |
             git fetch
