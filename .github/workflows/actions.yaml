@@ -1,8 +1,5 @@
-name: CI
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
+name: Clang format checker
+on: [push:]
 jobs:
   format:
     name: Format checker
