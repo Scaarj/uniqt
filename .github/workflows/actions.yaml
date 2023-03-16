@@ -11,7 +11,7 @@ jobs:
         with:
             set-safe-directory: true
       - name: Add safe directory
-        run: git config --global --add safe.directory /__w/uniqt/uniqt
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Clang format apply
         run: |
             git fetch
