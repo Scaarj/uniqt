@@ -14,14 +14,13 @@ ApplicationCore::ApplicationCore(int& argc, char** argv)
     EnumRegister::init();
 }
 #else
-    : defaultAttributes(), application(argc, argv)
-{
+    : defaultAttributes()
+    , application(argc, argv) {
     EnumRegister::init();
 }
 #endif
 
-void ApplicationCore::setOrganizationDomain(const QString& orgDomain)
-{
+void ApplicationCore::setOrganizationDomain(const QString& orgDomain) {
 #ifdef Q_OS_AURORA
     application->setOrganizationDomain(orgDomain);
 #else
@@ -29,8 +28,7 @@ void ApplicationCore::setOrganizationDomain(const QString& orgDomain)
 #endif
 }
 
-QString ApplicationCore::organizationDomain() const
-{
+QString ApplicationCore::organizationDomain() const {
 #ifdef Q_OS_AURORA
     return application->organizationDomain();
 #else
@@ -38,8 +36,7 @@ QString ApplicationCore::organizationDomain() const
 #endif
 }
 
-void ApplicationCore::setOrganizationName(const QString& orgName)
-{
+void ApplicationCore::setOrganizationName(const QString& orgName) {
 #ifdef Q_OS_AURORA
     application->setOrganizationName(orgName);
 #else
@@ -47,8 +44,7 @@ void ApplicationCore::setOrganizationName(const QString& orgName)
 #endif
 }
 
-QString ApplicationCore::organizationName() const
-{
+QString ApplicationCore::organizationName() const {
 #ifdef Q_OS_AURORA
     return application->organizationName();
 #else
@@ -56,8 +52,7 @@ QString ApplicationCore::organizationName() const
 #endif
 }
 
-void ApplicationCore::setApplicationName(const QString& applicationName)
-{
+void ApplicationCore::setApplicationName(const QString& applicationName) {
 #ifdef Q_OS_AURORA
     application->setApplicationName(applicationName);
 #else
@@ -65,8 +60,7 @@ void ApplicationCore::setApplicationName(const QString& applicationName)
 #endif
 }
 
-QString ApplicationCore::applicationName() const
-{
+QString ApplicationCore::applicationName() const {
 #ifdef Q_OS_AURORA
     return application->applicationName();
 #else
@@ -74,8 +68,7 @@ QString ApplicationCore::applicationName() const
 #endif
 }
 
-void ApplicationCore::setApplicationVersion(const QString& version)
-{
+void ApplicationCore::setApplicationVersion(const QString& version) {
 #ifdef Q_OS_AURORA
     application->setApplicationVersion(version);
 #else
@@ -83,16 +76,14 @@ void ApplicationCore::setApplicationVersion(const QString& version)
 #endif
 }
 
-void ApplicationCore::setStyle([[maybe_unused]] const QString& style)
-{
+void ApplicationCore::setStyle([[maybe_unused]] const QString& style) {
 #ifdef Q_OS_AURORA
 #else
     QQuickStyle::setStyle(style);
 #endif
 }
 
-void ApplicationCore::setSource(const QString& path)
-{
+void ApplicationCore::setSource(const QString& path) {
 #ifdef Q_OS_AURORA
     view->setSource(SailfishApp::pathTo(path));
     view->show();
@@ -101,16 +92,18 @@ void ApplicationCore::setSource(const QString& path)
 
     QUrl url("qrc:/" + path);
 
-    connection = QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &application, [&](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
+    connection = QObject::connect(
+        &engine, &QQmlApplicationEngine::objectCreated, &application,
+        [&](QObject* obj, const QUrl& objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
+        },
+        Qt::QueuedConnection);
     engine.load(url);
 #endif
 }
 
-int ApplicationCore::exec()
-{
+int ApplicationCore::exec() {
 #ifdef Q_OS_AURORA
     return application->exec();
 #else
