@@ -10,6 +10,8 @@ jobs:
         uses: actions/checkout@v3
         with:
             set-safe-directory: true
+      - name: Test echo
+        run: echo test echo
       - name: Add safe directory
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Clang format apply
