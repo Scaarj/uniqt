@@ -18,10 +18,18 @@ jobs:
         run: |
             git fetch
             
-      - name: Clang format apply step 2
+      - name: Clang format apply step 2.1
         run: |
-            git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+            git diff -U0 --no-color main
+           
+      - name: Clang format apply step 2.2
+        run: |
+            clang-format-diff -p1 -style file | tee format.diff
             
+      - name: Clang format apply step 2.3
+        run: |
+            tee format.diff
+           
       - name: Clang format apply step 3
         run: |
             if [ -s format.diff ]; then exit 1; fi
