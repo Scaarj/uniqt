@@ -1,0 +1,27 @@
+--- src/uniqt/applicationCore.h	(before formatting)
++++ src/uniqt/applicationCore.h	(after formatting)
+@@ -35,17 +35,16 @@
+     QGuiApplication* application;
+     QQuickView* view;
+ #else
+-    class DefaultAttributes 
+-    {
+-    public:
+-        DefaultAttributes()   {
+-    #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
++	class DefaultAttributes {
++	public:
++		DefaultAttributes() {
++	#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+             QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+     #endif
+-        }
+-    } defaultAttributes;
++		}
++	} defaultAttributes;
+ 
+-    QGuiApplication application;
++	QGuiApplication application;
+     QQmlApplicationEngine engine;
+     QMetaObject::Connection connection;
+ #endif

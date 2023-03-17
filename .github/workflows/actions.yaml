@@ -12,9 +12,11 @@ jobs:
             set-safe-directory: true
       - name: Add safe directory
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-      - name: Clang format apply
+      - name: Git fetch
         run: git fetch
+      - name: Clang format apply
              git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+      - name: Clang format check result      
              if [ -s format.diff ]; then exit 1; fi
       - name: Upload format
         uses: actions/upload-artifact@v2
