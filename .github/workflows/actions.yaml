@@ -14,12 +14,16 @@ jobs:
         run: |
             git config --global --add safe.directory /__w/uniqt/uniqt
 
-      - name: Clang format apply
+      - name: Clang format apply step 1
         run: |
             git fetch
-            git diff -U0 --no-color origin/main
-            clang-format-diff -p1 -style file
-            tee format.diff
+            
+      - name: Clang format apply step 2
+        run: |
+            git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+            
+      - name: Clang format apply step 3
+        run: |
             if [ -s format.diff ]; then exit 1; fi
             
       - name: Git status
