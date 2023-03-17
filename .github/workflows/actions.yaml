@@ -1,34 +1,23 @@
-name: "Clang format checker"
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
+name: Clang format checker
+on: [push]
 jobs:
-  clang-format:
-    name: "uniqt format checker"
+  format:
+    name: Format checker
     runs-on: ubuntu-latest
+    container: yaishenka/docker-codestyle-checker
     steps:
-      - name: "🔍️ Inspect Environment"
-        run: |
-          env | grep ^GITHUB
-          echo ""
-          cat ${GITHUB_EVENT_PATH}
-          echo ""
-          env
-
-      - name: "Checkout code"
+      - name: Checkout code
         uses: actions/checkout@v3
-        
-      - name: "Install colordiff"
-        run: sudo apt-get install -y --no-install-recommends colordiff
-        
-      - name: "Clang format apply"
-        uses: diegoferigo/gh-action-clang-format@main
-        id: format
-        with:
-          style: file
-          
-      - name: "Format result diff"
+      - name: Add safe directory
+        run: git config --global --add safe.directory /__w/uniqt/uniqt
+      - name: Clang format apply
+        run: |
+            git fetch
+            git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+            if [ -s format.diff ]; then exit 1; fi
+      - name: Upload format
+        uses: actions/upload-artifact@v2
         if: failure()
-        run: printf "${{ steps.format.outputs.diff }}" | colordiff
-          
+        with:
+          name: format.diff
+          path: format.diff
