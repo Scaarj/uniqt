@@ -17,7 +17,9 @@ jobs:
       - name: Clang format apply
         run: |
             git fetch
-            git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+            git diff -U0 --no-color origin/main
+            clang-format-diff -p1 -style file
+            tee format.diff
             if [ -s format.diff ]; then exit 1; fi
             
       - name: Git status
