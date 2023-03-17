@@ -1,14 +1,14 @@
 name: Clang format checker
 on:
-  pull_request:
+  push:
     branches:
-      - develop
+      - main
       
 jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           # check out HEAD on the branch
           ref: ${{ github.head_ref }}
