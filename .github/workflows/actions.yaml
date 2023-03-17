@@ -13,13 +13,16 @@ jobs:
       - name: Add safe directory
         run: |
             git config --global --add safe.directory /__w/uniqt/uniqt
-            git diff -U0 --no-color origin/main
 
       - name: Clang format apply
         run: |
             git fetch
             git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
             if [ -s format.diff ]; then exit 1; fi
+            
+      - name: Git status
+        run: |
+            git status
             
       - name: Upload format
         uses: actions/upload-artifact@v2
