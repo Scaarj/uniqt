@@ -15,9 +15,9 @@ jobs:
       - name: Git fetch
         run: git fetch
       - name: Clang format apply
-             git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+        run: git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
       - name: Clang format check result      
-             if [ -s format.diff ]; then exit 1; fi
+        run: if [ -s format.diff ]; then exit 1; fi
       - name: Upload format
         uses: actions/upload-artifact@v2
         if: failure()
