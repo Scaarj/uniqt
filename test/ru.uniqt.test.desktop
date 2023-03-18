@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-Icon=ru.uniqt.tests
+Icon=ru.uniqt.test
 Exec=/usr/bin/ru.uniqt.test
 Name=Template
 Name[ru]=Шаблон
