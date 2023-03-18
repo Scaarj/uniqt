@@ -5,15 +5,10 @@
 
 using namespace testing;
 
-// NOTE: test demo
-TEST(applicationCore, setOrganizationDomain) {
-    int argc = 0;
-    char* argv[1] = {""};
+TEST(Test, SucceedTest) {
+    ASSERT_EQ(1, 1);
+}
 
-    auto str = "org name";
-
-    uniqt::ApplicationCore app(argc, argv);
-    app.setOrganizationDomain(str);
-
-    ASSERT_STREQ(app.organizationName().toStdString().c_str(), str);
+TEST(Test, FailTest) {
+    ASSERT_EQ(1, 0);
 }
