@@ -1,22 +1,25 @@
 name: Clang format checker
-on:
-  push:
-    branches:
-      - main
-      
+on: [push]
 jobs:
   format:
+    name: Format checker
     runs-on: ubuntu-latest
+    container: yaishenka/docker-codestyle-checker
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          # check out HEAD on the branch
-          ref: ${{ github.head_ref }}
-          # make sure the parent commit is grabbed as well, because
-          # that's what will get formatted (i.e. the most recent commit)
-          fetch-depth: 2
-      # format the latest commit
-      - uses: purduesigbots/clang-format-action@1
-        # use one of clang-format's supported styles or leave this out to use the style in your .clang-format file
+            set-safe-directory: true
+      - name: Add safe directory
+        run: git config --global --add safe.directory /__w/uniqt/uniqt
+      - name: Clang format apply
+        run: |
+            git fetch
+            git diff -U0 --no-color origin/main | clang-format-diff -p1 -style file | tee format.diff
+            if [ -s format.diff ]; then exit 1; fi
+      - name: Upload format
+        uses: actions/upload-artifact@v2
+        if: failure()
         with:
-          style: file
+          name: format.diff
+          path: format.diff
