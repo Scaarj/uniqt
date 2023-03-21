@@ -1,3 +1,5 @@
+CONFIG += c++17
+
 DEFINES += Q_OS_AURORA
 
 INCLUDEPATH += \

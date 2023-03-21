@@ -1,5 +1,6 @@
 #include "applicationCore.h"
 
+#include <QDir>
 #include <QQmlContext>
 
 #include "enum.h"
@@ -9,8 +10,8 @@ using namespace uniqt;
 ApplicationCore::ApplicationCore(int& argc, char** argv)
 #ifdef Q_OS_AURORA
 {
-    application = SailfishApp::application(argc, argv);
-    view = SailfishApp::createView();
+    application = Aurora::Application::application(argc, argv);
+    view = Aurora::Application::createView();
     EnumRegister::init();
 }
 #else
@@ -85,7 +86,7 @@ void ApplicationCore::setStyle([[maybe_unused]] const QString& style) {
 
 void ApplicationCore::setSource(const QString& path) {
 #ifdef Q_OS_AURORA
-    view->setSource(SailfishApp::pathTo(path));
+    view->setSource(Aurora::Application::pathTo(path));
     view->show();
 #else
     engine.addImportPath(QML_IMPORT_PATH_STRING);
@@ -100,6 +101,16 @@ void ApplicationCore::setSource(const QString& path) {
         },
         Qt::QueuedConnection);
     engine.load(url);
+#endif
+}
+
+void ApplicationCore::makeStandartPaths() {
+#ifdef Q_OS_AURORA
+    QDir().mkpath(Aurora::Application::filesDir(false).path());
+    QDir().mkpath(Aurora::Application::filesDir(true).path());
+    QDir().mkpath(Aurora::Application::cacheDir(false).path());
+    QDir().mkpath(Aurora::Application::cacheDir(true).path());
+#else
 #endif
 }
 

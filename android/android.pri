@@ -1,3 +1,5 @@
+CONFIG += c++17
+
 INCLUDEPATH += \
     $$PWD \
     $$PWD/qml/uniqt/ \

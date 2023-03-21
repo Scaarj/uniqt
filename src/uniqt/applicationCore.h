@@ -4,7 +4,7 @@
 #include <memory>
 
 #ifdef Q_OS_AURORA
-    #include <sailfishapp.h>
+    #include <auroraapp.h>
 #else
     #include <QGuiApplication>
     #include <QObject>
@@ -26,8 +26,8 @@ public:
     void setApplicationVersion(const QString& version);
     void setSource(const QString&);
 
+    void makeStandartPaths();
     static void setStyle(const QString& style);
-
     int exec();
 
 private:
@@ -35,11 +35,9 @@ private:
     QGuiApplication* application;
     QQuickView* view;
 #else
-    class DefaultAttributes 
-    {
+    class DefaultAttributes {
     public:
-        DefaultAttributes() 
-        {
+        DefaultAttributes() {
     #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     #endif
