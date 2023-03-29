@@ -30,6 +30,8 @@ public:
     static void setStyle(const QString& style);
     int exec();
 
+    QObject* rootObject();
+
 private:
 #ifdef Q_OS_AURORA
     QGuiApplication* application;

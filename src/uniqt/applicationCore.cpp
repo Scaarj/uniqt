@@ -121,3 +121,11 @@ int ApplicationCore::exec() {
     return application.exec();
 #endif
 }
+
+QObject* ApplicationCore::rootObject() {
+#ifdef Q_OS_AURORA
+    return view->rootObject();
+#else
+    return engine.rootObjects().first();
+#endif
+}
