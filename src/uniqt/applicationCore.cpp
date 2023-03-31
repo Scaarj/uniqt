@@ -10,8 +10,8 @@ using namespace uniqt;
 ApplicationCore::ApplicationCore(int& argc, char** argv)
 #ifdef Q_OS_AURORA
 {
-    application = Aurora::Application::application(argc, argv);
-    view = Aurora::Application::createView();
+    application = SailfishApp::application(argc, argv);
+    view = SailfishApp::createView();
     EnumRegister::init();
 }
 #else
@@ -86,7 +86,7 @@ void ApplicationCore::setStyle([[maybe_unused]] const QString& style) {
 
 void ApplicationCore::setSource(const QString& path) {
 #ifdef Q_OS_AURORA
-    view->setSource(Aurora::Application::pathTo(path));
+    view->setSource(SailfishApp::pathTo(path));
     view->show();
 #else
     engine.addImportPath(QML_IMPORT_PATH_STRING);
@@ -106,10 +106,11 @@ void ApplicationCore::setSource(const QString& path) {
 
 void ApplicationCore::makeStandartPaths() {
 #ifdef Q_OS_AURORA
-    QDir().mkpath(Aurora::Application::filesDir(false).path());
-    QDir().mkpath(Aurora::Application::filesDir(true).path());
-    QDir().mkpath(Aurora::Application::cacheDir(false).path());
-    QDir().mkpath(Aurora::Application::cacheDir(true).path());
+//    Uncomment in 4.0.2.175 and above version
+//    QDir().mkpath(Aurora::Application::filesDir(false).path());
+//    QDir().mkpath(Aurora::Application::filesDir(true).path());
+//    QDir().mkpath(Aurora::Application::cacheDir(false).path());
+//    QDir().mkpath(Aurora::Application::cacheDir(true).path());
 #else
 #endif
 }

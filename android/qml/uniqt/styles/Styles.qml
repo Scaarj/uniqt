@@ -9,9 +9,13 @@ QtObject {
     id: root
 
     readonly property bool android: Qt.platform.os === "android"
-    readonly property real ratio: 1.0
+    readonly property real pixelRatio: 1.0
     readonly property int screenHeight: Screen.height
     readonly property int screenWidth: Screen.width
+
+    function px(pixel) {
+        return pixelRatio * pixel
+    }
 
     property var colorModel: [
         ["background", colors.background],
@@ -70,35 +74,35 @@ QtObject {
 
     readonly property QtObject margins: QtObject
     {
-        property int xsmall: small / 2 * ratio
-        property int small: 4 * ratio
-        property int middle: small * 2 * ratio
-        property int large: small * 4 * ratio
-        property int xlarge: small * 8 * ratio
+        property int xsmall: small / 2 * pixelRatio
+        property int small: 4 * pixelRatio
+        property int middle: small * 2 * pixelRatio
+        property int large: small * 4 * pixelRatio
+        property int xlarge: small * 8 * pixelRatio
         property int border: large
     }
 
     readonly property QtObject iconSize: QtObject
     {
-        property int ldpi: 36 * ratio
-        property int mdpi: 48 * ratio
-        property int tvdpi: 64 * ratio
-        property int hdpi: 72 * ratio
-        property int xhdpi: 96 * ratio
-        property int xxhdpi: 144 * ratio
-        property int xxxhdpi: 192 * ratio
+        property int ldpi: 36 * pixelRatio
+        property int mdpi: 48 * pixelRatio
+        property int tvdpi: 64 * pixelRatio
+        property int hdpi: 72 * pixelRatio
+        property int xhdpi: 96 * pixelRatio
+        property int xxhdpi: 144 * pixelRatio
+        property int xxxhdpi: 192 * pixelRatio
     }
 
     readonly property QtObject pageSize: QtObject
     {
-        property int content: 52 * ratio
+        property int content: 52 * pixelRatio
         property int header: content
         property int footer: content
     }
 
     readonly property QtObject control: QtObject
     {
-        property int button: android ? 40 * ratio : 44 * ratio
+        property int button: android ? 40 * pixelRatio : 44 * pixelRatio
     }
 
     readonly property QtObject button: QtObject
@@ -126,11 +130,11 @@ QtObject {
 
         readonly property QtObject size: QtObject
         {
-            property int xsmall: 12 * ratio
-            property int small: 14 * ratio
-            property int middle: 18 * ratio
-            property int large: 22 * ratio
-            property int xlarge: 24 * ratio
+            property int xsmall: 12 * pixelRatio
+            property int small: 14 * pixelRatio
+            property int middle: 18 * pixelRatio
+            property int large: 22 * pixelRatio
+            property int xlarge: 24 * pixelRatio
         }
     }
 
@@ -138,11 +142,11 @@ QtObject {
     {
         readonly property QtObject size: QtObject
         {
-            property int xsmall: small / 2 * ratio
-            property int small: 8 * ratio
-            property int middle: small * 2 * ratio
-            property int large: small * 4 * ratio
-            property int xlarge: small * 8 * ratio
+            property int xsmall: small / 2 * pixelRatio
+            property int small: 8 * pixelRatio
+            property int middle: small * 2 * pixelRatio
+            property int large: small * 4 * pixelRatio
+            property int xlarge: small * 8 * pixelRatio
         }
     }
 }

@@ -4,7 +4,7 @@
 #include <memory>
 
 #ifdef Q_OS_AURORA
-    #include <auroraapp.h>
+    #include <sailfishapp.h>
 #else
     #include <QGuiApplication>
     #include <QObject>

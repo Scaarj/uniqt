@@ -8,7 +8,12 @@ QtObject {
 
     readonly property int screenHeight: Screen.height
     readonly property int screenWidth: Screen.width
-    readonly property real iconRatio: 2.25
+    // TODO: calculate from Screen Width and pixel density
+    property real pixelRatio: 2
+
+    function px(pixel) {
+        return pixelRatio * pixel
+    }
 
     property var colorModel: [
         ["background", colors.background],
@@ -73,13 +78,13 @@ QtObject {
 
     readonly property QtObject iconSize: QtObject
     {
-        property int ldpi: 36 * iconRatio
-        property int mdpi: 48 * iconRatio
-        property int tvdpi: 64 * iconRatio
-        property int hdpi: 72 * iconRatio
-        property int xhdpi: 96 * iconRatio
-        property int xxhdpi: 144 * iconRatio
-        property int xxxhdpi: 192 * iconRatio
+        property int ldpi: 36 * pixelRatio
+        property int mdpi: 48 * pixelRatio
+        property int tvdpi: 64 * pixelRatio
+        property int hdpi: 72 * pixelRatio
+        property int xhdpi: 96 * pixelRatio
+        property int xxhdpi: 144 * pixelRatio
+        property int xxxhdpi: 192 * pixelRatio
     }
 
     readonly property QtObject pageSize: QtObject
