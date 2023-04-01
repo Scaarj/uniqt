@@ -10,97 +10,97 @@ using namespace uniqt;
 ApplicationCore::ApplicationCore(int& argc, char** argv)
 #ifdef Q_OS_AURORA
 {
-    application = SailfishApp::application(argc, argv);
-    view = SailfishApp::createView();
-    EnumRegister::init();
+	application = SailfishApp::application(argc, argv);
+	view = SailfishApp::createView();
+	EnumRegister::init();
 }
 #else
     : defaultAttributes()
     , application(argc, argv) {
-    EnumRegister::init();
+	EnumRegister::init();
 }
 #endif
 
 void ApplicationCore::setOrganizationDomain(const QString& orgDomain) {
 #ifdef Q_OS_AURORA
-    application->setOrganizationDomain(orgDomain);
+	application->setOrganizationDomain(orgDomain);
 #else
-    application.setOrganizationDomain(orgDomain);
+	application.setOrganizationDomain(orgDomain);
 #endif
 }
 
 QString ApplicationCore::organizationDomain() const {
 #ifdef Q_OS_AURORA
-    return application->organizationDomain();
+	return application->organizationDomain();
 #else
-    return application.organizationDomain();
+	return application.organizationDomain();
 #endif
 }
 
 void ApplicationCore::setOrganizationName(const QString& orgName) {
 #ifdef Q_OS_AURORA
-    application->setOrganizationName(orgName);
+	application->setOrganizationName(orgName);
 #else
-    application.setOrganizationName(orgName);
+	application.setOrganizationName(orgName);
 #endif
 }
 
 QString ApplicationCore::organizationName() const {
 #ifdef Q_OS_AURORA
-    return application->organizationName();
+	return application->organizationName();
 #else
-    return application.organizationName();
+	return application.organizationName();
 #endif
 }
 
 void ApplicationCore::setApplicationName(const QString& applicationName) {
 #ifdef Q_OS_AURORA
-    application->setApplicationName(applicationName);
+	application->setApplicationName(applicationName);
 #else
-    application.setApplicationName(applicationName);
+	application.setApplicationName(applicationName);
 #endif
 }
 
 QString ApplicationCore::applicationName() const {
 #ifdef Q_OS_AURORA
-    return application->applicationName();
+	return application->applicationName();
 #else
-    return application.applicationName();
+	return application.applicationName();
 #endif
 }
 
 void ApplicationCore::setApplicationVersion(const QString& version) {
 #ifdef Q_OS_AURORA
-    application->setApplicationVersion(version);
+	application->setApplicationVersion(version);
 #else
-    application.setApplicationVersion(version);
+	application.setApplicationVersion(version);
 #endif
 }
 
 void ApplicationCore::setStyle([[maybe_unused]] const QString& style) {
 #ifdef Q_OS_AURORA
 #else
-    QQuickStyle::setStyle(style);
+	QQuickStyle::setStyle(style);
 #endif
 }
 
 void ApplicationCore::setSource(const QString& path) {
 #ifdef Q_OS_AURORA
-    view->setSource(SailfishApp::pathTo(path));
-    view->show();
+	view->setSource(SailfishApp::pathTo(path));
+	view->show();
 #else
-    engine.addImportPath(QML_IMPORT_PATH_STRING);
+	engine.addImportPath(QML_IMPORT_PATH_STRING);
 
-    QUrl url("qrc:/" + path);
+	QUrl url("qrc:/" + path);
 
-    connection = QObject::connect(
-        &engine, &QQmlApplicationEngine::objectCreated, &application,
-        [&](QObject* obj, const QUrl& objUrl) {
-            if (!obj && url == objUrl)
-                QCoreApplication::exit(-1);
-        },
-        Qt::QueuedConnection);
-    engine.load(url);
+	connection = QObject::connect(
+		&engine, &QQmlApplicationEngine::objectCreated, &application,
+		[&](QObject* obj, const QUrl& objUrl) {
+			if (!obj && url == objUrl)
+				QCoreApplication::exit(-1);
+		},
+		Qt::QueuedConnection);
+	engine.load(url);
 #endif
 }
 
@@ -117,16 +117,16 @@ void ApplicationCore::makeStandartPaths() {
 
 int ApplicationCore::exec() {
 #ifdef Q_OS_AURORA
-    return application->exec();
+	return application->exec();
 #else
-    return application.exec();
+	return application.exec();
 #endif
 }
 
 QObject* ApplicationCore::rootObject() {
 #ifdef Q_OS_AURORA
-    return view->rootObject();
+	return view->rootObject();
 #else
-    return engine.rootObjects().first();
+	return engine.rootObjects().first();
 #endif
 }
