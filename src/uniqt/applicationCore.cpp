@@ -15,8 +15,8 @@ ApplicationCore::ApplicationCore(int& argc, char** argv)
 	EnumRegister::init();
 }
 #else
-    : defaultAttributes()
-    , application(argc, argv) {
+	: defaultAttributes()
+	, application(argc, argv) {
 	EnumRegister::init();
 }
 #endif
