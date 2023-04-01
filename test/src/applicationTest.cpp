@@ -6,5 +6,5 @@
 using namespace testing;
 
 TEST(Test, SucceedTest) {
-    ASSERT_EQ(1, 1);
+	ASSERT_EQ(1, 1);
 }
