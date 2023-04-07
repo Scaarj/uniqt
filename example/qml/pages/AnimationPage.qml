@@ -10,7 +10,6 @@ Page {
 
     headerTitle: "Animation"
 
-    padding: Styles.px(4)
     content: ColumnLayout {
         id: gridLayout
         width: root.contentMaxWidth

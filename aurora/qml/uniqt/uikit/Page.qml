@@ -10,7 +10,6 @@ Q.Page {
     id: root
 
     property alias layout: layoutControl
-    property alias padding: container.padding
     property alias leftPadding: container.leftPadding
     property alias rightPadding: container.rightPadding
     property alias topPadding: container.topPadding
@@ -41,8 +40,8 @@ Q.Page {
             }
 
             icon.source: "image://theme/icon-m-back"
-            icon.width: root.headerHeight / 2
-            icon.height: root.headerHeight / 2
+            icon.width: Styles.px(32)
+            icon.height: Styles.px(32)
             backgroundColor: "transparent"
 
             onClicked: root.close()
@@ -108,7 +107,10 @@ Q.Page {
 
         Container {
             id: container
-            padding: Styles.px(8)
+            leftPadding: Styles.px(8)
+            rightPadding: leftPadding
+            topPadding: leftPadding
+            bottomPadding: leftPadding
         }
     }
 

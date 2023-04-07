@@ -6,7 +6,6 @@ Page {
 
     headerTitle: "Color"
 
-    padding: Styles.px(4)
     content: GridLayout {
         id: gridLayout
         width: root.contentMaxWidth

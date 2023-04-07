@@ -7,7 +7,6 @@ Item {
     property var background: null
     property var contentItem: null
 
-    property alias padding: container.padding
     property alias leftPadding: container.leftPadding
     property alias rightPadding: container.rightPadding
     property alias topPadding: container.topPadding

@@ -7,7 +7,6 @@ Rectangle {
     id: root
 
     property alias layout: layoutControl
-    property alias padding: container.padding
     property alias leftPadding: container.leftPadding
     property alias rightPadding: container.rightPadding
     property alias topPadding: container.topPadding
@@ -39,8 +38,8 @@ Rectangle {
             }
 
             icon.source: "qrc:/icons/back_arrow.svg"
-            icon.width: root.headerHeight / 2
-            icon.height: root.headerHeight / 2
+            icon.width: Styles.px(32)
+            icon.height: Styles.px(32)
             padding: 0
             flat: true
             onClicked: root.close()
@@ -120,7 +119,11 @@ Rectangle {
 
         Container {
             id: container
-            padding: Styles.px(8)
+
+            leftPadding: Styles.px(8)
+            rightPadding: leftPadding
+            topPadding: leftPadding
+            bottomPadding: leftPadding
         }
     }
 

@@ -8,7 +8,6 @@ Page {
 
     property int blockSize: application.width / 6
 
-    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
         spacing: Styles.px(4)

@@ -6,7 +6,6 @@ Page {
 
     headerTitle: "Control"
 
-    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
         spacing: Styles.px(4)

@@ -10,7 +10,6 @@ Page {
     headerTitle: "UIKit demonstration"
     visibleBack: false
 
-    padding: Styles.px(4)
     content: ColumnLayout {
         id: columnLayout
         politic.preferredWidth: root.contentMaxWidth

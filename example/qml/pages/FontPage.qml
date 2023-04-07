@@ -41,7 +41,6 @@ Page {
         ["px18\nbold\nitalic", Qt.font({pixelSize: Styles.fonts.px18, weight: Font.Bold, italic: true}) ],
     ]
 
-    padding: Styles.px(4)
     content: GridLayout {
         id: gridLayout
         width: root.contentMaxWidth

@@ -9,7 +9,6 @@ Page {
     property int blockWidth: application.width / 6
     property int blockHeight: application.height / 12
 
-    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
         spacing: Styles.px(4)
