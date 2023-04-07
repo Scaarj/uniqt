@@ -13,56 +13,105 @@ QtObject {
     readonly property int screenHeight: Screen.height
     readonly property int screenWidth: Screen.width
 
-    function px(pixel) {
-        return pixelRatio * pixel
+    property int ldpi: px(36)
+    property int mdpi: px(48)
+    property int tvdpi: px(64)
+    property int hdpi: px(72)
+    property int xhdpi: px(96)
+    property int xxhdpi: px(144)
+    property int xxxhdpi: px(192)
+
+    readonly property QtObject material: QtObject
+    {
+        readonly property int theme: Material.Dark
+        readonly property int themeLight: Material.Light
+        readonly property int themeDark: Material.Dark
+
+        readonly property int primary: Material.DeepPurple
+        readonly property int secondary: Material.LightBlue
+
+        readonly property int shade50: Material.Shade50
+        readonly property int shade100: Material.Shade100
+        readonly property int shade200: Material.Shade200
+        readonly property int shade300: Material.Shade300
+        readonly property int shade400: Material.Shade400
+        readonly property int shade500: Material.Shade500
+        readonly property int shade600: Material.Shade600
+        readonly property int shade700: Material.Shade700
+        readonly property int shade800: Material.Shade800
+        readonly property int shade900: Material.Shade900
+        readonly property int shadeA100: Material.ShadeA100
+        readonly property int shadeA200: Material.ShadeA200
+        readonly property int shadeA400: Material.ShadeA400
+        readonly property int shadeA700: Material.ShadeA700
     }
 
     property var colorModel: [
+        ["darkPrimary", colors.darkPrimary],
+        ["lightPrimary", colors.lightPrimary],
+        ["primary", colors.primary],
+        ["textIcons", colors.textIcons],
+        ["secondary", colors.secondary],
+        ["primaryText", colors.primaryText],
+        ["secondaryText", colors.secondaryText],
+        ["divider", colors.divider],
         ["background", colors.background],
-        ["backgroundHighlight", colors.backgroundHighlight],
-        ["primaryColor", colors.primaryColor],
-        ["secondaryColor", colors.secondaryColor],
+        ["surface", colors.surface],
         ["error", colors.error],
-        ["primaryHighlight", colors.primaryHighlight],
-        ["secondaryHighlight", colors.darkerHighlight],
-        ["darkerHighlight", colors.secondaryHighlight],
-// NOTE: not used platform depended colors
-//        ["accentColor", Material.accentColor],
-//        ["backgroundColor", Material.backgroundColor],
-//        ["backgroundDimColor", Material.backgroundDimColor],
-//        ["buttonColor", Material.buttonColor],
-//        ["buttonDisabledColor", Material.buttonDisabledColor],
-//        ["dialogColor", Material.dialogColor],
-//        ["dividerColor", Material.dividerColor],
-//        ["dropShadowColor", Material.dropShadowColor],
-//        ["frameColor", Material.frameColor],
-//        ["highlightedButtonColor", Material.highlightedButtonColor],
-//        ["highlightedRippleColor", Material.highlightedRippleColor],
-//        ["hintTextColor", Material.hintTextColor],
-//        ["iconColor", Material.iconColor],
-//        ["iconDisabledColor", Material.iconDisabledColor],
-//        ["listHighlightColor", Material.listHighlightColor],
-//        ["primaryColor", Material.primaryColor],
-//        ["primaryHighlightedTextColor", Material.primaryHighlightedTextColor],
-//        ["primaryTextColor", Material.primaryTextColor],
-//        ["rippleColor", Material.rippleColor],
-//        ["scrollBarColor", Material.scrollBarColor],
-//        ["scrollBarHoveredColor", Material.scrollBarHoveredColor],
-//        ["scrollBarPressedColor", Material.scrollBarPressedColor],
-//        ["secondaryTextColor", Material.secondaryTextColor],
-//        ["spinBoxDisabledIconColor", Material.spinBoxDisabledIconColor]
+        ["topPrimary", colors.topPrimary],
+        ["topSecondary", colors.topSecondary],
+        ["topBackground", colors.topBackground],
+        ["topSurface", colors.topSurface],
+        ["topError", colors.topError],
+        ["primary shade50", color(material.primary, material.shade50)],
+        ["primary Shade100", color(material.primary, material.shade100)],
+        ["primary Shade200", color(material.primary, material.shade200)],
+        ["primary Shade300", color(material.primary, material.shade300)],
+        ["primary Shade400", color(material.primary, material.shade400)],
+        ["primary Shade500", color(material.primary, material.shade500)],
+        ["primary Shade600", color(material.primary, material.shade600)],
+        ["primary Shade700", color(material.primary, material.shade700)],
+        ["primary Shade800", color(material.primary, material.shade800)],
+        ["primary Shade900", color(material.primary, material.shade900)],
+        ["primary ShadeA100", color(material.primary, material.shadeA100)],
+        ["primary ShadeA200", color(material.primary, material.shadeA200)],
+        ["primary ShadeA400", color(material.primary, material.shadeA400)],
+        ["primary ShadeA700", color(material.primary, material.shadeA700)],
+        ["secondary shade50", color(material.secondary, material.shade50)],
+        ["secondary Shade100", color(material.secondary, material.shade100)],
+        ["secondary Shade200", color(material.secondary, material.shade200)],
+        ["secondary Shade300", color(material.secondary, material.shade300)],
+        ["secondary Shade400", color(material.secondary, material.shade400)],
+        ["secondary Shade500", color(material.secondary, material.shade500)],
+        ["secondary Shade600", color(material.secondary, material.shade600)],
+        ["secondary Shade700", color(material.secondary, material.shade700)],
+        ["secondary Shade800", color(material.secondary, material.shade800)],
+        ["secondary Shade900", color(material.secondary, material.shade900)],
+        ["secondary ShadeA100", color(material.secondary, material.shadeA100)],
+        ["secondary ShadeA200", color(material.secondary, material.shadeA200)],
+        ["secondary ShadeA400", color(material.secondary, material.shadeA400)],
+        ["secondary ShadeA700", color(material.secondary, material.shadeA700)],
     ]
 
     readonly property QtObject colors: QtObject
     {
-        property color background: Qt.lighter(Material.accentColor, 1.87)
-        property color backgroundHighlight: Material.backgroundDimColor
-        property color primaryColor: Material.primaryTextColor
-        property color secondaryColor: Material.secondaryTextColor
-        property color error: "red"
-        property color primaryHighlight: Qt.lighter(Material.accentColor, 1.8)
-        property color secondaryHighlight: Material.primaryColor
-        property color darkerHighlight: Material.accentColor
+        property color darkPrimary: "#512DA8"
+        property color lightPrimary: "#D1C4E9"
+        property color primary: color(material.primary, material.shade400)
+        property color textIcons: "#FFFFFF"
+        property color secondary: color(material.secondary, material.shade400)
+        property color primaryText: "#212121"
+        property color secondaryText: "#757575"
+        property color divider: "#BDBDBD"
+        property color background: color(material.primary, material.shade50)
+        property color surface: color(material.secondary, material.shade50)
+        property color error: "#B00020"
+        property color topPrimary: "#FFFFFF"
+        property color topSecondary: "#FFFFFF"
+        property color topBackground: "#000000"
+        property color topSurface: "#000000"
+        property color topError: "#FFFFFF"
+        property color shadow: "#80000000"
     }
 
     readonly property QtObject orientation: QtObject
@@ -72,81 +121,47 @@ QtObject {
         property int all: 3
     }
 
-    readonly property QtObject margins: QtObject
+    readonly property QtObject fonts: QtObject
     {
-        property int xsmall: small / 2 * pixelRatio
-        property int small: 4 * pixelRatio
-        property int middle: small * 2 * pixelRatio
-        property int large: small * 4 * pixelRatio
-        property int xlarge: small * 8 * pixelRatio
-        property int border: large
+        property string family: "Open Sans"
+
+        property int px96: root.px(96)
+        property int px64: root.px(64)
+        property int px32: root.px(32)
+        property int px28: root.px(28)
+        property int px24: root.px(24)
+        property int px20: root.px(20)
+        property int px18: root.px(18)
+        property int px16: root.px(16)
+        property int px14: root.px(14)
+        property int px12: root.px(12)
+        property int px10: root.px(10)
+
+        property font displayLarge:   Qt.font({ family: family, pixelSize: px96, weight: Font.Normal   }) // Display
+        property font displayMiddle:  Qt.font({ family: family, pixelSize: px64, weight: Font.Normal   }) // Display
+        property font displaySmall:   Qt.font({ family: family, pixelSize: px32, weight: Font.Normal   }) // Display
+        property font headlineLarge:  Qt.font({ family: family, pixelSize: px28, weight: Font.DemiBold }) // Headline 1
+        property font headlineMiddle: Qt.font({ family: family, pixelSize: px24, weight: Font.DemiBold }) // Headline 2
+        property font headlineSmall:  Qt.font({ family: family, pixelSize: px20, weight: Font.DemiBold }) // Headline 3
+        property font xlargeDemiBold: Qt.font({ family: family, pixelSize: px18, weight: Font.DemiBold }) // Body 1 / 1
+        property font xlarge:         Qt.font({ family: family, pixelSize: px18, weight: Font.Normal   }) // Body 1 / 2
+        property font xlargeHeighted: Qt.font({ family: family, pixelSize: px18, weight: Font.Normal   }) // Body 1 / 3
+        property font largeDemiBold:  Qt.font({ family: family, pixelSize: px16, weight: Font.DemiBold }) // Body 2 / 1
+        property font large:          Qt.font({ family: family, pixelSize: px16, weight: Font.Normal   }) // Body 2 / 2
+        property font largeHeighted:  Qt.font({ family: family, pixelSize: px16, weight: Font.Normal   }) // Body 2 / 3
+        property font middleDemiBold: Qt.font({ family: family, pixelSize: px14, weight: Font.DemiBold }) // Body 3 / 1
+        property font middle:         Qt.font({ family: family, pixelSize: px14, weight: Font.Normal   }) // Body 3 / 2
+        property font smallDemiBold:  Qt.font({ family: family, pixelSize: px12, weight: Font.DemiBold }) // Body 4 / 1
+        property font small:          Qt.font({ family: family, pixelSize: px12, weight: Font.Normal   }) // Body 4 / 2
+        property font caption:        Qt.font({ family: family, pixelSize: px10, weight: Font.DemiBold }) // Caption
+    } // fonts
+
+    function px(pixel) {
+        return pixelRatio * pixel
     }
 
-    readonly property QtObject iconSize: QtObject
+    function color(color, shade)
     {
-        property int ldpi: 36 * pixelRatio
-        property int mdpi: 48 * pixelRatio
-        property int tvdpi: 64 * pixelRatio
-        property int hdpi: 72 * pixelRatio
-        property int xhdpi: 96 * pixelRatio
-        property int xxhdpi: 144 * pixelRatio
-        property int xxxhdpi: 192 * pixelRatio
-    }
-
-    readonly property QtObject pageSize: QtObject
-    {
-        property int content: 52 * pixelRatio
-        property int header: content
-        property int footer: content
-    }
-
-    readonly property QtObject control: QtObject
-    {
-        property int button: android ? 40 * pixelRatio : 44 * pixelRatio
-    }
-
-    readonly property QtObject button: QtObject
-    {
-        readonly property QtObject width: QtObject
-        {
-            readonly property int tiny: android ? screenWidth / 8 : 48
-            readonly property int xsmall: android ? screenWidth / 3 - 4 * margins.small : 96
-            readonly property int small: android ? screenWidth / 2 - 3 * margins.small : 144
-            readonly property int middle: android ? screenWidth - margins.middle : 192
-            readonly property int large: android ? screenWidth - margins.small : 256
-        }
-    }
-
-    readonly property QtObject font: QtObject
-    {
-        readonly property QtObject type: QtObject
-        {
-            property font common: Qt.font({ pixelSize: font.size.middle })
-            property font control: Qt.font({ pixelSize: font.size.middle, capitalization: Font.MixedCase })
-            property font toolTip: Qt.font({ pixelSize: font.size.xsmall })
-            property font description: Qt.font({ pixelSize: font.size.small, italic: true })
-            property font header: Qt.font({ pixelSize: font.size.large, weight: Font.Bold })
-        }
-
-        readonly property QtObject size: QtObject
-        {
-            property int xsmall: 12 * pixelRatio
-            property int small: 14 * pixelRatio
-            property int middle: 18 * pixelRatio
-            property int large: 22 * pixelRatio
-            property int xlarge: 24 * pixelRatio
-        }
-    }
-
-    readonly property QtObject shadow: QtObject
-    {
-        readonly property QtObject size: QtObject
-        {
-            property int xsmall: small / 2 * pixelRatio
-            property int small: 8 * pixelRatio
-            property int middle: small * 2 * pixelRatio
-            property int large: small * 4 * pixelRatio
-            property int xlarge: small * 8 * pixelRatio
-        }
+        return Material.color(color, shade)
     }
 }

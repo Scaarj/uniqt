@@ -6,7 +6,7 @@ Rectangle {
 
     layout.fillWidth: true
     height: 1
-    color: Qt.darker(Styles.colors.background, 5)
+    color: Styles.colors.divider
 
     LayoutControl { id: layoutControl }
 }

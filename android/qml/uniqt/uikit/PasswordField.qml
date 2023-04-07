@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as Q
 import QtGraphicalEffects 1.15
+import uniqt.styles 1.0
 
 TextField {
     id: root
@@ -18,7 +19,8 @@ TextField {
     Image {
         id: iconVisible
 
-        property int size: root.height / 2
+        property int size: Styles.px(24)
+
         anchors {
             right: parent.right
             rightMargin: iconVisible.size / 2
@@ -31,7 +33,7 @@ TextField {
         ColorOverlay {
             anchors.fill: parent
             source: parent
-            color: root.color
+            color: Styles.colors.secondaryText
         }
 
         MouseArea {

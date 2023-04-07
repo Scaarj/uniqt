@@ -48,7 +48,7 @@ MouseArea {
         },
         State {
             name: "checked"
-            PropertyChanges { target: checkBox; color: Styles.colors.primaryHighlight; border.width: 0 }
+            PropertyChanges { target: checkBox; color: Styles.colors.secondary; border.width: 0 }
             PropertyChanges { target: leftMark; visible: true }
             PropertyChanges { target: rightMark; visible: true }
         }
@@ -58,10 +58,10 @@ MouseArea {
     Row {
         id: row
         anchors.centerIn: root
-        topPadding: Styles.margins.middle
+        topPadding: Styles.px(8)
         bottomPadding: topPadding
         leftPadding: topPadding
-        spacing: Styles.margins.middle
+        spacing: Styles.px(8)
 
         Item {
             width: 40
@@ -77,7 +77,7 @@ MouseArea {
                 radius: width / 10
                 border {
                     width: checkBox.width / 10
-                    color: Styles.colors.secondary
+                    color: Styles.colors.primaryText
                 }
 
                 Behavior on width { PropertyAnimation { easing.type: Easing.Linear } }
@@ -89,7 +89,7 @@ MouseArea {
                     height: checkBox.width / 2.7
                     x: checkBox.width * 0.5
                     y: checkBox.height * 0.7
-                    color: Styles.colors.background
+                    color: Styles.colors.textIcons
                     transform: Rotation { origin.x: 0; origin.y: 0; angle: 135 }
                 }
 
@@ -99,7 +99,7 @@ MouseArea {
                     height: checkBox.width / 1.8
                     x: checkBox.width * 0.5
                     y: checkBox.height * 0.7
-                    color: Styles.colors.background
+                    color: Styles.colors.textIcons
                     transform: Rotation { origin.x: 0; origin.y: 0; angle: -135 }
                 }
             }

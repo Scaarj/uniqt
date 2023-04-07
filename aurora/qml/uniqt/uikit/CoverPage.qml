@@ -21,7 +21,7 @@ CoverBackground {
             id: colorOverlay
             anchors.fill: coverPlaceholder
             source: coverPlaceholder
-            color: Styles.colors.primaryHighlight
+            color: Styles.colors.primary
         }
     }
 

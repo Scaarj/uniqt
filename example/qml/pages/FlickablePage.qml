@@ -10,7 +10,7 @@ Page {
 
     headerTitle: "Flickable"
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         id: gridLayout
         width: root.contentMaxWidth

@@ -9,10 +9,10 @@ Page {
     property int blockWidth: application.width / 6
     property int blockHeight: application.height / 12
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
-        spacing: Styles.margins.small
+        spacing: Styles.px(4)
 
         Text {
             text: "Row positions. LayoutDirection Qt.LeftToRight"

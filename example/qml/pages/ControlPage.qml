@@ -6,10 +6,10 @@ Page {
 
     headerTitle: "Control"
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
-        spacing: Styles.margins.small
+        spacing: Styles.px(4)
 
         Button {
             text: "Button1"
@@ -18,15 +18,24 @@ Page {
         Button {
             text: "Button2"
             icon.source: "qrc:/icons/back_arrow.svg"
-            icon.width: height / 2
-            icon.height: height / 2
         }
 
         Button {
             icon.source: "qrc:/icons/back_arrow.svg"
             width: height
-            icon.width: height / 2
-            icon.height: height / 2
+        }
+
+        RowLayout {
+            layout.fillWidth: true
+            ComboBox {
+                id: comboBox
+                width: 200
+                model: [ "Menu1", "Menu2", "Menu3", "Menu4", "Menu5"]
+            }
+
+            Label {
+                text: "index:" + comboBox.currentIndex
+            }
         }
 
         CheckBox {
@@ -92,6 +101,7 @@ Page {
 
         SliderButton {
             text: "Slidder button"
+            description: "Description"
         }
 
         TextField {
@@ -104,18 +114,5 @@ Page {
         }
 
         PasswordField {}
-
-        RowLayout {
-            layout.fillWidth: true
-            ComboBox {
-                id: comboBox
-                width: 200
-                model: [ "Menu1", "Menu2", "Menu3"]
-            }
-
-            Label {
-                text: "index:" + comboBox.currentIndex
-            }
-        }
     }
 }

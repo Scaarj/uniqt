@@ -11,8 +11,8 @@ ApplicationWindow {
     coverPage: CoverPage {
         icon {
             source: Qt.resolvedUrl("qrc:/icons/cover.svg")
-            width: Styles.iconSize.middle
-            height: Styles.iconSize.middle
+            width: Styles.mdpi
+            height: Styles.mdpi
         }
         title: "Example application"
     }

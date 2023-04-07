@@ -10,12 +10,12 @@ Page {
     headerTitle: "UIKit demonstration"
     visibleBack: false
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         id: columnLayout
         politic.preferredWidth: root.contentMaxWidth
 
-        spacing: Styles.margins.small
+        spacing: Styles.px(8)
 
         Repeater {
             model: pages

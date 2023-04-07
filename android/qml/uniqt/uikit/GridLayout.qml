@@ -7,8 +7,8 @@ Q.GridLayout {
     property alias modifier: modifierControl
     property alias politic: layoutPolitic
 
-    rowSpacing: Styles.margins.small
-    columnSpacing: Styles.margins.small
+    rowSpacing: Styles.px(4)
+    columnSpacing: Styles.px(4)
 
     Component.onCompleted: {
         modifier.apply()

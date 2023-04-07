@@ -5,22 +5,22 @@ Page {
     id: root
 
     property var sizes: [
-        ["ldpi", Styles.iconSize.ldpi],
-        ["mdpi", Styles.iconSize.mdpi],
-        ["tvdpi", Styles.iconSize.tvdpi],
-        ["hdpi", Styles.iconSize.hdpi],
-        ["xhdpi", Styles.iconSize.xhdpi],
-        ["xxhdpi", Styles.iconSize.xxhdpi],
-        ["xxxhdpi", Styles.iconSize.xxxhdpi]
+        ["ldpi", Styles.ldpi],
+        ["mdpi", Styles.mdpi],
+        ["tvdpi", Styles.tvdpi],
+        ["hdpi", Styles.hdpi],
+        ["xhdpi", Styles.xhdpi],
+        ["xxhdpi", Styles.xxhdpi],
+        ["xxxhdpi", Styles.xxxhdpi]
     ]
 
     headerTitle: "Icon"
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: GridLayout {
         id: gridLayout
         width: root.contentMaxWidth
         columns: 2
-        rowSpacing: Styles.margins.middle
+        rowSpacing: Styles.px(8)
 
         Repeater {
             model: root.sizes

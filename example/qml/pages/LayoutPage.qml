@@ -9,7 +9,7 @@ Page {
     property int blockWidth: application.width / 6
     property int blockHeight: application.height / 12
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
 
@@ -20,7 +20,7 @@ Page {
         RowLayout {
             politic.fillWidth: true
             politic.preferredHeight: blockHeight
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
 
             Rectangle { color: "red" }
             Rectangle { color: "green" }
@@ -159,8 +159,8 @@ Page {
             layout.fillWidth: true
             rows: 2
             columns: 2
-            columnSpacing: Styles.margins.small
-            rowSpacing: Styles.margins.large
+            columnSpacing: Styles.px(4)
+            rowSpacing: Styles.px(16)
 
             Rectangle {
                 layout.alignment: Qt.AlignTop

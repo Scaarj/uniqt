@@ -7,34 +7,46 @@ Page {
     headerTitle: "Font"
 
     property var fonts: [
-        ["xsmall", Qt.font({pixelSize: Styles.font.size.xsmall}) ],
-        ["small",  Qt.font({pixelSize: Styles.font.size.small})  ],
-        ["middle", Qt.font({pixelSize: Styles.font.size.middle}) ],
-        ["large",  Qt.font({pixelSize: Styles.font.size.large})  ],
-        ["xlarge", Qt.font({pixelSize: Styles.font.size.xlarge}) ],
-        ["xsmall\nbold", Qt.font({pixelSize: Styles.font.size.xsmall, weight: Font.Bold}) ],
-        ["small\nbold",  Qt.font({pixelSize: Styles.font.size.small,  weight: Font.Bold}) ],
-        ["middle\nbold", Qt.font({pixelSize: Styles.font.size.middle, weight: Font.Bold}) ],
-        ["large\nbold",  Qt.font({pixelSize: Styles.font.size.large,  weight: Font.Bold}) ],
-        ["xlarge\nbold", Qt.font({pixelSize: Styles.font.size.xlarge, weight: Font.Bold}) ],
-        ["xsmall\nitalic", Qt.font({pixelSize: Styles.font.size.xsmall, italic: true}) ],
-        ["small\nitalic",  Qt.font({pixelSize: Styles.font.size.small,  italic: true}) ],
-        ["middle\nitalic", Qt.font({pixelSize: Styles.font.size.middle, italic: true}) ],
-        ["large\nitalic",  Qt.font({pixelSize: Styles.font.size.large,  italic: true}) ],
-        ["xlarge\nitalic", Qt.font({pixelSize: Styles.font.size.xlarge, italic: true}) ],
-        ["xsmall\nbold\nitalic", Qt.font({pixelSize: Styles.font.size.xsmall, weight: Font.Bold, italic: true}) ],
-        ["small\nbold\nitalic",  Qt.font({pixelSize: Styles.font.size.small,  weight: Font.Bold, italic: true}) ],
-        ["middle\nbold\nitalic", Qt.font({pixelSize: Styles.font.size.middle, weight: Font.Bold, italic: true}) ],
-        ["large\nbold\nitalic",  Qt.font({pixelSize: Styles.font.size.large,  weight: Font.Bold, italic: true}) ],
-        ["xlarge\nbold\nitalic", Qt.font({pixelSize: Styles.font.size.xlarge, weight: Font.Bold, italic: true}) ],
+        ["caption", Styles.fonts.caption ],
+        ["small", Styles.fonts.small ],
+        ["smallDemiBold", Styles.fonts.smallDemiBold ],
+        ["middleDemiBold", Styles.fonts.middleDemiBold ],
+        ["largeHeighted", Styles.fonts.largeHeighted ],
+        ["large", Styles.fonts.large ],
+        ["largeDemiBold", Styles.fonts.largeDemiBold ],
+        ["xlargeHeighted", Styles.fonts.xlargeHeighted ],
+        ["xlarge", Styles.fonts.xlarge ],
+        ["xlargeDemiBold", Styles.fonts.xlargeDemiBold ],
+        ["headlineSmall", Styles.fonts.headlineSmall ],
+        ["headlineMiddle", Styles.fonts.headlineMiddle ],
+        ["headlineLarge", Styles.fonts.headlineLarge ],
+        ["displaySmall", Styles.fonts.displaySmall ],
+        ["displayMiddle", Styles.fonts.displayMiddle ],
+        ["displayLarge", Styles.fonts.displayLarge ],
+        ["px12",  Qt.font({pixelSize: Styles.fonts.px12}) ],
+        ["px14", Qt.font({pixelSize: Styles.fonts.px14}) ],
+        ["px16",  Qt.font({pixelSize: Styles.fonts.px16}) ],
+        ["px18", Qt.font({pixelSize: Styles.fonts.px18}) ],
+        ["px12\nbold",  Qt.font({pixelSize: Styles.fonts.px12, weight: Font.Bold}) ],
+        ["px14\nbold", Qt.font({pixelSize: Styles.fonts.px14, weight: Font.Bold}) ],
+        ["px16\nbold",  Qt.font({pixelSize: Styles.fonts.px16, weight: Font.Bold}) ],
+        ["px18\nbold", Qt.font({pixelSize: Styles.fonts.px18, weight: Font.Bold}) ],
+        ["px12\nitalic",  Qt.font({pixelSize: Styles.fonts.px12, italic: true}) ],
+        ["px14\nitalic", Qt.font({pixelSize: Styles.fonts.px14, italic: true}) ],
+        ["px16\nitalic",  Qt.font({pixelSize: Styles.fonts.px16, italic: true}) ],
+        ["px18\nitalic", Qt.font({pixelSize: Styles.fonts.px18, italic: true}) ],
+        ["px12\nbold\nitalic",  Qt.font({pixelSize: Styles.fonts.px12, weight: Font.Bold, italic: true}) ],
+        ["px14\nbold\nitalic", Qt.font({pixelSize: Styles.fonts.px14, weight: Font.Bold, italic: true}) ],
+        ["px16\nbold\nitalic",  Qt.font({pixelSize: Styles.fonts.px16, weight: Font.Bold, italic: true}) ],
+        ["px18\nbold\nitalic", Qt.font({pixelSize: Styles.fonts.px18, weight: Font.Bold, italic: true}) ],
     ]
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: GridLayout {
         id: gridLayout
         width: root.contentMaxWidth
         columns: 2
-        rowSpacing: Styles.margins.middle
+        rowSpacing: Styles.px(8)
 
         Repeater {
             id: textRepeater
@@ -44,19 +56,7 @@ Page {
                 layout.row: index
                 layout.column: 0
                 text: modelData[0]
-                font: Qt.font({ bold: true })
-            }
-        }
-
-        Repeater {
-            id: fontRepeater
-            model: root.fonts
-
-            Text {
-                layout.row: index
-                layout.column: 1
                 font: modelData[1]
-                text: "Text font size"
             }
         }
     }

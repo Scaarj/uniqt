@@ -8,7 +8,7 @@ Pane {
     property alias contentLabel: contentLabel
     property alias contentWidth: contentLabel.width
     property alias contentHeight: contentLabel.height
-    property int margins: Styles.margins.small
+    property int margins: Styles.px(4)
     property int maxWidth: contentLabel.implicitWidth
     property string text
 
@@ -24,14 +24,14 @@ Pane {
 
         width: Math.min(fontMetrics.advanceWidth(text) + leftPadding + rightPadding, maxWidth)
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        font: Styles.font.type.toolTip
+        font: Styles.fonts.caption
         text: root.text
     }
 
     background: Rectangle {
         id: backgroundRect
         anchors.fill: parent
-        radius: Styles.margins.small
+        radius: Styles.px(4)
         color: Styles.colors.background
         border.color: Qt.darker(Styles.colors.background, 2)
     }

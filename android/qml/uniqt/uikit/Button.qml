@@ -1,4 +1,5 @@
 import QtQuick.Controls 2.15 as Q
+import QtQuick.Controls.Material 2.15
 import uniqt.styles 1.0
 
 Q.Button {
@@ -6,18 +7,26 @@ Q.Button {
 
     property alias layout: layoutControl
     property color bgColor: Styles.colors.background
+    property color materialBackground: Styles.colors.topPrimary
+    property color materialForeground: Styles.colors.primary
+    property int materialTheme: Styles.material.theme
 
-    implicitHeight: Styles.control.button
-    layout.preferredWidth: text.length === 0 ? Styles.button.width.tiny : Styles.button.width.small
-    font: Styles.font.type.control
+    Material.background: flat ? "transparent" : materialForeground
+    Material.foreground: materialBackground
+    Material.theme: materialTheme
+
+    implicitHeight: Styles.px(40)
+    layout.preferredWidth: text.length === 0 ? implicitHeight : Styles.px(40) + fontMetric.advanceWidth(root.text)
+                                               + leftPadding + rightPadding
+    font: Styles.fonts.middle
     bottomInset: 1
     topInset: 1
     leftInset: 1
     rightInset: 1
 
-    background: Rectangle {
-        color: pressed ? Qt.darker(bgColor, 2) : (hovered ? Qt.darker(bgColor, 1.6) : Qt.darker(bgColor, 1.3))
-        radius: Styles.margins.small
+    FontMetrics {
+        id: fontMetric
+        font: root.font
     }
 
     LayoutControl { id: layoutControl }

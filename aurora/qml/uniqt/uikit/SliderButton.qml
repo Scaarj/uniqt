@@ -19,14 +19,14 @@ MouseArea {
         State {
             name: "unchecked"
             AnchorChanges { target: indicator; anchors.left: container.left }
-            PropertyChanges { target: container; color: Styles.colors.secondary }
-            PropertyChanges { target: indicator; color: Qt.lighter(Styles.colors.primaryHighlight, 5) }
+            PropertyChanges { target: container; color: Styles.colors.background }
+            PropertyChanges { target: indicator; color: Styles.colors.divider }
         },
         State {
             name: "checked"
             AnchorChanges { target: indicator; anchors.right: container.right }
-            PropertyChanges { target: container; color: Styles.colors.secondaryHighlight }
-            PropertyChanges { target: indicator; color: Styles.colors.primaryHighlight }
+            PropertyChanges { target: container; color: Styles.color(Styles.material.secondary, Styles.material.shade200) }
+            PropertyChanges { target: indicator; color: Styles.colors.secondary }
         }
     ]
     state: root.checked ? "checked" : "unchecked"
@@ -42,8 +42,9 @@ MouseArea {
 
     Grid {
         id: grid
-        columnSpacing: Styles.margins.middle
-        padding: Styles.margins.middle
+        columnSpacing: Styles.px(12)
+        rowSpacing: Styles.px(8)
+        padding: Styles.px(8)
 
         columns: 2
         rows: descriptionLabel.visible ? 2 : 1
@@ -51,8 +52,8 @@ MouseArea {
 
         Rectangle {
             id: container
-            width: Styles.iconSize.ldpi
-            height: width / 4
+            width: Styles.px(40)
+            height: Styles.px(14)
             radius: height / 2
             color: Styles.colors.secondary
 
@@ -63,10 +64,10 @@ MouseArea {
                     leftMargin: 0
                     rightMargin: anchors.leftMargin
                 }
-                height: container.height * 2
+                height: Styles.px(20)
                 width: height
                 radius: height / 2
-                color: Qt.lighter(Styles.colors.primaryHighlight, 5)
+                color: Styles.colors.secondary
             }
 
             DropShadow {
@@ -80,8 +81,8 @@ MouseArea {
 
         Text {
             id: text
-            color: Styles.colors.primary
-            font: Styles.font.type.common
+            font: Styles.fonts.middle
+            color: Styles.colors.primaryText
         }
 
         Item {
@@ -91,8 +92,8 @@ MouseArea {
 
         Text {
             id: descriptionLabel
-            color: Styles.colors.primary
-            font: Styles.font.type.description
+            font: Qt.font({pixelSize: Styles.fonts.px12, italic: true})
+            color: Styles.colors.secondaryText
             visible: descriptionLabel.text.length
         }
     }

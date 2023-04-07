@@ -8,10 +8,10 @@ Page {
 
     property int blockSize: application.width / 6
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         width: root.contentMaxWidth
-        spacing: Styles.margins.small
+        spacing: Styles.px(4)
 
         Text {
             text: "Layouts"
@@ -25,7 +25,7 @@ Page {
             politic.fillWidth: true
             politic.preferredHeight: blockSize
             modifier.radius: blockSize / 2
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
 
             Rectangle { color: "red" }
             Rectangle { color: "green" }
@@ -40,7 +40,7 @@ Page {
             politic.fillWidth: true
             politic.preferredHeight: blockSize
             modifier.color: "purple"
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
 
             Rectangle { color: "red" }
             Rectangle { color: "green" }
@@ -54,9 +54,9 @@ Page {
         RowLayout {
             politic.fillWidth: true
             politic.preferredHeight: blockSize
-            modifier.borderWidth: Styles.margins.small
+            modifier.borderWidth: Styles.px(4)
             modifier.borderColor: "purple"
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
 
             Rectangle { color: "red" }
             Rectangle { color: "green" }
@@ -72,7 +72,7 @@ Page {
         }
 
         Row {
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
             modifier {
                 radius: blockSize / 2
                 childHeight: blockSize
@@ -89,7 +89,7 @@ Page {
         }
 
         Row {
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
             modifier {
                 color: "purple"
                 childHeight: blockSize
@@ -106,9 +106,9 @@ Page {
         }
 
         Row {
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
             modifier {
-                borderWidth: Styles.margins.small
+                borderWidth: Styles.px(4)
                 borderColor: "purple"
                 childHeight: blockSize
                 childWidth: blockSize
@@ -124,10 +124,10 @@ Page {
         }
 
         Column {
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
             modifier {
                 radius: blockSize / 2
-                borderWidth: Styles.margins.small
+                borderWidth: Styles.px(4)
                 borderColor: "purple"
                 childHeight: blockSize
                 childWidth: blockSize
@@ -143,12 +143,12 @@ Page {
         }
 
         Grid {
-            spacing: Styles.margins.small
+            spacing: Styles.px(4)
             rows: 2
             columns: 2
             modifier {
                 radius: blockSize / 2
-                borderWidth: Styles.margins.small
+                borderWidth: Styles.px(4)
                 borderColor: "purple"
                 childHeight: blockSize
                 childWidth: blockSize

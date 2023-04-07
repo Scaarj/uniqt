@@ -10,12 +10,11 @@ Pane {
     property alias contentLabel: contentLabel
     property alias contentWidth: contentLabel.width
     property alias contentHeight: contentLabel.height
-    property int margins: Styles.margins.small
+    property int margins: Styles.px(4)
     property int maxWidth: contentLabel.implicitWidth
     property string text
 
     padding: margins
-
 
     contentItem: Q.Label {
         id: contentLabel
@@ -27,16 +26,16 @@ Pane {
 
         width: Math.min(fontMetrics.advanceWidth(text) + leftPadding + rightPadding, maxWidth)
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        font: Styles.font.type.toolTip
+        font: Styles.fonts.caption
         text: root.text
     }
 
     background: Rectangle {
         id: backgroundRect
         anchors.fill: parent
-        radius: Styles.margins.small
-        color: Material.backgroundColor
-        border.color: Material.backgroundColor
+        radius: Styles.px(4)
+        color: Styles.colors.secondary
+        border.color: Styles.colors.secondary
     }
 
     FontMetrics {

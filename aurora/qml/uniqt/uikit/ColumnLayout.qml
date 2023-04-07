@@ -8,7 +8,7 @@ Q.ColumnLayout {
     property alias modifier: modifierControl
     property alias politic: layoutPolitic
 
-    spacing: Styles.margins.small
+    spacing: Styles.px(4)
 
     Component.onCompleted: {
         modifier.apply()

@@ -4,13 +4,13 @@ import uniqt.styles 1.0
 Page {
     id: root
 
-    property int blockHeight: application.height / 12
-    property int blockWidth: application.width / 6
-    property int fieldHeight: application.height / 6
+    property int blockHeight: Styles.px(64)
+    property int blockWidth: Styles.px(64)
+    property int fieldHeight: Styles.px(128)
 
     headerTitle: "Animation"
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         id: gridLayout
         width: root.contentMaxWidth
@@ -23,7 +23,7 @@ Page {
             id: fieldForSequentialAnimation
             layout.fillWidth: true
             height: fieldHeight
-            color: "lightgrey"
+            color: Styles.color(Styles.material.primary, Styles.material.shade100)
 
             Rectangle {
                 id: rectForSequentialAnimation
@@ -31,10 +31,11 @@ Page {
                 width: blockWidth
                 x: 0
                 y: 0
-                color: "red"
+                color: Styles.color(Styles.material.secondary, Styles.material.shade800)
 
                 SequentialAnimation {
                     running: true
+
                     NumberAnimation {
                         id: sequentialAnimation1
                         target: rectForSequentialAnimation
@@ -74,7 +75,7 @@ Page {
             id: fieldForParallelAnimation
             layout.fillWidth: true
             height: fieldHeight
-            color: "lightgrey"
+            color: Styles.color(Styles.material.primary, Styles.material.shade100)
 
             Rectangle {
                 id: rectForParallelAnimation
@@ -82,7 +83,7 @@ Page {
                 width: blockWidth
                 x: 0
                 y: 0
-                color: "Blue"
+                color: Styles.color(Styles.material.secondary, Styles.material.shade700)
 
                 ParallelAnimation {
                     running: true
@@ -123,14 +124,14 @@ Page {
 
         Text {
             text: "Click for animation"
-            font: Styles.font.type.description
         }
 
         Rectangle {
             layout.alignment: Qt.AlignHCenter
             height: blockHeight
             width: height
-            color: "green"
+            color: Styles.color(Styles.material.secondary, Styles.material.shade600)
+
             RotationAnimation on rotation {
                 id: rotationAnimation
                 running: false
@@ -152,20 +153,19 @@ Page {
 
         Text {
             text: "Click for animation"
-            font: Styles.font.type.description
         }
 
         Rectangle {
             id: fieldForAnchorAnimation
             layout.fillWidth: true
             height: blockHeight
-            color: "lightgrey"
+            color: Styles.color(Styles.material.primary, Styles.material.shade100)
 
             Rectangle {
                 id: rectForAnchorAnimation
                 height: parent.height
                 width: height
-                color: "purple"
+                color: Styles.color(Styles.material.secondary, Styles.material.shade500)
             }
 
             states: [
@@ -202,7 +202,6 @@ Page {
 
         Text {
             text: "Click for animation"
-            font: Styles.font.type.description
         }
 
         Rectangle {
@@ -210,12 +209,12 @@ Page {
             layout.alignment: Qt.AlignHCenter
             height: blockHeight
             width: height
-            color: "red"
+            color: Styles.color(Styles.material.secondary, Styles.material.shade900)
 
             ColorAnimation on color {
                 id: colorAnimation
-                from: "red"
-                to: "blue"
+                from: Styles.color(Styles.material.secondary, Styles.material.shade900)
+                to: Styles.color(Styles.material.secondary, Styles.material.shade200)
             }
 
             MouseArea {

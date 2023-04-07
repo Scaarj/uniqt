@@ -17,7 +17,7 @@ Page {
 
     headerTitle: "Graphic"
 
-    padding: Styles.margins.small
+    padding: Styles.px(4)
     content: ColumnLayout {
         id: gridLayout
         width: root.contentMaxWidth
@@ -33,15 +33,15 @@ Page {
                 width: blockWidth
 
                 Rectangle {
-                    color: "lightgrey"
-                    width: parent.width - Styles.margins.middle
-                    height: parent.height - Styles.margins.middle
+                    color: Styles.colors.secondary
+                    width: parent.width - Styles.px(8)
+                    height: parent.height - Styles.px(8)
                     anchors.centerIn: parent
 
                     Text {
                         anchors.centerIn: parent
                         text: "NoShadow"
-                        font.pixelSize: Styles.font.size.xsmall
+                        color: Styles.colors.topSecondary
                     }
                 }
             }
@@ -52,26 +52,26 @@ Page {
 
                 Rectangle {
                     id: dropShadowRect
-                    color: "lightgrey"
-                    width: parent.width - Styles.margins.middle
-                    height: parent.height - Styles.margins.middle
+                    color: Styles.colors.secondary
+                    width: parent.width - Styles.px(8)
+                    height: parent.height - Styles.px(8)
                     anchors.centerIn: parent
 
                     Text {
                         anchors.centerIn: parent
                         text: "DropShadow"
-                        font.pixelSize: Styles.font.size.xsmall
+                        color: Styles.colors.topSecondary
                     }
                 }
 
                 DropShadow {
                     anchors.fill: dropShadowRect
-                    radius: Styles.shadow.size.small
+                    radius: Styles.px(4)
                     samples: 16
-                    color: "#80000000"
+                    color: Styles.colors.shadow
                     source: dropShadowRect
-                    horizontalOffset: Styles.margins.small
-                    verticalOffset: Styles.margins.small
+                    horizontalOffset: Styles.px(4)
+                    verticalOffset: Styles.px(4)
                 }
             }
 
@@ -81,23 +81,23 @@ Page {
 
                 Rectangle {
                     id: innerShadowRect
-                    color: "lightgrey"
-                    width: parent.width - Styles.margins.middle
-                    height: parent.height - Styles.margins.middle
+                    color: Styles.colors.secondary
+                    width: parent.width - Styles.px(8)
+                    height: parent.height - Styles.px(8)
                     anchors.centerIn: parent
 
                     Text {
                         anchors.centerIn: parent
                         text: "InnerShsdow"
-                        font.pixelSize: Styles.font.size.xsmall
+                        color: Styles.colors.topSecondary
                     }
                 }
 
                 InnerShadow {
                     anchors.fill: parent
-                    radius: Styles.shadow.size.small
+                    radius: Styles.px(4)
                     samples: 16
-                    color: "#80000000"
+                    color: Styles.colors.shadow
                     source: parent
                     smooth: true
                     cached: true

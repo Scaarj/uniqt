@@ -29,7 +29,7 @@ Q.Page {
             verticalCenter: parent ? parent.verticalCenter : undefined
             left: parent ? parent.left : undefined
             right: parent ? parent.right : undefined
-            leftMargin: Styles.margins.middle
+            leftMargin: Styles.px(8)
             rightMargin: anchors.leftMargin
         }
 
@@ -43,9 +43,9 @@ Q.Page {
             icon.source: "image://theme/icon-m-back"
             icon.width: root.headerHeight / 2
             icon.height: root.headerHeight / 2
-            icon.color: Styles.colors.primary
-            onClicked: root.close()
             backgroundColor: "transparent"
+
+            onClicked: root.close()
         }
 
         Base.Text {
@@ -55,12 +55,13 @@ Q.Page {
             }
 
             text: root.headerTitle
-            font: Styles.font.type.header
+            font: Styles.fonts.headlineMiddle
+            color: Styles.colors.topPrimary
         }
     }
 
-    property int headerHeight: headerContent && headerContent.visible ? Styles.pageSize.header : 0
-    property int footerHeight: footerContent && footerContent.visible ? Styles.pageSize.footer : 0
+    property int headerHeight: headerContent && headerContent.visible ? Styles.px(52) : 0
+    property int footerHeight: footerContent && footerContent.visible ? Styles.px(52) : 0
     property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding) - headerHeight - footerHeight
     property int contentMaxWidth: root.width - (leftPadding ? leftPadding : padding) - (rightPadding ? rightPadding : padding)
 
@@ -89,7 +90,7 @@ Q.Page {
     Rectangle {
         id: headerBackground
         anchors.fill: header
-        color: Styles.colors.darkerHighlight
+        color: Styles.colors.primary
         visible: headerContent ? true : false
         z: root.z + 1
     }
@@ -107,7 +108,7 @@ Q.Page {
 
         Container {
             id: container
-            padding: Styles.margins.middle
+            padding: Styles.px(8)
         }
     }
 

@@ -9,22 +9,33 @@ Q.Button {
     property alias layout: layoutControl
     property bool hovered: false
     property var bgColor: undefined
+    property int leftPadding: Styles.px(8)
+    property int rightPadding: Styles.px(8)
 
-    color: bgColor ? Qt.darker(bgColor, 10) : Styles.colors.primary
-    highlightBackgroundColor: bgColor ? Qt.darker(bgColor, 20) : Q.Theme.rgba(Styles.colors.backgroundHighlight, Q.Theme.opacityFaint)
-    highlightColor: bgColor ? Qt.darker(bgColor, 10) : Styles.colors.primaryHighlight
+    color: Styles.colors.topPrimary
+    highlightColor: color
+    backgroundColor: Styles.colors.primary
+    implicitHeight: Styles.px(40)
 
-    icon.height: root.height / 2
-    icon.width: icon.height
-
-    onPressAndHold: {
-        hovered = true
+    implicitWidth: text.length === 0 ? implicitHeight : Styles.px(40) + fontMetric.advanceWidth(root.text)
+                                       + leftPadding + rightPadding
+    icon {
+        color: root.color
+        height: root.height / 2
+        width: icon.height
     }
+
+    onPressAndHold: hovered = true
 
     onPressedChanged: {
         if (!pressed && hovered) {
             hovered = false
         }
+    }
+
+    FontMetrics {
+        id: fontMetric
+        font: Styles.fonts.middle
     }
 
     LayoutControl { id: layoutControl }

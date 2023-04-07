@@ -27,7 +27,7 @@ Rectangle {
             verticalCenter: parent ? parent.verticalCenter : undefined
             left: parent ? parent.left : undefined
             right: parent ? parent.right : undefined
-            leftMargin: Styles.margins.middle
+            leftMargin: Styles.px(8)
             rightMargin: anchors.leftMargin
         }
 
@@ -43,13 +43,11 @@ Rectangle {
             icon.height: root.headerHeight / 2
             padding: 0
             flat: true
-            background: Rectangle {
-                color: backButton.pressed ? Qt.rgba(0,0,0,0.2) : backButton.hovered ? Qt.rgba(0,0,0,0.1) : headerBackground.color
-                radius: Styles.margins.small
-            }
-
             onClicked: root.close()
             width: height
+
+            materialForeground: "transparent"
+            materialBackground: Styles.colors.topPrimary
         }
 
         Text {
@@ -59,12 +57,13 @@ Rectangle {
             }
 
             text: root.headerTitle
-            font: Styles.font.type.header
+            font: Styles.fonts.headlineMiddle
+            color: Styles.colors.topPrimary
         }
     }
 
-    property int headerHeight: headerContent && headerContent.visible ? Styles.pageSize.header : 0
-    property int footerHeight: footerContent && footerContent.visible ? Styles.pageSize.footer : 0
+    property int headerHeight: headerContent && headerContent.visible ? Styles.px(52) : 0
+    property int footerHeight: footerContent && footerContent.visible ? Styles.px(52) : 0
     property int contentMaxHeight: root.height - (topPadding ? topPadding : padding) - (bottomPadding ? bottomPadding : padding) - headerHeight - footerHeight
     property int contentMaxWidth: root.width - (leftPadding ? leftPadding : padding) - (rightPadding ? rightPadding : padding)
 
@@ -86,11 +85,6 @@ Rectangle {
         id: background
         anchors.fill: parent
         color: Styles.colors.background
-
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: Qt.lighter(background.color, 1.2) }
-            GradientStop { position: 1.0; color: background.color }
-        }
     }
 
     Item {
@@ -109,7 +103,7 @@ Rectangle {
         anchors.fill: header
         visible: headerContent ? headerContent.visible : false
         z: root.z + 1
-        color: Styles.colors.primaryHighlight
+        color: Styles.colors.primary
     }
 
     Flickable {
@@ -126,7 +120,7 @@ Rectangle {
 
         Container {
             id: container
-            padding: Styles.margins.middle
+            padding: Styles.px(8)
         }
     }
 

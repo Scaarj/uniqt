@@ -4,7 +4,7 @@ import uniqt.styles 1.0
 Q.Text {
     property alias layout: layoutControl
 
-    color: Styles.colors.primary
+    color: Styles.colors.primaryText
 
     LayoutControl { id: layoutControl }
 }

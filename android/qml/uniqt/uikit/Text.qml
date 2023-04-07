@@ -4,9 +4,12 @@ import uniqt.styles 1.0
 
 Q.Text {
     property alias layout: layoutControl
+    property int materialTheme: Styles.material.theme
 
-    color: Material.primaryTextColor
-    font.pixelSize: Styles.font.size.middle
+    Material.theme: materialTheme
+
+    color: Styles.colors.primaryText
+    font: Styles.fonts.middle
 
     LayoutControl { id: layoutControl }
 }
