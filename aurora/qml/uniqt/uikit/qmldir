@@ -28,6 +28,8 @@ Item 1.0 Item.qml
 Label 1.0 Label.qml
 ListModel 1.0 ListModel.qml
 ListView 1.0 ListView.qml
+Menu 1.0 Menu.qml
+MenuItem 1.0 MenuItem.qml
 MouseArea 1.0 MouseArea.qml
 NumberAnimation 1.0 NumberAnimation.qml
 Page 1.0 Page.qml

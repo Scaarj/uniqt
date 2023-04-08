@@ -8,13 +8,14 @@ Q.Button {
 
     property alias layout: layoutControl
     property bool hovered: false
-    property var bgColor: undefined
     property int leftPadding: Styles.px(8)
     property int rightPadding: Styles.px(8)
+    property color materialBackground: Styles.colors.topPrimary
+    property color materialForeground: Styles.colors.primary
 
-    color: Styles.colors.topPrimary
+    color: materialBackground
     highlightColor: color
-    backgroundColor: Styles.colors.primary
+    backgroundColor: materialForeground
     implicitHeight: Styles.px(40)
 
     implicitWidth: text.length === 0 ? implicitHeight : Styles.px(40) + fontMetric.advanceWidth(root.text)

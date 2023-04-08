@@ -24,7 +24,7 @@ Pane {
 
         width: Math.min(fontMetrics.advanceWidth(text) + leftPadding + rightPadding, maxWidth)
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        font: Styles.fonts.caption
+        font: Styles.fonts.small
         text: root.text
     }
 

@@ -6,7 +6,6 @@ Q.Button {
     id: root
 
     property alias layout: layoutControl
-    property color bgColor: Styles.colors.background
     property color materialBackground: Styles.colors.topPrimary
     property color materialForeground: Styles.colors.primary
     property int materialTheme: Styles.material.theme
@@ -16,7 +15,7 @@ Q.Button {
     Material.theme: materialTheme
 
     implicitHeight: Styles.px(40)
-    layout.preferredWidth: text.length === 0 ? implicitHeight : Styles.px(40) + fontMetric.advanceWidth(root.text)
+    width: text.length === 0 ? implicitHeight : Styles.px(40) + fontMetric.advanceWidth(root.text)
                                                + leftPadding + rightPadding
     font: Styles.fonts.middle
     bottomInset: 1

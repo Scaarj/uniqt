@@ -52,5 +52,7 @@
         <file>qml/uniqt/uikit/qmldir</file>
         <file>qml/uniqt/uikit/Pane.qml</file>
         <file>qml/uniqt/uikit/ToolTip.qml</file>
+        <file>qml/uniqt/uikit/Menu.qml</file>
+        <file>qml/uniqt/uikit/MenuItem.qml</file>
     </qresource>
 </RCC>

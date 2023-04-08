@@ -6,11 +6,13 @@ import uniqt.styles 1.0
 Q.Label {
     id: root
 
+    property color materialBackground: Styles.colors.secondary
+    property color materialForeground: Styles.colors.topSecondary
     property alias layout: layoutControl
     property var background: Rectangle {
         anchors.fill: parent
         radius: Styles.px(4)
-        color:  Styles.colors.secondary
+        color:  materialBackground
     }
 
     leftPadding: Styles.px(8)
@@ -18,7 +20,7 @@ Q.Label {
     topPadding: Styles.px(4)
     bottomPadding: topPadding
 
-    color: Styles.colors.topSecondary
+    color: materialForeground
     font: Styles.fonts.middle
 
     LayoutControl { id: layoutControl }

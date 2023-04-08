@@ -164,4 +164,9 @@ QtObject {
     {
         return Material.color(color, shade)
     }
+
+    function isDark()
+    {
+        return Material.theme === Material.Dark
+    }
 }

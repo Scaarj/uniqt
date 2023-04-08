@@ -7,8 +7,8 @@ Rectangle {
     property alias layout: layoutControl
 
     Component.onCompleted: Layout.fillWidth = true
-    height: 2
-    color: Qt.darker(Styles.colors.background, 5)
+    height: Styles.px(2)
+    color: Styles.colors.divider
 
     LayoutControl { id: layoutControl }
 }

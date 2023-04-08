@@ -20,13 +20,12 @@ Pane {
         id: contentLabel
         horizontalAlignment: Qt.AlignHCenter
         verticalAlignment:   Qt.AlignVCenter
-        padding:       0
         leftPadding:  backgroundRect.radius
         rightPadding: leftPadding
 
         width: Math.min(fontMetrics.advanceWidth(text) + leftPadding + rightPadding, maxWidth)
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        font: Styles.fonts.caption
+        font: Styles.fonts.small
         text: root.text
     }
 

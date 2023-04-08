@@ -16,6 +16,7 @@ Q.Page {
     property alias bottomPadding: container.bottomPadding
     property alias container: flickable
     property alias header: header
+    property alias headerAdditionalItem: headerAdditional.contentItem
     property alias content: container.contentItem
     property alias footer: footer
     property alias visibleBack: backButton.visible
@@ -50,12 +51,18 @@ Q.Page {
         Base.Text {
             anchors {
                 verticalCenter: parent.verticalCenter
-                right: parent.right
+                right: headerAdditionalItem ? headerAdditional.left : parent.right
             }
 
             text: root.headerTitle
             font: Styles.fonts.headlineMiddle
             color: Styles.colors.topPrimary
+        }
+
+        Base.Container {
+            id: headerAdditional
+            anchors { verticalCenter: parent.verticalCenter; right: parent.right }
+            leftPadding: Styles.px(8)
         }
     }
 
