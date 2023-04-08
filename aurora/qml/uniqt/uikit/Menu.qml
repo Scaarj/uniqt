@@ -100,7 +100,7 @@ Rectangle {
         }
     }
 
-    implicitWidth: 500//contentItem ? contentItem.width : 0
+    implicitWidth: contentItem ? contentItem.width : 0
     implicitHeight: contentItem ? contentItem.height : 0
     width: implicitWidth
     height: implicitHeight

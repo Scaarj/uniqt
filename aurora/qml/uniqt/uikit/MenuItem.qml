@@ -30,7 +30,7 @@ Item {
         id: bgRect
         anchors.fill: parent
     }
-    property var contentItem: Label {
+    property var contentItem: Text {
         id: label
     }
 
@@ -48,7 +48,7 @@ Item {
         triggerTimer.start()
     }
 
-    implicitWidth: parent.width
+    implicitWidth: Styles.px(128)
     implicitHeight: Styles.px(36)
 
     Item {
