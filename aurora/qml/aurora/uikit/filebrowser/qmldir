@@ -1,0 +1,9 @@
+# Module name
+module aurora.uikit.filebrowser
+
+# Components
+ErrorToolTip 1.0 ErrorToolTip.qml
+FileBrowserPage 1.0 FileBrowserPage.qml
+FileDelegate 1.0 FileDelegate.qml
+FileMenu 1.0 FileMenu.qml
+

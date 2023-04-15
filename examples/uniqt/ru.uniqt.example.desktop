@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.uniqt.example
+Exec=/usr/bin/ru.uniqt.example
+Name=Template
+Name[ru]=Шаблон
+
+[X-Application]
+Permissions=
+OrganizationName=ru.uniqt
+ApplicationName=example
+ExecDBus=/usr/bin/ru.uniqt.example
