@@ -75,6 +75,7 @@ ListItem {
             Label {
                 id: fileNameLabel
                 Layout.fillWidth: true
+                leftPadding: Theme.paddingMedium
                 text: model.fileName
                 truncationMode: TruncationMode.Fade
             }
