@@ -16,5 +16,10 @@
         <source>Filebrowser demo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="63"/>
+        <source>Not enough rights!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

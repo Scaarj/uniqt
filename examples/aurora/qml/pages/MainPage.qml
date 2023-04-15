@@ -52,9 +52,15 @@ Page {
     FileBrowserPage {
         id: filebrowser
 
+        onlyHomePath: false
+
         onCopy: {
             filePathCopy.text = path
             pageStack.pop()
+        }
+
+        onRename: {
+            showError(qsTr("Not enough rights!"))
         }
 
         onRemove: {
