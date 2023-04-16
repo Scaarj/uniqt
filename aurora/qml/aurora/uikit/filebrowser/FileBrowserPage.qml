@@ -9,8 +9,9 @@ Page {
     property alias title: pageHeader.title
     property bool onlyHomePath: true
     property bool enableCopy: true
-    property bool enableRemove: true
     property bool enableOpen: true
+    property bool enablePaste: true
+    property bool enableRemove: true
     property bool enableRename: true
     property bool disabledVisible: true
 
@@ -21,7 +22,7 @@ Page {
     signal rename(string path)
 
     function showError(error) {
-        fileToolTip.show(error)
+        errorToolTip.show(error)
     }
 
     allowedOrientations: Orientation.All
@@ -67,9 +68,10 @@ Page {
 
             width: listView.width
             enableCopyPath: root.enableCopy
-            enableRename: root.enableRename
             enableOpen: root.enableOpen
+            enablePaste: root.enablePaste
             enableRemove: root.enableRemove
+            enableRename: root.enableRename
             disabledVisible: root.disabledVisible
         }
 
@@ -96,7 +98,7 @@ Page {
         onPathChanged: {
             // NOTE: On no permission to access directory absolutePath is not setted and model view breaks
             if (absolutePath.length === 0) {
-                fileToolTip.text = qsTr("No permissions to access %1").arg(path)
+                showError(qsTr("No permissions to access %1").arg(path))
                 path = previousPath
                 absolutePath = previousAbsolutePath
             } else {
@@ -116,7 +118,7 @@ Page {
     }
 
     ErrorToolTip {
-        id: fileToolTip
+        id: errorToolTip
         x: (root.width - width) / 2
         y: (root.height - height) / 2
     }
