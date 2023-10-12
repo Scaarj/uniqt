@@ -8,3 +8,8 @@ using namespace testing;
 TEST(Test, SucceedTest) {
 	ASSERT_EQ(1, 1);
 }
+
+TEST(Test, FailedTest) {
+ASSERT_EQ(1, 0);
+}
+
