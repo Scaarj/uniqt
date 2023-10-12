@@ -17,8 +17,8 @@ SOURCES += \
 contains(QMAKE_HOST.arch, armv7l) | contains(QMAKE_HOST.arch, i486) | contains(QMAKE_QMAKE, .*Aurora.*) {
     message("Configuring for aurora build...")
 
-    CONFIG += sailfishapp sailfishapp_i18n
-    SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
+    CONFIG += auroraapp auroraapp_i18n
+    AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
 
     include(../aurora/aurora.pri)
 } else {
